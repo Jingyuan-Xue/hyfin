@@ -1,0 +1,149 @@
+{
+  "Company": {
+    "company_id": "A000514",
+    "company_name": "渝开发",
+    "report_year": "2023",
+    "source_doc_id": "A000514_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "存货跌价风险",
+      "Category": "市场价格",
+      "Subcategory": "存货价值",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "资产减值损失 -193,594,946.20 | -17,473,091.99 | 1007.96% | 主要系房地产市场深度调整，计提车库存货跌价准备所致。",
+          "Interpretation": "公司2023年计提资产减值损失1.94亿元，同比大幅增长1007.96%，直接原因是房地产市场深度调整导致存货跌价，对利润影响巨大。"
+        }
+      ],
+      "Reason": "资产减值损失同比暴增1007.96%，金额1.94亿元，直接减少净利润，表明房地产市场下行对公司存货价值造成重大影响，暴露程度高。",
+      "Mitigants": [],
+      "MetricHints": [
+        "资产减值损失金额 -193,594,946.20元",
+        "同比变动 1007.96%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "信用减值风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "应收账款坏账",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "信用减值损失 -28,746,747.82 | -2,856,649.30 | 906.31% | 主要系本期计提应收南樾天宸二期团购应收款坏账准备所致。",
+          "Interpretation": "公司2023年信用减值损失2875万元，同比增加906.31%，主要因应收团购款计提坏账，表明客户信用风险显著增加。"
+        }
+      ],
+      "Reason": "信用减值损失同比暴增906.31%，金额2875万元，直接影响利润，表明客户信用风险暴露高。",
+      "Mitigants": [],
+      "MetricHints": [
+        "信用减值损失金额 -28,746,747.82元",
+        "同比变动 906.31%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户集中度风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "单一客户依赖",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名客户合计销售金额占年度销售总额比例 | 53.35%",
+          "Interpretation": "前五名客户销售占比53.35%，其中第一大客户占比48.56%，公司收入高度依赖少数客户，一旦客户需求变化将对收入产生重大影响。"
+        },
+        {
+          "EvidenceQuote": "1 | 客户一 | 645,638,832.11 | 48.56%",
+          "Interpretation": "第一大客户销售额6.46亿元，占年度销售总额48.56%，集中度极高。"
+        }
+      ],
+      "Reason": "前五名客户销售占比53.35%，最大客户占比48.56%，收入高度集中，存在重大客户依赖风险。",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名客户销售占比53.35%",
+        "第一大客户销售占比48.56%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "按揭贷款担保风险",
+      "Category": "财务流动性",
+      "Subcategory": "或有负债",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至 2023 年 12 月 31 日，公司按房地产经营惯例为商品房承购人提供按揭贷款担保合计 11,327.80 万元。",
+          "Interpretation": "公司为购房者提供按揭贷款担保1.13亿元，属于或有负债，若购房者违约，公司需承担偿还责任，增加财务风险。"
+        }
+      ],
+      "Reason": "担保金额1.13亿元，占营业收入约8.5%，虽属经营惯例，但仍构成一定财务风险。",
+      "Mitigants": [],
+      "MetricHints": [
+        "按揭贷款担保金额 11,327.80万元"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "房地产政策调控风险",
+      "Category": "政策监管",
+      "Subcategory": "行业政策",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（1）政策风险：房地产受政府宏观政策影响较大，未来房地产行业政策亦可能存在进一步的调整，或出台新的调控政策。若公司未来不能适应不断变动的行业政策，则公司的业务发展和财务状况可能受到一定影响。",
+          "Interpretation": "公司明确承认政策风险，指出政策调整可能对公司业务和财务产生不利影响。"
+        }
+      ],
+      "Reason": "公司主动披露政策风险，但未量化具体影响，故暴露程度中等。",
+      "Mitigants": [
+        "紧密跟踪政策变化，及时调整公司经营策略。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "市场需求下行风险",
+      "Category": "需求周期",
+      "Subcategory": "房地产市场周期",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（2）经营风险：中心城区商品房市占率回调上涨，市场持续承压，新房容量低位企稳，随着宏观政策端降低首付比例及公积金贷款利率；开发利润率降低等经营风险，可能会对公司的经营业绩产生一定的影响。",
+          "Interpretation": "公司描述市场持续承压、开发利润率降低，表明市场需求疲软对业绩有负面影响。"
+        }
+      ],
+      "Reason": "公司指出市场持续承压、开发利润率降低，但未给出具体量化数据，暴露程度中等。",
+      "Mitigants": [
+        "及时调整开发节奏和营销策略，加快开发周转速度。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "融资环境变化风险",
+      "Category": "财务流动性",
+      "Subcategory": "融资成本及可得性",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（3）财务风险：房地产开发行业属于资金密集型行业，在国家房地产调控的大背景下，融资环境的变化可能导致公司的融资受到限制或公司的融资成本上升，从而对公司的生产经营产生不利影响。",
+          "Interpretation": "公司指出融资环境变化可能导致融资受限或成本上升，影响生产经营。"
+        }
+      ],
+      "Reason": "公司披露融资风险，但未量化具体融资额或成本变化，暴露程度中等。",
+      "Mitigants": [
+        "合理安排融资计划，不断拓展多种融资方式，保证公司财务成本处于合理范围。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "根据年报风险披露及财务数据，识别出7个主要风险暴露，包括政策、市场、财务、资产减值、信用减值、客户集中度及担保风险。"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "$id": "finglmqa.phase6.financial_fact.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_metric": {
+      "enum": [
+        "净资产",
+        "加权平均净资产收益率",
+        "基本每股收益",
+        "归属于上市公司股东的净利润",
+        "总资产",
+        "扣除非经常性损益后的净利润",
+        "稀释每股收益",
+        "经营活动产生的现金流量净额",
+        "股本",
+        "营业收入"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "confidence_score": {
+      "type": "string"
+    },
+    "conflict_group_id": {
+      "type": "string"
+    },
+    "document_id": {
+      "type": "string"
+    },
+    "fact_id": {
+      "type": "string"
+    },
+    "has_conflict": {
+      "type": "boolean"
+    },
+    "is_selected": {
+      "type": "boolean"
+    },
+    "metric_year": {
+      "type": "integer"
+    },
+    "normalized_unit": {
+      "enum": [
+        "元",
+        "元/股",
+        "ratio",
+        "股"
+      ]
+    },
+    "normalized_value": {
+      "pattern": "^-?[0-9]+(?:\\.[0-9]+)?$",
+      "type": "string"
+    },
+    "provenance": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "report_year": {
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "finglmqa.phase6.financial_fact.v1"
+    },
+    "selection_status": {
+      "type": "string"
+    },
+    "source_candidate_id": {
+      "type": "string"
+    },
+    "source_col_index": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "source_markdown": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_row_index": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "source_table_id": {
+      "type": "string"
+    },
+    "statement": {
+      "enum": [
+        "balance_sheet",
+        "cash_flow_statement",
+        "financial_indicator",
+        "income_statement"
+      ]
+    },
+    "stock_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "support_count": {
+      "minimum": 1,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_version",
+    "fact_id",
+    "document_id",
+    "stock_code",
+    "report_year",
+    "metric_year",
+    "statement",
+    "canonical_metric",
+    "normalized_value",
+    "normalized_unit",
+    "confidence_score",
+    "confidence",
+    "support_count",
+    "is_selected",
+    "selection_status",
+    "conflict_group_id",
+    "has_conflict",
+    "source_table_id",
+    "source_row_index",
+    "source_col_index",
+    "source_markdown",
+    "source_candidate_id",
+    "provenance"
+  ],
+  "type": "object"
+}

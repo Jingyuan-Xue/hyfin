@@ -1,0 +1,13 @@
+{
+  "schema_version": "finglmqa.type3.tabgr.input_freeze.v1",
+  "corpus_id": "annual_reports_170_v1",
+  "corpus_profile_sha256": "fd9a15bd7a245711ff968060433f70ba9023e35862bed3e7590e452bc355f716",
+  "table_blocks_sha256": "f2135116eddbb3ae788769f6cbf4f13b17697dab093232db8a147c4388da3dfc",
+  "financial_facts_sha256": "abeb4b3b221aac74705b84c80469c03b23fd8638d67004c75dd7a512c6841405",
+  "tabgr_runtime_sha256": "7d193807d5f74b3281c8bd52c0d6da76f1f149cd5e92c4c82b47de4b8708d316",
+  "expected_input_tables": 43569,
+  "expected_ready_tables": 43540,
+  "expected_anomalies": 29,
+  "expected_selected_facts": 4189,
+  "freeze_fingerprint": "5003c59222256c69db0a6a479dc8b2310fa21038989b520355a814a7a573e35b"
+}

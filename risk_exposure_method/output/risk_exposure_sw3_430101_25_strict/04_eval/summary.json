@@ -1,0 +1,22 @@
+{
+  "company_count": 24,
+  "empirical_p_value_random_ge_observed": 0.334,
+  "end": "2024-12-31",
+  "feature_count": 9,
+  "granularity": "category",
+  "market_factor": "sh000300",
+  "output_dir": "output/risk_exposure_sw3_430101_25_strict/04_eval",
+  "pair_count": 253,
+  "random_trials": 500,
+  "randomized_similarity_return_pearson_mean": 0.0014234591618819137,
+  "randomized_similarity_return_pearson_p95": 0.10467212781741105,
+  "randomized_similarity_return_pearson_std": 0.06253158912052917,
+  "records": "output/risk_exposure_sw3_430101_25_strict/03_dataset/risk_exposure_records.jsonl",
+  "risk_group_count": 8,
+  "risk_similarity_return_pearson": 0.028582934375877476,
+  "risk_similarity_return_spearman": 0.028859285698893025,
+  "similarity": "cosine",
+  "start": "2024-01-01",
+  "usable_pair_count": 253,
+  "year": "2023"
+}

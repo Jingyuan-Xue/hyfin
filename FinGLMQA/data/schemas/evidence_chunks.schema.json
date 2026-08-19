@@ -1,0 +1,111 @@
+{
+  "$id": "finglmqa.phase7.evidence_chunk.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "a2rag_chunk_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "a2rag_metadata": {
+      "type": "object"
+    },
+    "company_full": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "company_name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "content": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "content_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "document_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evidence_chunk_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "line_range": {
+      "maxItems": 2,
+      "minItems": 2,
+      "prefixItems": [
+        {
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "minimum": 1,
+          "type": "integer"
+        }
+      ],
+      "type": "array"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "report_year": {
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": "finglmqa.phase7.evidence_chunk.v1"
+    },
+    "section_path": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "semantic_tags": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "source_content_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "source_markdown": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "stock_code": {
+      "pattern": "^[0-9]{6}$",
+      "type": "string"
+    },
+    "stock_symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "evidence_chunk_id",
+    "a2rag_chunk_id",
+    "document_id",
+    "company_name",
+    "stock_code",
+    "report_year",
+    "section_path",
+    "semantic_tags",
+    "line_range",
+    "source_markdown",
+    "content"
+  ],
+  "title": "FinGLMQA Phase 7 evidence chunk",
+  "type": "object"
+}

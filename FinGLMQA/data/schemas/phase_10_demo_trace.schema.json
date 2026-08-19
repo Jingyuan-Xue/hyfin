@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase10.demo_trace.v1",
+  "title": "Phase10DemoTrace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "composition_pattern_id", "subplans", "missing_fact_requests", "trace_hash", "semantic_trace_hash", "trace_file_sha256", "trace_delivery"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase10.demo_trace.v1"},
+    "request_id": {"type": "string", "minLength": 1},
+    "composition_pattern_id": {"type": ["string", "null"]},
+    "subplans": {"type": "array"},
+    "missing_fact_requests": {"type": "array"},
+    "trace_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "semantic_trace_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "trace_file_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "trace_delivery": {"enum": ["inline", "reference"]},
+    "trace": {"type": "object"},
+    "trace_reference": {"type": "string"}
+  }
+}

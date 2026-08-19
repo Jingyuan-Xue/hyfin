@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.scope_plan.v1",
+  "title": "ScopePlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scope_plan_id", "scope_kind", "resolver_version", "phase8_capabilities", "entity_resolutions", "report_year_constraints", "metric_years", "corpus_scope", "explicit_document_ids", "findings", "resolution_skipped_reason"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.scope_plan.v1"},
+    "scope_plan_id": {"type": "string"},
+    "scope_kind": {"enum": ["single_document", "company_documents", "multi_company_documents", "explicit_document_set", "corpus"]},
+    "resolver_version": {"type": "string"},
+    "phase8_capabilities": {"type": "object", "additionalProperties": false, "required": ["fact", "sql", "formula", "evidence"], "properties": {"fact": {"$ref": "#/$defs/capability"}, "sql": {"$ref": "#/$defs/capability"}, "formula": {"$ref": "#/$defs/capability"}, "evidence": {"$ref": "#/$defs/capability"}}},
+    "entity_resolutions": {"type": "array", "items": {"$ref": "#/$defs/entity"}},
+    "report_year_constraints": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}},
+    "metric_years": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}},
+    "corpus_scope": {"type": ["object", "null"]},
+    "explicit_document_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "findings": {"type": "array"},
+    "resolution_skipped_reason": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "capability": {"enum": ["direct", "entity_subscope", "single_document_subscope", "contract_only", "forbidden"]},
+    "identity": {"type": "object", "additionalProperties": false, "required": ["stock_code", "stock_name", "company_full"], "properties": {"stock_code": {"type": "string"}, "stock_name": {"type": "string"}, "company_full": {"type": "string"}}},
+    "document": {"type": "object", "additionalProperties": false, "required": ["document_id", "stock_code", "report_year", "artifact_fingerprint"], "properties": {"document_id": {"type": "string"}, "stock_code": {"type": "string"}, "report_year": {"type": "integer"}, "artifact_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}},
+    "entity": {"type": "object", "additionalProperties": false, "required": ["entity_key", "mention", "mention_ordinal", "status", "identity", "document_set", "findings"], "properties": {"entity_key": {"type": "string"}, "mention": {"type": "string"}, "mention_ordinal": {"type": "integer", "minimum": 0}, "status": {"enum": ["unique", "missing", "ambiguous", "conflict"]}, "identity": {"anyOf": [{"$ref": "#/$defs/identity"}, {"type": "null"}]}, "document_set": {"type": "array", "items": {"$ref": "#/$defs/document"}}, "findings": {"type": "array"}}}
+  }
+}

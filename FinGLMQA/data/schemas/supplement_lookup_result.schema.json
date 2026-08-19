@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase9.supplement_lookup_result.v1",
+  "title": "Phase 9 Supplemental Lookup Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "requirement_id", "status", "records", "repository_fingerprint", "fact_source"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase9.supplement_lookup_result.v1"},
+    "requirement_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["found", "not_found", "ambiguous"]},
+    "records": {"type": "array"},
+    "repository_fingerprint": {"type": "string", "minLength": 1},
+    "fact_source": {"const": "supplemental_tabgr"}
+  }
+}

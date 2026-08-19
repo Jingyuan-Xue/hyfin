@@ -1,0 +1,1 @@
+"""ICDM demonstration web application."""

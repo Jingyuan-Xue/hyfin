@@ -1,0 +1,86 @@
+/* Presentation-scale typography for desktop and conference screens. */
+.brand { font-size: 16px; }
+.brand > span { width: 36px; height: 36px; font-size: 12px; }
+.sidebar nav small { font-size: 10px; }
+.nav-item { padding: 12px 11px; font-size: 14px; }
+.side-footer a { font-size: 13px; }
+.side-footer span { font-size: 10px; }
+
+.language-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin: 2px 4px 16px;
+  padding: 3px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
+  background: rgba(255,255,255,.04);
+}
+.language-switch button {
+  padding: 7px 5px;
+  color: #83938c;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 750;
+}
+.language-switch button.active { color: #fff; background: rgba(255,255,255,.12); }
+
+.title-block p { font-size: 15px; }
+.case-line { padding: 18px 20px; }
+.avatar { width: 44px; height: 44px; font-size: 12px; }
+.case-line strong { font-size: 16px; }
+.case-line small { font-size: 12px; }
+#run-demo { padding: 11px 17px; font-size: 13px; }
+
+.step { padding: 14px 18px; font-size: 13px; }
+.step b { width: 28px; height: 28px; font-size: 11px; }
+.demo-toolbar { min-height: 58px; }
+.channel-tabs button, .mode-tabs button { padding: 9px 13px; font-size: 12px; }
+.mode-tabs > span { font-size: 10px; }
+.evidence-panel, .label-panel { padding: 25px; }
+.panel-heading > span { font-size: 11px; }
+.panel-heading small { font-size: 11px; }
+.evidence-content { min-height: 320px; padding: 21px; }
+blockquote { font-size: 16px; }
+.evidence-foot span { font-size: 11px; }
+.evidence-foot b { font-size: 12px; }
+th { font-size: 11px; }
+td { font-size: 13px; }
+.table-note { padding: 14px; font-size: 12px; }
+
+.label-card { padding: 14px; }
+.label-top span { font-size: 10px; }
+.label-top b { font-size: 17px; }
+.label-card h3 { font-size: 15px; }
+.label-card p { font-size: 11px; }
+.decision-note { padding: 13px; font-size: 11px; }
+
+.metric-strip article { padding: 20px; }
+.metric-strip strong { font-size: 32px; }
+.metric-strip span { font-size: 11px; }
+.chart-card, .finding-card { padding: 23px; }
+.card-title span, .finding-card > span, .data-head span { font-size: 11px; }
+.card-title h2, .finding-card h2, .data-head h2 { font-size: 24px; }
+.card-title > b { font-size: 15px; }
+.bar-row { grid-template-columns: 145px minmax(0,1fr) 58px; }
+.bar-row > span { font-size: 12px; }
+.bar-row strong { font-size: 13px; }
+.finding-card h2 { font-size: 27px; }
+.finding-card > div strong { font-size: 44px; }
+.finding-card > div small { font-size: 11px; }
+.finding-card p { font-size: 12px; }
+.data-head input { width: 270px; padding: 11px 13px; font-size: 12px; }
+.data-tabs button { padding: 12px 15px; font-size: 12px; }
+.data-tabs button b { font-size: 11px; }
+.data-table th { padding: 12px 15px; font-size: 11px; }
+.data-table td { padding: 13px 15px; font-size: 12px; }
+.cluster-pill, .tag-list span { font-size: 11px; }
+.table-footer { padding: 11px 15px; font-size: 11px; }
+
+@media (max-width: 850px) {
+  .language-switch { display: flex; margin: 0 8px 0 auto; }
+  .sidebar nav { margin-left: 0; }
+  .nav-item { font-size: 12px; }
+}

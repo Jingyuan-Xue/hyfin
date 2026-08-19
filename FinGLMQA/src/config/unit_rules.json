@@ -1,0 +1,106 @@
+{
+  "schema_version": "finglmqa.phase5.unit_rules.v1",
+  "description": "Unit normalization rules for Phase 5. Decimal values are serialized as strings by the runner to preserve financial precision.",
+  "null_markers": [
+    "",
+    "-",
+    "--",
+    "---",
+    "—",
+    "–",
+    "－",
+    "不适用",
+    "不适用。",
+    "无",
+    "N/A",
+    "n/a",
+    "NA",
+    "na",
+    "null",
+    "None"
+  ],
+  "rules": [
+    {
+      "rule_id": "money_yuan",
+      "category": "money",
+      "aliases": [
+        "元",
+        "人民币元",
+        "人民币"
+      ],
+      "normalized_unit": "元",
+      "multiplier": "1"
+    },
+    {
+      "rule_id": "money_wanyuan",
+      "category": "money",
+      "aliases": [
+        "万元",
+        "人民币万元"
+      ],
+      "normalized_unit": "元",
+      "multiplier": "10000"
+    },
+    {
+      "rule_id": "money_qianyuan",
+      "category": "money",
+      "aliases": [
+        "千元",
+        "人民币千元"
+      ],
+      "normalized_unit": "元",
+      "multiplier": "1000"
+    },
+    {
+      "rule_id": "money_yiyuan",
+      "category": "money",
+      "aliases": [
+        "亿元",
+        "人民币亿元"
+      ],
+      "normalized_unit": "元",
+      "multiplier": "100000000"
+    },
+    {
+      "rule_id": "ratio_percent",
+      "category": "ratio",
+      "aliases": [
+        "%",
+        "％",
+        "百分比"
+      ],
+      "normalized_unit": "ratio",
+      "multiplier": "0.01"
+    },
+    {
+      "rule_id": "count_person",
+      "category": "count",
+      "aliases": [
+        "人",
+        "人数"
+      ],
+      "normalized_unit": "人",
+      "multiplier": "1",
+      "integer": true
+    },
+    {
+      "rule_id": "share_count",
+      "category": "share_count",
+      "aliases": [
+        "股"
+      ],
+      "normalized_unit": "股",
+      "multiplier": "1"
+    },
+    {
+      "rule_id": "money_per_share",
+      "category": "money_per_share",
+      "aliases": [
+        "元/股",
+        "元／股"
+      ],
+      "normalized_unit": "元/股",
+      "multiplier": "1"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "base_url": "https://llm.eulerai.au/v1",
+  "dry_run": false,
+  "generated_at": "2026-06-11T17:07:43.625972+00:00",
+  "model": "deepseek-v4-flash",
+  "output_json": "output/risk_exposure_sw3_430101_25_strict/02_stage2/A000736_2023/A000736_2023_risk_exposure.json",
+  "prompt": "output/risk_exposure_sw3_430101_25_strict/02_stage2/A000736_2023/A000736_2023_risk_prompt.txt",
+  "risk_categories": [
+    "市场价格",
+    "需求周期",
+    "供应链",
+    "政策监管",
+    "财务流动性",
+    "汇率利率",
+    "客户信用/集中度",
+    "运营安全环保",
+    "技术替代",
+    "诉讼合规治理"
+  ],
+  "source": "output/risk_exposure_sw3_430101_25_strict/01_slices/A000736_2023_risk_structured.md",
+  "status": "ok"
+}

@@ -1,0 +1,48 @@
+/* Presentation scale for screenshots and conference projection.
+   Every earlier stylesheet sizes type in absolute px (252 declarations, median
+   11px), so scaling the whole shell keeps type, padding, chips and borders in
+   proportion instead of overflowing the fixed-width sidebar and panels.
+   Loaded last so the viewport-height corrections below win. */
+
+body { zoom: 1.25; }
+
+/* 100vh resolves against the unzoomed viewport and is then multiplied by the
+   zoom factor, which would push full-height panes past the window and add an
+   outer scrollbar. 100 / 1.25 = 80. */
+.app-shell { min-height: 80vh; }
+.sidebar { height: 80vh; }
+.view { min-height: 80vh; }
+
+#qa-view {
+  height: 80vh;
+  height: 80dvh;
+  min-height: 576px;
+}
+
+body.qa-page-active {
+  height: 80vh;
+  height: 80dvh;
+}
+
+body.qa-page-active .app-shell,
+body.qa-page-active main {
+  height: 80vh;
+  height: 80dvh;
+}
+
+/* Prominent, centered brand title at the top of the desktop sidebar. */
+@media (min-width: 851px) {
+  .brand {
+    width: 100%;
+    justify-content: center;
+    padding: 2px 0 28px;
+    text-align: center;
+  }
+
+  .brand strong {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+}

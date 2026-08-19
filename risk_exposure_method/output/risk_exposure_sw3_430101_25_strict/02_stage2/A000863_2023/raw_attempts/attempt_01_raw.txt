@@ -1,0 +1,148 @@
+{
+  "Company": {
+    "company_id": "A000863",
+    "company_name": "三湘印象",
+    "report_year": "2023",
+    "source_doc_id": "A000863_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "房地产销售收入大幅下滑",
+      "Category": "需求周期",
+      "Subcategory": "房地产销售",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "房地产销售 | 757,854,422.15 | 315,020,565.99 | 58.43% | -36.27% | -45.26% | 6.83%",
+          "Interpretation": "房地产销售收入同比下降36.27%，成本同比下降45.26%，收入大幅下滑构成重大业绩风险。"
+        }
+      ],
+      "Reason": "房地产销售是公司主营业务，收入同比下降36.27%，直接影响收入及利润，证据明确显示下滑幅度大。",
+      "Mitigants": [],
+      "MetricHints": ["房地产销售收入同比变化率", "毛利率变化"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "购房按揭担保风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "按揭担保",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至2023年12 月31日，本公司为客户购房按揭贷款提供的阶段性担保总额为 163,539.71万元。主要系三湘森林海尚城项目提供阶段性担保 151,318.00万元。",
+          "Interpretation": "公司为客户提供16.35亿元的按揭担保，若客户违约，公司需承担连带责任，构成重大信用风险。"
+        }
+      ],
+      "Reason": "担保金额占公司总资产约23%，金额重大，且集中于单一项目，风险高。",
+      "Mitigants": [],
+      "MetricHints": ["担保总额", "担保占总资产比例"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "现金流紧张风险",
+      "Category": "财务流动性",
+      "Subcategory": "经营活动现金流",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "现金及现金等价物净增加额 -225,964,682.22 | -20,389,321.56 | -1008.25%",
+          "Interpretation": "现金净增加额同比大幅下降1008.25%，表明现金流状况严重恶化。"
+        },
+        {
+          "EvidenceQuote": "筹资活动产生的现金流量净额 -232,499,900.05 | -177,327,702.19 | -31.11%",
+          "Interpretation": "筹资活动现金流净流出2.32亿元，进一步加剧流动性压力。"
+        }
+      ],
+      "Reason": "现金净增加额大幅负值且同比降幅超过1000%，筹资活动净流出，显示公司面临流动性不足风险。",
+      "Mitigants": [],
+      "MetricHints": ["经营活动现金流量净额", "筹资活动现金流量净额", "现金及现金等价物净增加额"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "投资公允价值变动风险",
+      "Category": "市场价格",
+      "Subcategory": "投资资产估值",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "公允价值变动损益 | -38,980,285.34 | 156.56% | 主要系本期投资基金公允价值变动损益 | 否",
+          "Interpretation": "公允价值变动损失3898万元，占利润总额156.56%，说明公司利润高度依赖投资估值，波动性大。"
+        }
+      ],
+      "Reason": "公允价值变动损失金额大且占利润比例极高，直接影响利润稳定性，风险暴露高。",
+      "Mitigants": [],
+      "MetricHints": ["公允价值变动损益金额", "公允价值变动损益占利润总额比例"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "存货高度集中风险",
+      "Category": "需求周期",
+      "Subcategory": "存货减值",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "存货 | 4,304,228,960.87 | 61.32% | 4,129,319,506.04 | 59.68% | 1.64%",
+          "Interpretation": "存货占总资产61.32%，主要为房地产开发成本，若市场下行，减值风险极高。"
+        }
+      ],
+      "Reason": "存货占资产比例超过60%，且房地产行业下行周期中易发生减值，对公司资产质量构成重大威胁。",
+      "Mitigants": [],
+      "MetricHints": ["存货金额", "存货占总资产比例"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中风险",
+      "Category": "供应链",
+      "Subcategory": "采购集中度",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 371,699,597.86",
+          "Interpretation": "前五名供应商采购额占年度采购总额比例38.09%，采购集中度较高。"
+        }
+      ],
+      "Reason": "前五名供应商采购占比接近40%，若某供应商出现问题，可能影响项目成本和进度。",
+      "Mitigants": [],
+      "MetricHints": ["前五名供应商采购占比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户集中风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "销售集中度",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "客户一 | 138,273,987.20 | 12.51%",
+          "Interpretation": "最大客户销售额占年度销售总额12.51%，有一定依赖度。"
+        }
+      ],
+      "Reason": "最大客户占比超过10%，但整体前五仅18.32%，风险相对可控。",
+      "Mitigants": [],
+      "MetricHints": ["前五大客户销售占比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "短期偿债压力增加风险",
+      "Category": "财务流动性",
+      "Subcategory": "债务结构",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "一年内到期的非流动负债 | 499,289,885.61 | 7.11% | 335,442,100.82 | 4.85% | 2.26% | 主要系期末一年内到期长期借款增加所致",
+          "Interpretation": "一年内到期非流动负债增至4.99亿元，占总资产7.11%，且同比上升，短期偿债压力加大。"
+        }
+      ],
+      "Reason": "短期债务增加可能增加流动性紧张，但货币资金7.13亿元仍可覆盖，风险中等。",
+      "Mitigants": [],
+      "MetricHints": ["一年内到期非流动负债金额", "货币资金余额"],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "证据直接来自年报表格和文字说明，金额比例明确，风险暴露可量化。"
+  }
+}

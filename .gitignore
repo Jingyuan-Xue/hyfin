@@ -1,0 +1,38 @@
+.DS_Store
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# JavaScript
+node_modules/
+
+# Editors and local runtime files
+.idea/
+.vscode/
+*.log
+*.pid
+
+# Large local assets and generated runtime state
+/models/
+/output/
+/runtime/
+/FinGLMQA/data/indexes/
+/FinGLMQA/data/corpus_package/
+
+# Manuscript sources and paper-only figure tooling
+/paper/
+/scripts/build_demonstration_figure.py
+/scripts/capture_demonstration_states.py
+/scripts/make_triptych.py

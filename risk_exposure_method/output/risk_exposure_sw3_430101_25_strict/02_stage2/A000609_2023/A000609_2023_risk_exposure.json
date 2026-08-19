@@ -1,0 +1,152 @@
+{
+  "CanonicalizationHints": [
+    {
+      "Aliases": [
+        "流动性危机",
+        "偿债能力不足"
+      ],
+      "CanonicalRisk": "持续经营重大不确定性",
+      "MergeReason": "同义风险，均指向货币资金远低于短期债务导致的持续经营问题。"
+    },
+    {
+      "Aliases": [
+        "单一供应商依赖"
+      ],
+      "CanonicalRisk": "供应商集中度风险",
+      "MergeReason": "均指供应商采购高度集中。"
+    }
+  ],
+  "Company": {
+    "company_id": "A000609",
+    "company_name": "中迪投资",
+    "report_year": "2023",
+    "source_doc_id": "A000609_2023"
+  },
+  "QualityFlag": {
+    "NeedHumanReview": false,
+    "Notes": "证据覆盖持续经营、供应商集中、收入下滑、财务费用及资产受限，重大风险均已识别。",
+    "Sufficiency": "sufficient"
+  },
+  "RiskExposures": [
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "公司连续四年经营亏损，2023 年 12月 31 日合并资产负债表的货币资金余额为 35,088,243.12 元，一年内到期的长期借款余额为 512,163,927.87 元。前述事项表明存在可能导致对中迪投资持续经营能力产生重大疑虑的重大不确定性。",
+          "Interpretation": "直接表明公司连续四年亏损，货币资金远低于一年内到期长债，审计认为存在持续经营重大不确定性，暴露程度极高。"
+        },
+        {
+          "EvidenceQuote": "2024 年1季度，销售回款 4,105.10 万元，经营活动产生现金流量净额 1,772.45 万元。",
+          "Interpretation": "补充信息显示2024年一季度现金流改善，但未能消除持续经营风险。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "货币资金/一年内到期长期借款=0.0685",
+        "连续亏损年数=4"
+      ],
+      "Mitigants": [
+        "公司拟通过保交楼资金、债务重组、降息、引入战略伙伴等措施化解风险"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "货币资金仅3508万元，而一年内到期长期借款5.12亿元，缺口巨大且连续四年亏损，直接影响持续经营能力。",
+      "RiskName": "持续经营重大不确定性",
+      "Subcategory": "持续经营"
+    },
+    {
+      "Category": "供应链",
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额占年度采购总额比例 | 91. 42%",
+          "Interpretation": "前五名供应商采购占比极高，超过90%，显示采购高度集中。"
+        },
+        {
+          "EvidenceQuote": "1 | 成都捷意建筑工程有限公司 | 84,188,783. 28 | 84.56%",
+          "Interpretation": "单一供应商成都捷意建筑工程有限公司占采购总额84.56%，极度依赖。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "前五名供应商采购占比=91.42%",
+        "第一大供应商占比=84.56%"
+      ],
+      "Mitigants": [
+        "公司未披露针对供应商集中的缓释措施"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "前五名供应商采购占比91.42%，其中第一名占比84.56%，任何一家供应商出现问题都可能严重干扰项目建设。",
+      "RiskName": "供应商集中度风险",
+      "Subcategory": "供应商集中"
+    },
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "房地产行业 | 57,645,524.34 | 56,731,845.50 | 1.58% | -86.53% | -86.32% | -1.46%",
+          "Interpretation": "房地产业务营业收入同比下降86.53%，毛利率仅1.58%，需求严重萎缩。"
+        },
+        {
+          "EvidenceQuote": "房地产行业 | 结算面积 | 万平米 | 1. 44 | 6.93 | -79.25%",
+          "Interpretation": "结算面积同比下降79.25%，进一步证实销售规模大幅缩减。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "营业收入同比-86.53%",
+        "结算面积同比-79.25%"
+      ],
+      "Mitigants": [
+        "公司调整产品结构，推出刚需小户型与改善大户型适应市场"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "营业收入和结算面积均暴跌超过七成，表明市场需求急剧萎缩，直接影响公司收入来源。",
+      "RiskName": "收入大幅下滑",
+      "Subcategory": "房地产销售下行"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "财务费用 | 102,476,715. 58 | 78,108,377. 04 | 31.20%",
+          "Interpretation": "财务费用同比增加31.20%，主要因计提大额预计负债利息，加重财务负担。"
+        },
+        {
+          "EvidenceQuote": "主要是由于本报告期公司计提对中国建筑一局（集团)有限公司资金利息的预计负债。",
+          "Interpretation": "明确财务费用上升的原因是对中建一局的预计负债利息，反映诉讼导致的潜在现金流压力。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "财务费用同比+31.20%",
+        "财务费用占收入比=10248万/5765万≈1.78倍"
+      ],
+      "Mitigants": [
+        "公司与中建一局已达成基本协议，尽快处理诉讼"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "财务费用超1亿元且同比大增，侵蚀利润，增大流动性压力。",
+      "RiskName": "财务费用大幅上升",
+      "Subcategory": "利息支出"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "3、截至报告期末的资产权利受限情况",
+          "Interpretation": "公司存在资产权利受限情况，具体表格未摘录，但表明部分资产已被抵押或冻结，削弱融资弹性。"
+        },
+        {
+          "EvidenceQuote": "报告期内公司主要资产计量属性是否发生重大变化□是 否",
+          "Interpretation": "资产计量属性未变，但受限资产可能限制公司再融资能力。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [],
+      "Mitigants": [],
+      "NeedHumanReview": true,
+      "Reason": "资产权利受限会减少可用于偿债或新增融资的资产基础，加剧流动性紧张。",
+      "RiskName": "资产受限风险",
+      "Subcategory": "资产抵押"
+    }
+  ]
+}

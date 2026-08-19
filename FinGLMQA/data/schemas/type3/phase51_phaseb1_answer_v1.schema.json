@@ -1,0 +1,729 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.phase51.phase_b1_answer.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_version",
+    "arm",
+    "corpus_id",
+    "question_id",
+    "question",
+    "document_id",
+    "base_kind",
+    "base_answer_sha256",
+    "answer_safe_text",
+    "claims",
+    "would_render_claims",
+    "citations",
+    "selected_candidate_ids",
+    "selected_claim_sha256",
+    "would_render_claim_sha256",
+    "semantic_trace"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.type3.phase51.phase_b1_answer.v1"
+    },
+    "profile_version": {
+      "const": "compact-tabgr-cell-literal-v1"
+    },
+    "arm": {
+      "enum": [
+        "b1a_current_shortlist_existing_auth",
+        "b1b_current_shortlist_literal_auth",
+        "b1c_full_document_tabgr_literal_auth",
+        "b1d_full_retrieval_literal_render_suppressed"
+      ]
+    },
+    "corpus_id": {"type": "string", "minLength": 1},
+    "question_id": {"type": "string", "minLength": 1},
+    "question": {"type": "string", "minLength": 1},
+    "document_id": {"type": "string", "minLength": 1},
+    "base_kind": {"const": "frozen_v10"},
+    "base_answer_sha256": {"$ref": "#/$defs/sha256"},
+    "answer_safe_text": {
+      "type": "string",
+      "minLength": 1,
+      "not": {"pattern": "\\[未经授权数值\\]"}
+    },
+    "claims": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/claim"}
+    },
+    "would_render_claims": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/claim"}
+    },
+    "citations": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/citation"}
+    },
+    "selected_candidate_ids": {
+      "type": "array",
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "selected_claim_sha256": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/sha256"}
+    },
+    "would_render_claim_sha256": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/sha256"}
+    },
+    "semantic_trace": {"$ref": "#/$defs/caseTrace"}
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "coordinate": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {"type": "integer", "minimum": 0},
+        {"type": "integer", "minimum": 0}
+      ],
+      "items": false
+    },
+    "range": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {"type": "integer", "minimum": 0},
+        {"type": "integer", "minimum": 0}
+      ],
+      "items": false
+    },
+    "rowLabelCell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coordinate",
+        "origin_coordinate",
+        "origin_cell_hash",
+        "raw_value",
+        "raw_value_sha256"
+      ],
+      "properties": {
+        "coordinate": {"$ref": "#/$defs/coordinate"},
+        "origin_coordinate": {"$ref": "#/$defs/coordinate"},
+        "origin_cell_hash": {"$ref": "#/$defs/sha256"},
+        "raw_value": {"type": "string", "minLength": 1},
+        "raw_value_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "b1SelectedCell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authorization_kind",
+        "authorization_id",
+        "authorization_sha256",
+        "coordinate",
+        "origin_coordinate",
+        "origin_cell_hash",
+        "raw_value",
+        "raw_value_sha256",
+        "column_header",
+        "unit",
+        "period",
+        "accounting_scope",
+        "authorization"
+      ],
+      "properties": {
+        "authorization_kind": {
+          "enum": [
+            "numeric_authorization",
+            "source_cell_exact_literal"
+          ]
+        },
+        "authorization_id": {
+          "type": "string",
+          "pattern": "^(?:t3tabgr-auth|t3tabgr-lit)-[0-9a-f]{24}$"
+        },
+        "authorization_sha256": {"$ref": "#/$defs/sha256"},
+        "coordinate": {"$ref": "#/$defs/coordinate"},
+        "origin_coordinate": {"$ref": "#/$defs/coordinate"},
+        "origin_cell_hash": {"$ref": "#/$defs/sha256"},
+        "raw_value": {"type": "string", "minLength": 1},
+        "raw_value_sha256": {"$ref": "#/$defs/sha256"},
+        "column_header": {"type": "string", "minLength": 1},
+        "unit": {"type": "string", "minLength": 1},
+        "period": {
+          "type": "string",
+          "pattern": "^(?:19|20)\\d{2}$"
+        },
+        "accounting_scope": {
+          "oneOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "null"}
+          ]
+        },
+        "authorization": {
+          "oneOf": [
+            {
+              "$ref": "finglmqa.type3.tabgr.numeric_authorization.v1"
+            },
+            {
+              "$ref": "finglmqa.type3.tabgr.cell_literal_authorization.v1"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "authorization_kind": {
+                "const": "numeric_authorization"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "authorization": {
+                "$ref": "finglmqa.type3.tabgr.numeric_authorization.v1"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "authorization": {
+                "$ref": "finglmqa.type3.tabgr.cell_literal_authorization.v1"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "b1Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_kind",
+        "authorization_kind",
+        "text",
+        "candidate_id",
+        "corpus_id",
+        "document_id",
+        "source_markdown",
+        "source_sha256",
+        "table_id",
+        "table_index",
+        "table_sha256",
+        "table_line_range",
+        "heading_path",
+        "row_index",
+        "row_path",
+        "row_label_cell",
+        "selected_cells",
+        "hydrated_projection_sha256",
+        "claim_sha256"
+      ],
+      "properties": {
+        "claim_kind": {
+          "enum": [
+            "compact_tabgr_single_value",
+            "compact_tabgr_comparison"
+          ]
+        },
+        "authorization_kind": {
+          "enum": [
+            "numeric_authorization",
+            "source_cell_exact_literal"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "not": {"pattern": "\\[未经授权数值\\]"}
+        },
+        "candidate_id": {"type": "string", "minLength": 1},
+        "corpus_id": {"type": "string", "minLength": 1},
+        "document_id": {"type": "string", "minLength": 1},
+        "source_markdown": {"type": "string", "minLength": 1},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "table_id": {"type": "string", "minLength": 1},
+        "table_index": {"type": "integer", "minimum": 1},
+        "table_sha256": {"$ref": "#/$defs/sha256"},
+        "table_line_range": {"$ref": "#/$defs/range"},
+        "heading_path": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "row_index": {"type": "integer", "minimum": 0},
+        "row_path": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "row_label_cell": {"$ref": "#/$defs/rowLabelCell"},
+        "selected_cells": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/b1SelectedCell"}
+        },
+        "hydrated_projection_sha256": {"$ref": "#/$defs/sha256"},
+        "claim_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "claim": {
+      "oneOf": [
+        {
+          "$ref": "finglmqa.type3.phase51.compact_tabgr_answer.v1#/$defs/claim"
+        },
+        {"$ref": "#/$defs/b1Claim"}
+      ]
+    },
+    "b1Citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "citation_kind",
+        "claim_sha256",
+        "authorization_kind",
+        "candidate_id",
+        "corpus_id",
+        "document_id",
+        "source_markdown",
+        "source_sha256",
+        "table_id",
+        "table_index",
+        "table_sha256",
+        "table_line_range",
+        "row_index",
+        "row_path",
+        "row_label_cell",
+        "selected_cells",
+        "hydrated_projection_sha256",
+        "citation_sha256"
+      ],
+      "properties": {
+        "citation_kind": {"const": "compact_tabgr_cell_claim"},
+        "claim_sha256": {"$ref": "#/$defs/sha256"},
+        "authorization_kind": {
+          "enum": [
+            "numeric_authorization",
+            "source_cell_exact_literal"
+          ]
+        },
+        "candidate_id": {"type": "string", "minLength": 1},
+        "corpus_id": {"type": "string", "minLength": 1},
+        "document_id": {"type": "string", "minLength": 1},
+        "source_markdown": {"type": "string", "minLength": 1},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "table_id": {"type": "string", "minLength": 1},
+        "table_index": {"type": "integer", "minimum": 1},
+        "table_sha256": {"$ref": "#/$defs/sha256"},
+        "table_line_range": {"$ref": "#/$defs/range"},
+        "row_index": {"type": "integer", "minimum": 0},
+        "row_path": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "row_label_cell": {"$ref": "#/$defs/rowLabelCell"},
+        "selected_cells": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/b1SelectedCell"}
+        },
+        "hydrated_projection_sha256": {"$ref": "#/$defs/sha256"},
+        "citation_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "citation": {
+      "oneOf": [
+        {
+          "$ref": "finglmqa.type3.phase51.compact_tabgr_answer.v1#/$defs/legacyCitation"
+        },
+        {
+          "$ref": "finglmqa.type3.phase51.compact_tabgr_answer.v1#/$defs/compactCitation"
+        },
+        {"$ref": "#/$defs/b1Citation"}
+      ]
+    },
+    "orderedShortlistCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rank",
+        "candidate_id",
+        "retrieval_channel",
+        "retrieval_score"
+      ],
+      "properties": {
+        "rank": {"type": "integer", "minimum": 1},
+        "candidate_id": {"type": "string", "minLength": 1},
+        "retrieval_channel": {"const": "phase4_frozen_shortlist"},
+        "retrieval_score": {"type": "null"}
+      }
+    },
+    "orderedFullCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rank",
+        "candidate_id",
+        "retrieval_channel",
+        "retrieval_score"
+      ],
+      "properties": {
+        "rank": {"type": "integer", "minimum": 1},
+        "candidate_id": {"type": "string", "minLength": 1},
+        "retrieval_channel": {"const": "tabgr_lexical_v2"},
+        "retrieval_score": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]{8}$"
+        }
+      }
+    },
+    "shortlistRetrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "retrieval_kind",
+        "authorization_blind",
+        "top_k",
+        "ablations",
+        "ppr_enabled",
+        "eligible_row_count",
+        "retrieved_count",
+        "ordered_candidates",
+        "ordered_candidates_semantic_sha256"
+      ],
+      "properties": {
+        "retrieval_kind": {"const": "phase4_shortlist"},
+        "authorization_blind": {"const": true},
+        "top_k": {"type": "null"},
+        "ablations": {"const": []},
+        "ppr_enabled": {"const": false},
+        "eligible_row_count": {"type": "integer", "minimum": 0},
+        "retrieved_count": {"type": "integer", "minimum": 0},
+        "ordered_candidates": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/orderedShortlistCandidate"}
+        },
+        "ordered_candidates_semantic_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "fullRetrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "retrieval_kind",
+        "authorization_blind",
+        "retriever_version",
+        "tabgr_runtime_sha256",
+        "top_k",
+        "ablations",
+        "ppr_enabled",
+        "eligible_row_count",
+        "retrieved_count",
+        "ordered_candidates",
+        "document_shard_sha256",
+        "ordered_candidates_semantic_sha256"
+      ],
+      "properties": {
+        "retrieval_kind": {
+          "const": "full_document_tabgr_lexical_top100"
+        },
+        "authorization_blind": {"const": true},
+        "retriever_version": {
+          "const": "type3-tabgr-lexical-retriever-v2"
+        },
+        "tabgr_runtime_sha256": {"$ref": "#/$defs/sha256"},
+        "top_k": {"const": 100},
+        "ablations": {"const": []},
+        "ppr_enabled": {"const": false},
+        "eligible_row_count": {"type": "integer", "minimum": 0},
+        "retrieved_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "ordered_candidates": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {"$ref": "#/$defs/orderedFullCandidate"}
+        },
+        "document_shard_sha256": {"$ref": "#/$defs/sha256"},
+        "ordered_candidates_semantic_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "rejectedCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_id", "reason"],
+      "properties": {
+        "candidate_id": {"type": "string"},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "selectedAuthorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_id",
+        "claim_sha256",
+        "authorization_kind",
+        "cells"
+      ],
+      "properties": {
+        "candidate_id": {"type": "string", "minLength": 1},
+        "claim_sha256": {"$ref": "#/$defs/sha256"},
+        "authorization_kind": {
+          "enum": [
+            "numeric_authorization",
+            "source_cell_exact_literal"
+          ]
+        },
+        "cells": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/b1SelectedCell"}
+        }
+      }
+    },
+    "b1ComposerTrace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "profile_version",
+        "composer_version",
+        "semantic_input",
+        "authorization_mode",
+        "render_suppressed",
+        "route",
+        "route_gate_enabled",
+        "complementarity_enabled",
+        "input_candidate_count",
+        "existing_authorized_cell_count",
+        "literal_authorized_cell_count",
+        "eligible_cell_count",
+        "ranked_claim_count",
+        "would_render_claim_count",
+        "rendered_claim_count",
+        "selected_candidate_ids",
+        "selected_authorization_kinds",
+        "selected_claim_sha256",
+        "selected_citation_sha256",
+        "selected_authorizations",
+        "would_render_append_text_sha256",
+        "rejected_candidates",
+        "base_answer_sha256",
+        "append_characters",
+        "semantic_trace_sha256"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "finglmqa.type3.phase51.b1.compact_trace.v1"
+        },
+        "profile_version": {
+          "const": "compact-tabgr-cell-literal-v1"
+        },
+        "composer_version": {
+          "const": "type3-phase51-b1-compact-v1"
+        },
+        "semantic_input": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["question"],
+          "properties": {
+            "question": {"type": "string", "minLength": 1}
+          }
+        },
+        "authorization_mode": {
+          "enum": ["existing_only", "existing_plus_literal"]
+        },
+        "render_suppressed": {"type": "boolean"},
+        "route": {
+          "enum": [
+            "table_blocked",
+            "table_optional",
+            "table_comparison",
+            "table_direct"
+          ]
+        },
+        "route_gate_enabled": {"const": true},
+        "complementarity_enabled": {"const": true},
+        "input_candidate_count": {"type": "integer", "minimum": 0},
+        "existing_authorized_cell_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "literal_authorized_cell_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eligible_cell_count": {"type": "integer", "minimum": 0},
+        "ranked_claim_count": {"type": "integer", "minimum": 0},
+        "would_render_claim_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "rendered_claim_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "selected_candidate_ids": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "selected_authorization_kinds": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "enum": [
+              "numeric_authorization",
+              "source_cell_exact_literal"
+            ]
+          }
+        },
+        "selected_claim_sha256": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "selected_citation_sha256": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "selected_authorizations": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/selectedAuthorization"}
+        },
+        "would_render_append_text_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "rejected_candidates": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/rejectedCandidate"}
+        },
+        "base_answer_sha256": {"$ref": "#/$defs/sha256"},
+        "append_characters": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 260
+        },
+        "semantic_trace_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "caseTrace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "profile_version",
+        "arm",
+        "semantic_input",
+        "source_phase4_packet_sha256",
+        "base_kind",
+        "base_answer_sha256",
+        "retrieval",
+        "authorization_mode",
+        "render_suppressed",
+        "composer",
+        "selected_candidate_ids",
+        "selected_claim_sha256",
+        "would_render_claim_sha256",
+        "v3_b2_regression_case_sha256",
+        "semantic_trace_sha256"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "finglmqa.type3.phase51.phase_b1_case_trace.v1"
+        },
+        "profile_version": {
+          "const": "compact-tabgr-cell-literal-v1"
+        },
+        "arm": {
+          "enum": [
+            "b1a_current_shortlist_existing_auth",
+            "b1b_current_shortlist_literal_auth",
+            "b1c_full_document_tabgr_literal_auth",
+            "b1d_full_retrieval_literal_render_suppressed"
+          ]
+        },
+        "semantic_input": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["corpus_id", "document_id", "question"],
+          "properties": {
+            "corpus_id": {"type": "string", "minLength": 1},
+            "document_id": {"type": "string", "minLength": 1},
+            "question": {"type": "string", "minLength": 1}
+          }
+        },
+        "source_phase4_packet_sha256": {"$ref": "#/$defs/sha256"},
+        "base_kind": {"const": "frozen_v10"},
+        "base_answer_sha256": {"$ref": "#/$defs/sha256"},
+        "retrieval": {
+          "oneOf": [
+            {"$ref": "#/$defs/shortlistRetrieval"},
+            {"$ref": "#/$defs/fullRetrieval"}
+          ]
+        },
+        "authorization_mode": {
+          "enum": ["existing_only", "existing_plus_literal"]
+        },
+        "render_suppressed": {"type": "boolean"},
+        "composer": {
+          "oneOf": [
+            {
+              "$ref": "finglmqa.type3.phase51.compact_tabgr_answer.v1#/$defs/composerTrace"
+            },
+            {"$ref": "#/$defs/b1ComposerTrace"}
+          ]
+        },
+        "selected_candidate_ids": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "selected_claim_sha256": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "would_render_claim_sha256": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "v3_b2_regression_case_sha256": {
+          "oneOf": [
+            {"$ref": "#/$defs/sha256"},
+            {"type": "null"}
+          ]
+        },
+        "semantic_trace_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  }
+}

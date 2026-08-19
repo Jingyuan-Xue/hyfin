@@ -1,0 +1,123 @@
+{
+  "CanonicalizationHints": [
+    {
+      "Aliases": [
+        "楼市持续低迷",
+        "存量项目去化难度大"
+      ],
+      "CanonicalRisk": "房地产市场需求下行导致去化困难",
+      "MergeReason": "均指向需求端风险"
+    },
+    {
+      "Aliases": [
+        "供应商依赖",
+        "采购集中度"
+      ],
+      "CanonicalRisk": "供应商集中度过高",
+      "MergeReason": "均描述供应商集中风险"
+    }
+  ],
+  "Company": {
+    "company_id": "A000029",
+    "company_name": "深深房Ａ",
+    "report_year": "2023",
+    "source_doc_id": "A000029_2023"
+  },
+  "QualityFlag": {
+    "NeedHumanReview": false,
+    "Notes": "证据来自年报原文，风险识别直接且可量化，供应商集中度和需求下行有明确数据支撑，存货减值也有明确说明。",
+    "Sufficiency": "sufficient"
+  },
+  "RiskExposures": [
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "楼市持续低迷导致公司存量项目去化难度加大，同时公司现存开发用地资源储备不足，新业务拓展尚未有实质成果，企业经营发展承压。",
+          "Interpretation": "本条原文直接陈述楼市低迷导致项目去化困难，表明需求端风险对公司收入产生重大影响。"
+        },
+        {
+          "EvidenceQuote": "受市场、开发周期影响，公司房地产销售量同比下降 43.19%",
+          "Interpretation": "定量证据显示房地产销售量同比下降43.19%，直接验证需求下行对收入的冲击。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "房地产销售量同比下降43.19%",
+        "存量项目去化难度"
+      ],
+      "Mitigants": [
+        "公司计划全力加大项目销售力度，着力推进存量去化",
+        "有针对性地制定土地拓展计划",
+        "积极探索符合公司发展实际的新路径"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "楼市持续低迷和销售量大幅下降直接导致公司收入减少，现金流承压，且未来土地储备不足进一步制约增长，属于高暴露风险。",
+      "RiskName": "房地产市场需求下行导致去化困难",
+      "Subcategory": "房地产市场需求低迷"
+    },
+    {
+      "Category": "供应链",
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 135,980, 783.49 前五名供应商合计采购金额占年度采购总额比例 | 94.52%",
+          "Interpretation": "前五名供应商采购额占比高达94.52%，表明公司采购高度集中于少数供应商。"
+        },
+        {
+          "EvidenceQuote": "法人一 | 117,030, 547. 22 | 81.34%",
+          "Interpretation": "第一大供应商采购额占比81.34%，存在单一供应商依赖风险。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "前五名供应商采购额占年度采购总额比例94.52%",
+        "第一名供应商采购额占比81.34%"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "前五名供应商采购额占比94.52%，且第一大供应商超过80%，一旦供应商出现问题将严重冲击公司成本及项目进度，暴露度高。",
+      "RiskName": "供应商集中度过高",
+      "Subcategory": "供应商依赖"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "存货 | 3,915,215,921.96 | 60.37% | 4,257,109,614. 31 | 74.82% | -14. 45% | 主要是深房林馨苑项目减值所致。",
+          "Interpretation": "存货占总资产60.37%，且减少14.45%的原因明确为项目减值，说明存在实质性资产价值损失。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "存货占总资产比例60.37%",
+        "存货减少比例14.45%（减值因素）"
+      ],
+      "Mitigants": [
+        "公司持续关注项目风险并调整策略"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "存货规模巨大且发生减值，直接影响资产负债表质量和利润，但公司现金流尚可，故定为中等暴露。",
+      "RiskName": "存货减值风险",
+      "Subcategory": "资产减值"
+    },
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "公司现存开发用地资源储备不足，新业务拓展尚未有实质成果，企业经营发展承压。",
+          "Interpretation": "原文直接披露土地储备不足和新业务未突破，对企业持续经营构成压力，但无量化数据。"
+        }
+      ],
+      "ExposureScore": 1,
+      "MetricHints": [],
+      "Mitigants": [
+        "公司计划有针对性地制定土地拓展计划",
+        "积极探索符合公司发展实际的新路径"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "土地资源是房地产开发的基础，储备不足将影响未来收入，但当前未产生直接财务损失，暴露程度较低。",
+      "RiskName": "土地储备不足制约未来发展",
+      "Subcategory": "资源储备"
+    }
+  ]
+}

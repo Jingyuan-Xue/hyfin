@@ -1,0 +1,1113 @@
+{
+  "all_passed": true,
+  "cases": {
+    "explicit_share_unit": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "connection_mode": "read_only",
+        "duckdb_version": "1.5.4",
+        "facts": [
+          {
+            "canonical_metric": "股本",
+            "confidence_scores": [
+              "0.9000"
+            ],
+            "fact_ids": [
+              "fact_3acc18e99688a45fb0c00691"
+            ],
+            "metric_year": 2020,
+            "normalized_unit": "股",
+            "normalized_value": "718994343",
+            "provenance": [
+              {
+                "line_range": [
+                  1644,
+                  1644
+                ],
+                "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+                "source_table_id": "A603601_再升科技_2020年年度报告_table_0039_c050d4026b",
+                "statement": "balance_sheet"
+              }
+            ]
+          }
+        ],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [
+          "股本"
+        ],
+        "source_database": "data/facts/financial_facts.duckdb",
+        "source_view": "selected_financial_facts",
+        "status": "selected_facts_injected",
+        "unit_policy": {
+          "requested_unit": "股",
+          "status": "ok"
+        },
+        "year_policy": {
+          "metric_year": 2020,
+          "metric_years": [
+            2020
+          ],
+          "report_year": 2020,
+          "report_year_mentions": [],
+          "status": "ok",
+          "year_resolution": "explicit_metric_year"
+        }
+      },
+      "question": "再升科技2020年股本是多少股？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "重庆再升科技股份有限公司",
+        "company_query": "再升科技",
+        "document_id": "A603601_再升科技_2020年年度报告",
+        "report_year": 2020,
+        "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+        "status": "unique",
+        "stock_code": "603601",
+        "stock_name": "再升科技",
+        "stock_symbol": "A603601"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 455,
+        "candidate_document_id": "A603601_再升科技_2020年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "再升科技",
+            "content_preview": "其他说明：  \n注1： 截至 2020年12 月31日，已发行的可转换公司债券累计有人民币94,005,000.00元转换成公司股票，累计因转股形成的股份数量为 10,938,230 股，本期因转股形成的股份数量为10,922,075 股。  \n注 2：截止 2020 年 12 月 31 日，公司 2019 年股票期权激励计划首次授予股票期权第一个行权期通过自主行权方式已在中国证券登记结算有限责任公司上海分公司过户登记股份为5,256,356 股。",
+            "content_sha256": "d8b067307567c8b319282cc5a717c5fb7c615d0edbc806e606f778eb2a567833",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-5be84b60efb4e54ddd542ed100f82608",
+            "line_range": [
+              4286,
+              4290
+            ],
+            "rank": 1,
+            "report_year": 2020,
+            "score": 0.73562872,
+            "section_path": [
+              "53、 股本"
+            ],
+            "semantic_tags": [
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          },
+          {
+            "company_name": "再升科技",
+            "content_preview": "公经天职国际会计师事务所（特殊普通合伙）审计，2020 年度公司实现合并净利润394,547,220.12 元（经审计），2020 年度母公司实现净利润 298,327,098.61 元，提取 10%法定盈余公积 29,832,709.86 元后，加上以前年度剩余未分配利润 187,684,487.33 元，截至 2020 年 12 月 31日，公司实际可供股东分配的净利润 456,178,876.08 元。  \n公司拟以实施权益分派股权登记日登记的总股本为基数，每 10 股派发现金红利 1.5 元（含税），截至 2021 年 3 月 31 日，公司总股本为 719,478,244 股，公司通过回购专用账户回购的股份数 1,124,353 股，不参与利润分配。扣除回购专用账户的股份数 1,124,353 股，以此计算合计拟分派现金红利 107,753,083.65 元。  \n在实施权益分派的股权登记日前，公司总股本发生变动的，公司拟维持每股分配金额不变，相应调整分配总额。剩余未分配利润结转以后年度分配。本利润分配预案尚待公司 2020 年年度股东大会审议。",
+            "content_sha256": "a0cdd61380bfb7b95569d54af9849631ef21544cf52372f15047f07efa8f9351",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-d9e55a16e0d96171652aa5849923c30a",
+            "line_range": [
+              1108,
+              1112
+            ],
+            "rank": 2,
+            "report_year": 2020,
+            "score": 0.7316339,
+            "section_path": [
+              "（2）公司2020年年度利润分配预案"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          },
+          {
+            "company_name": "再升科技",
+            "content_preview": "√适用 □不适用  \n2020 年，公司实现营业收入 18.84 亿元，实现归属于上市公司股东的净利润 3.60 亿元。截至2020 年 12 月 31 日，公司总资产为 27.42 亿元，归属于上市公司股东的净资产为 18.21 亿元。  \n2021 年公司将持续以国家“青山绿水”战略为导向，以“干净空气”为企业使命，围绕干净空气的事后、事中、事前，持续推动企业创新发展。随着先进制造、产业升级的发展要求，以及人们对于美好生活的向往，加上近期疫情影响，干净空气行业需求大幅提升，公司亦将继续担起干净空气行业使命，充分利用自身研发、检验、材料等优势，加快各项干净空气产品产能释放，持续降本，以满足市场需求，同时持续深入推进降本增效，不断提升经营效益。",
+            "content_sha256": "c5ebc80432be1622e690bb5430558da7fd6b8026aad6004d999568c6ded8b097",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-5978902a5d6a4cfb552e0205a7784a62",
+            "line_range": [
+              1032,
+              1036
+            ],
+            "rank": 3,
+            "report_year": 2020,
+            "score": 0.73095036,
+            "section_path": [
+              "(三) 经营计划"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "flyada_revenue_fixture": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "connection_mode": "read_only",
+        "duckdb_version": "1.5.4",
+        "facts": [
+          {
+            "canonical_metric": "营业收入",
+            "confidence_scores": [
+              "1.0000"
+            ],
+            "fact_ids": [
+              "fact_7dc500f189d9cc7f098fd9c5"
+            ],
+            "metric_year": 2019,
+            "normalized_unit": "元",
+            "normalized_value": "3704210734.9",
+            "provenance": [
+              {
+                "line_range": [
+                  77,
+                  77
+                ],
+                "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+                "source_table_id": "A000026_飞亚达_2019年年度报告_table_0007_acc5dee31c",
+                "statement": "income_statement"
+              }
+            ]
+          }
+        ],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [
+          "营业收入"
+        ],
+        "source_database": "data/facts/financial_facts.duckdb",
+        "source_view": "selected_financial_facts",
+        "status": "selected_facts_injected",
+        "unit_policy": {
+          "requested_unit": null,
+          "status": "ok"
+        },
+        "year_policy": {
+          "metric_year": 2019,
+          "metric_years": [
+            2019
+          ],
+          "report_year": 2019,
+          "report_year_mentions": [],
+          "status": "ok",
+          "year_resolution": "explicit_metric_year"
+        }
+      },
+      "question": "飞亚达2019年营业收入是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "飞亚达精密科技股份有限公司",
+        "company_query": "飞亚达",
+        "document_id": "A000026_飞亚达_2019年年度报告",
+        "report_year": 2019,
+        "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+        "status": "unique",
+        "stock_code": "000026",
+        "stock_name": "飞亚达",
+        "stock_symbol": "A000026"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 386,
+        "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年度，飞亚达公司的主营业务收入为368,695.59万元。飞亚达公司的销售收入主要源于自产飞亚达表和代理品牌名表。销售模式上除自产飞亚达表存在少量直销及委托代销外，其余自产飞亚达表及代理品牌名表均采用商场门店及电商平台销售模式。与收入确认相关的会计政策见附注三、25。  \n由于营业收入是公司利润表的重要项目，是公司的主要利润来源，收入确认的准确性和完整性对公司利润影响较大，因此我们将收入确认作为关键审计事项。",
+            "content_sha256": "5fc6fd6b74c77ad8a23efb0fa2ce6205dbfd61f6c76ad2f8a5dc04c41d6b840c",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-4701b5bed80e435c5e3967dfc54cc1ab",
+            "line_range": [
+              1180,
+              1182
+            ],
+            "rank": 1,
+            "report_year": 2019,
+            "score": 0.72671455,
+            "section_path": [
+              "第八节可转换公司债券相关情况",
+              "1、事项描述"
+            ],
+            "semantic_tags": [
+              "business",
+              "financial"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+            "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+            "line_range": [
+              153,
+              155
+            ],
+            "rank": 2,
+            "report_year": 2019,
+            "score": 0.69956207,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "一、概述"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2.本年投资活动产生的现金流量净额-166,063,346.68元，较去年同期-146,823,850.26元，增加支出19,239,496.42元，主要由于本年新开门店及柜台更新投入较去年同期增加。  \n3.本年筹资活动产生的现金流量净额-126,755,283.74元，较去年同期-207,831,024.31元，减少支出81,075,740.57元，主要由于本年银行借款增加、收到股权激励款及支付B股回购款。  \n4.本年现金及现金等价物净增加额152,470,505.12元，主要由于本年销售收入增加及当期税务政策带来经营性现金流入增加。报告期内公司经营活动产生的现金净流量与本年度净利润存在重大差异的原因说明  \n不适用",
+            "content_sha256": "91209e7a0f62d681e6cc02c6c9f1a20613fd95366ef712ff7c0f8ff636b73412",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-366dbeccb7623d3c36996ee26659b30c",
+            "line_range": [
+              304,
+              310
+            ],
+            "rank": 3,
+            "report_year": 2019,
+            "score": 0.69720942,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "5、现金流"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "growth_formula_required": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "facts": [],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "reason": "calculation_not_supported_by_phase7_fact_injection",
+        "recognized_metrics": [
+          "营业收入"
+        ],
+        "status": "formula_required"
+      },
+      "question": "飞亚达2019年营业收入增长率是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "飞亚达精密科技股份有限公司",
+        "company_query": "飞亚达",
+        "document_id": "A000026_飞亚达_2019年年度报告",
+        "report_year": 2019,
+        "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+        "status": "unique",
+        "stock_code": "000026",
+        "stock_name": "飞亚达",
+        "stock_symbol": "A000026"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 386,
+        "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+            "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+            "line_range": [
+              153,
+              155
+            ],
+            "rank": 1,
+            "report_year": 2019,
+            "score": 0.74008948,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "一、概述"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "报告期内，公司依托专业制表所积累的精密科技优势和较成熟的产业基础，继续推动精密科技业务发展和智能表业务探索。2019年，精密科技业务继续深耕核心市场，与多个行业龙头企业开启了业务合作，营业收入同比增长29%；公司继续投入资源，加快智能手表业务布局，“Jeep”品牌智能手表联合专业团队共同推进产品迭代开发和技术升级，发布智能全境界F02、F02 ESIM版及强续航A01三款新品，其中ESIM版成为中国联通官方首批认证的智能手表，奠定了在通讯领域的技术优势，公司智能手表业务继续保持较快增长。  \n2019年主要财务项目变动情况如下：",
+            "content_sha256": "428a07fddc1d1b708e3081a343fcfb387fbe74be1c9b268113a608de65f244ee",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+            "line_range": [
+              175,
+              177
+            ],
+            "rank": 2,
+            "report_year": 2019,
+            "score": 0.71676421,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "五、培育新增长点，新业务继续保持了较快的增长"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年度，飞亚达公司的主营业务收入为368,695.59万元。飞亚达公司的销售收入主要源于自产飞亚达表和代理品牌名表。销售模式上除自产飞亚达表存在少量直销及委托代销外，其余自产飞亚达表及代理品牌名表均采用商场门店及电商平台销售模式。与收入确认相关的会计政策见附注三、25。  \n由于营业收入是公司利润表的重要项目，是公司的主要利润来源，收入确认的准确性和完整性对公司利润影响较大，因此我们将收入确认作为关键审计事项。",
+            "content_sha256": "5fc6fd6b74c77ad8a23efb0fa2ce6205dbfd61f6c76ad2f8a5dc04c41d6b840c",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-4701b5bed80e435c5e3967dfc54cc1ab",
+            "line_range": [
+              1180,
+              1182
+            ],
+            "rank": 3,
+            "report_year": 2019,
+            "score": 0.70352799,
+            "section_path": [
+              "第八节可转换公司债券相关情况",
+              "1、事项描述"
+            ],
+            "semantic_tags": [
+              "business",
+              "financial"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "multi_year_fail_closed": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "facts": [],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [
+          "营业收入"
+        ],
+        "status": "metric_year_ambiguous",
+        "year_policy": {
+          "metric_years": [
+            2017,
+            2018
+          ],
+          "report_year": 2019,
+          "report_year_mentions": [
+            2019
+          ],
+          "status": "metric_year_ambiguous"
+        }
+      },
+      "question": "2019年报中2017年和2018年营业收入分别是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "飞亚达精密科技股份有限公司",
+        "company_query": "飞亚达",
+        "document_id": "A000026_飞亚达_2019年年度报告",
+        "report_year": 2019,
+        "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+        "status": "unique",
+        "stock_code": "000026",
+        "stock_name": "飞亚达",
+        "stock_symbol": "A000026"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 386,
+        "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+            "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+            "line_range": [
+              153,
+              155
+            ],
+            "rank": 1,
+            "report_year": 2019,
+            "score": 0.59165186,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "一、概述"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2.本年投资活动产生的现金流量净额-166,063,346.68元，较去年同期-146,823,850.26元，增加支出19,239,496.42元，主要由于本年新开门店及柜台更新投入较去年同期增加。  \n3.本年筹资活动产生的现金流量净额-126,755,283.74元，较去年同期-207,831,024.31元，减少支出81,075,740.57元，主要由于本年银行借款增加、收到股权激励款及支付B股回购款。  \n4.本年现金及现金等价物净增加额152,470,505.12元，主要由于本年销售收入增加及当期税务政策带来经营性现金流入增加。报告期内公司经营活动产生的现金净流量与本年度净利润存在重大差异的原因说明  \n不适用",
+            "content_sha256": "91209e7a0f62d681e6cc02c6c9f1a20613fd95366ef712ff7c0f8ff636b73412",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-366dbeccb7623d3c36996ee26659b30c",
+            "line_range": [
+              304,
+              310
+            ],
+            "rank": 2,
+            "report_year": 2019,
+            "score": 0.58227283,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "5、现金流"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年度，飞亚达公司的主营业务收入为368,695.59万元。飞亚达公司的销售收入主要源于自产飞亚达表和代理品牌名表。销售模式上除自产飞亚达表存在少量直销及委托代销外，其余自产飞亚达表及代理品牌名表均采用商场门店及电商平台销售模式。与收入确认相关的会计政策见附注三、25。  \n由于营业收入是公司利润表的重要项目，是公司的主要利润来源，收入确认的准确性和完整性对公司利润影响较大，因此我们将收入确认作为关键审计事项。",
+            "content_sha256": "5fc6fd6b74c77ad8a23efb0fa2ce6205dbfd61f6c76ad2f8a5dc04c41d6b840c",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-4701b5bed80e435c5e3967dfc54cc1ab",
+            "line_range": [
+              1180,
+              1182
+            ],
+            "rank": 3,
+            "report_year": 2019,
+            "score": 0.5651834,
+            "section_path": [
+              "第八节可转换公司债券相关情况",
+              "1、事项描述"
+            ],
+            "semantic_tags": [
+              "business",
+              "financial"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "report_vs_metric_year": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "connection_mode": "read_only",
+        "duckdb_version": "1.5.4",
+        "facts": [
+          {
+            "canonical_metric": "营业收入",
+            "confidence_scores": [
+              "1.0000"
+            ],
+            "fact_ids": [
+              "fact_480b0a784fe65e2d81b94871"
+            ],
+            "metric_year": 2018,
+            "normalized_unit": "元",
+            "normalized_value": "3400450599.9",
+            "provenance": [
+              {
+                "line_range": [
+                  77,
+                  77
+                ],
+                "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+                "source_table_id": "A000026_飞亚达_2019年年度报告_table_0007_acc5dee31c",
+                "statement": "income_statement"
+              }
+            ]
+          }
+        ],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [
+          "营业收入"
+        ],
+        "source_database": "data/facts/financial_facts.duckdb",
+        "source_view": "selected_financial_facts",
+        "status": "selected_facts_injected",
+        "unit_policy": {
+          "requested_unit": null,
+          "status": "ok"
+        },
+        "year_policy": {
+          "metric_year": 2018,
+          "metric_years": [
+            2018
+          ],
+          "report_year": 2019,
+          "report_year_mentions": [
+            2019
+          ],
+          "status": "ok",
+          "year_resolution": "explicit_metric_year"
+        }
+      },
+      "question": "2019年报披露的2018年营业收入是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "飞亚达精密科技股份有限公司",
+        "company_query": "飞亚达",
+        "document_id": "A000026_飞亚达_2019年年度报告",
+        "report_year": 2019,
+        "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+        "status": "unique",
+        "stock_code": "000026",
+        "stock_name": "飞亚达",
+        "stock_symbol": "A000026"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 386,
+        "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2.本年投资活动产生的现金流量净额-166,063,346.68元，较去年同期-146,823,850.26元，增加支出19,239,496.42元，主要由于本年新开门店及柜台更新投入较去年同期增加。  \n3.本年筹资活动产生的现金流量净额-126,755,283.74元，较去年同期-207,831,024.31元，减少支出81,075,740.57元，主要由于本年银行借款增加、收到股权激励款及支付B股回购款。  \n4.本年现金及现金等价物净增加额152,470,505.12元，主要由于本年销售收入增加及当期税务政策带来经营性现金流入增加。报告期内公司经营活动产生的现金净流量与本年度净利润存在重大差异的原因说明  \n不适用",
+            "content_sha256": "91209e7a0f62d681e6cc02c6c9f1a20613fd95366ef712ff7c0f8ff636b73412",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-366dbeccb7623d3c36996ee26659b30c",
+            "line_range": [
+              304,
+              310
+            ],
+            "rank": 1,
+            "report_year": 2019,
+            "score": 0.60172111,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "5、现金流"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+            "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+            "line_range": [
+              153,
+              155
+            ],
+            "rank": 2,
+            "report_year": 2019,
+            "score": 0.60148764,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "一、概述"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年度，飞亚达公司的主营业务收入为368,695.59万元。飞亚达公司的销售收入主要源于自产飞亚达表和代理品牌名表。销售模式上除自产飞亚达表存在少量直销及委托代销外，其余自产飞亚达表及代理品牌名表均采用商场门店及电商平台销售模式。与收入确认相关的会计政策见附注三、25。  \n由于营业收入是公司利润表的重要项目，是公司的主要利润来源，收入确认的准确性和完整性对公司利润影响较大，因此我们将收入确认作为关键审计事项。",
+            "content_sha256": "5fc6fd6b74c77ad8a23efb0fa2ce6205dbfd61f6c76ad2f8a5dc04c41d6b840c",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-4701b5bed80e435c5e3967dfc54cc1ab",
+            "line_range": [
+              1180,
+              1182
+            ],
+            "rank": 3,
+            "report_year": 2019,
+            "score": 0.59818178,
+            "section_path": [
+              "第八节可转换公司债券相关情况",
+              "1、事项描述"
+            ],
+            "semantic_tags": [
+              "business",
+              "financial"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "two_profit_metrics": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "connection_mode": "read_only",
+        "duckdb_version": "1.5.4",
+        "facts": [
+          {
+            "canonical_metric": "归属于上市公司股东的净利润",
+            "confidence_scores": [
+              "1.0000"
+            ],
+            "fact_ids": [
+              "fact_664585115baf977c9ee5ab16"
+            ],
+            "metric_year": 2020,
+            "normalized_unit": "元",
+            "normalized_value": "359677001.99",
+            "provenance": [
+              {
+                "line_range": [
+                  102,
+                  102
+                ],
+                "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+                "source_table_id": "A603601_再升科技_2020年年度报告_table_0008_c7186fdc95",
+                "statement": "income_statement"
+              }
+            ]
+          },
+          {
+            "canonical_metric": "扣除非经常性损益后的净利润",
+            "confidence_scores": [
+              "1.0000"
+            ],
+            "fact_ids": [
+              "fact_1911df77fbd1b0e54dee9d77"
+            ],
+            "metric_year": 2020,
+            "normalized_unit": "元",
+            "normalized_value": "339549989.1",
+            "provenance": [
+              {
+                "line_range": [
+                  102,
+                  102
+                ],
+                "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+                "source_table_id": "A603601_再升科技_2020年年度报告_table_0008_c7186fdc95",
+                "statement": "income_statement"
+              }
+            ]
+          }
+        ],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [
+          "归属于上市公司股东的净利润",
+          "扣除非经常性损益后的净利润"
+        ],
+        "source_database": "data/facts/financial_facts.duckdb",
+        "source_view": "selected_financial_facts",
+        "status": "selected_facts_injected",
+        "unit_policy": {
+          "requested_unit": null,
+          "status": "ok"
+        },
+        "year_policy": {
+          "metric_year": 2020,
+          "metric_years": [
+            2020
+          ],
+          "report_year": 2020,
+          "report_year_mentions": [],
+          "status": "ok",
+          "year_resolution": "default_report_year"
+        }
+      },
+      "question": "归母净利润和扣非净利润分别是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "重庆再升科技股份有限公司",
+        "company_query": "再升科技",
+        "document_id": "A603601_再升科技_2020年年度报告",
+        "report_year": 2020,
+        "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+        "status": "unique",
+        "stock_code": "603601",
+        "stock_name": "再升科技",
+        "stock_symbol": "A603601"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 455,
+        "candidate_document_id": "A603601_再升科技_2020年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "再升科技",
+            "content_preview": "本期发生同一控制下企业合并的，被合并方在合并前实现的净利润为：0 元,上期被合并方实现的净利润为：0 元。\n法定代表人：郭茂主管会计工作负责人：杨金明会计机构负责人：文逸",
+            "content_sha256": "f882740f9d6fcc7c1123570dfd6b0cffe138061517c86bdb20210e8e0169ae06",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-0a8f074fe32162b16d5e0025c29aabab",
+            "line_range": [
+              2083,
+              2084
+            ],
+            "rank": 1,
+            "report_year": 2020,
+            "score": 0.60027725,
+            "section_path": [
+              "合并资产负债表"
+            ],
+            "semantic_tags": [
+              "financial"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          },
+          {
+            "company_name": "再升科技",
+            "content_preview": "公经天职国际会计师事务所（特殊普通合伙）审计，2020 年度公司实现合并净利润394,547,220.12 元（经审计），2020 年度母公司实现净利润 298,327,098.61 元，提取 10%法定盈余公积 29,832,709.86 元后，加上以前年度剩余未分配利润 187,684,487.33 元，截至 2020 年 12 月 31日，公司实际可供股东分配的净利润 456,178,876.08 元。  \n公司拟以实施权益分派股权登记日登记的总股本为基数，每 10 股派发现金红利 1.5 元（含税），截至 2021 年 3 月 31 日，公司总股本为 719,478,244 股，公司通过回购专用账户回购的股份数 1,124,353 股，不参与利润分配。扣除回购专用账户的股份数 1,124,353 股，以此计算合计拟分派现金红利 107,753,083.65 元。  \n在实施权益分派的股权登记日前，公司总股本发生变动的，公司拟维持每股分配金额不变，相应调整分配总额。剩余未分配利润结转以后年度分配。本利润分配预案尚待公司 2020 年年度股东大会审议。",
+            "content_sha256": "a0cdd61380bfb7b95569d54af9849631ef21544cf52372f15047f07efa8f9351",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-d9e55a16e0d96171652aa5849923c30a",
+            "line_range": [
+              1108,
+              1112
+            ],
+            "rank": 2,
+            "report_year": 2020,
+            "score": 0.59381956,
+            "section_path": [
+              "（2）公司2020年年度利润分配预案"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          },
+          {
+            "company_name": "再升科技",
+            "content_preview": "经天职国际会计师事务所（特殊普通合伙）审计，2020 年度公司实现合并净利润394,547,220.12 元（经审计），2020 年度母公司实现净利润 298,327,098.61 元，提取 10%法定盈余公积 29,832,709.86 元后，加上以前年度剩余未分配利润 187,684,487.33 元，截至 2020 年12 月 31 日，公司实际可供股东分配的净利润 456,178,876.08 元。  \n公司 2020 年年度利润分配预案：  \n公司拟以实施权益分派股权登记日登记的总股本为基数，每 10 股派发现金红利 1.5 元（含税），截至 2021年3 月 31 日，公司总股本为 719,478,244 股，公司通过回购专用账户回购的股份数 1,124,353 股，不参与利润分配。扣除回购专用账户的股份数 1,124,353 股，以此计算合计拟分派现金红利 107,753,083.65 元。在实施权益分派的股权登记日前，公司总股本发生变动的，公司拟维持每股分配金额不变，相应调整分配总额。剩余未分配利润结转以后年度分配。  \n以上利润分配预案尚需公司股东大会审议批准。",
+            "content_sha256": "3197c3026d4b41a602bfe02432151cafeedadfd7acff48c5c9fcc926050d85ca",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-4bf34a63245ab234808f7b5698bdd9a8",
+            "line_range": [
+              17,
+              23
+            ],
+            "rank": 3,
+            "report_year": 2020,
+            "score": 0.58252019,
+            "section_path": [
+              "五、 经董事会审议的报告期利润分配预案或公积金转增股本预案"
+            ],
+            "semantic_tags": [
+              "financial",
+              "governance",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "unit_ambiguous_share_capital": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "connection_mode": "read_only",
+        "duckdb_version": "1.5.4",
+        "facts": [],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [
+          "股本"
+        ],
+        "source_database": "data/facts/financial_facts.duckdb",
+        "source_view": "selected_financial_facts",
+        "status": "unit_ambiguous",
+        "unit_policy": {
+          "ambiguous_metric": "股本",
+          "available_units": [
+            "元",
+            "股"
+          ],
+          "metric_year": 2020,
+          "status": "unit_ambiguous"
+        },
+        "year_policy": {
+          "metric_year": 2020,
+          "metric_years": [
+            2020
+          ],
+          "report_year": 2020,
+          "report_year_mentions": [],
+          "status": "ok",
+          "year_resolution": "explicit_metric_year"
+        }
+      },
+      "question": "再升科技2020年股本是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "重庆再升科技股份有限公司",
+        "company_query": "再升科技",
+        "document_id": "A603601_再升科技_2020年年度报告",
+        "report_year": 2020,
+        "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+        "status": "unique",
+        "stock_code": "603601",
+        "stock_name": "再升科技",
+        "stock_symbol": "A603601"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 455,
+        "candidate_document_id": "A603601_再升科技_2020年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "再升科技",
+            "content_preview": "√适用 □不适用  \n2020 年，公司实现营业收入 18.84 亿元，实现归属于上市公司股东的净利润 3.60 亿元。截至2020 年 12 月 31 日，公司总资产为 27.42 亿元，归属于上市公司股东的净资产为 18.21 亿元。  \n2021 年公司将持续以国家“青山绿水”战略为导向，以“干净空气”为企业使命，围绕干净空气的事后、事中、事前，持续推动企业创新发展。随着先进制造、产业升级的发展要求，以及人们对于美好生活的向往，加上近期疫情影响，干净空气行业需求大幅提升，公司亦将继续担起干净空气行业使命，充分利用自身研发、检验、材料等优势，加快各项干净空气产品产能释放，持续降本，以满足市场需求，同时持续深入推进降本增效，不断提升经营效益。",
+            "content_sha256": "c5ebc80432be1622e690bb5430558da7fd6b8026aad6004d999568c6ded8b097",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-5978902a5d6a4cfb552e0205a7784a62",
+            "line_range": [
+              1032,
+              1036
+            ],
+            "rank": 1,
+            "report_year": 2020,
+            "score": 0.75788438,
+            "section_path": [
+              "(三) 经营计划"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          },
+          {
+            "company_name": "再升科技",
+            "content_preview": "公经天职国际会计师事务所（特殊普通合伙）审计，2020 年度公司实现合并净利润394,547,220.12 元（经审计），2020 年度母公司实现净利润 298,327,098.61 元，提取 10%法定盈余公积 29,832,709.86 元后，加上以前年度剩余未分配利润 187,684,487.33 元，截至 2020 年 12 月 31日，公司实际可供股东分配的净利润 456,178,876.08 元。  \n公司拟以实施权益分派股权登记日登记的总股本为基数，每 10 股派发现金红利 1.5 元（含税），截至 2021 年 3 月 31 日，公司总股本为 719,478,244 股，公司通过回购专用账户回购的股份数 1,124,353 股，不参与利润分配。扣除回购专用账户的股份数 1,124,353 股，以此计算合计拟分派现金红利 107,753,083.65 元。  \n在实施权益分派的股权登记日前，公司总股本发生变动的，公司拟维持每股分配金额不变，相应调整分配总额。剩余未分配利润结转以后年度分配。本利润分配预案尚待公司 2020 年年度股东大会审议。",
+            "content_sha256": "a0cdd61380bfb7b95569d54af9849631ef21544cf52372f15047f07efa8f9351",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-d9e55a16e0d96171652aa5849923c30a",
+            "line_range": [
+              1108,
+              1112
+            ],
+            "rank": 2,
+            "report_year": 2020,
+            "score": 0.75472939,
+            "section_path": [
+              "（2）公司2020年年度利润分配预案"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          },
+          {
+            "company_name": "再升科技",
+            "content_preview": "经天职国际会计师事务所（特殊普通合伙）审计，2020 年度公司实现合并净利润394,547,220.12 元（经审计），2020 年度母公司实现净利润 298,327,098.61 元，提取 10%法定盈余公积 29,832,709.86 元后，加上以前年度剩余未分配利润 187,684,487.33 元，截至 2020 年12 月 31 日，公司实际可供股东分配的净利润 456,178,876.08 元。  \n公司 2020 年年度利润分配预案：  \n公司拟以实施权益分派股权登记日登记的总股本为基数，每 10 股派发现金红利 1.5 元（含税），截至 2021年3 月 31 日，公司总股本为 719,478,244 股，公司通过回购专用账户回购的股份数 1,124,353 股，不参与利润分配。扣除回购专用账户的股份数 1,124,353 股，以此计算合计拟分派现金红利 107,753,083.65 元。在实施权益分派的股权登记日前，公司总股本发生变动的，公司拟维持每股分配金额不变，相应调整分配总额。剩余未分配利润结转以后年度分配。  \n以上利润分配预案尚需公司股东大会审议批准。",
+            "content_sha256": "3197c3026d4b41a602bfe02432151cafeedadfd7acff48c5c9fcc926050d85ca",
+            "document_id": "A603601_再升科技_2020年年度报告",
+            "evidence_chunk_id": "chunk-4bf34a63245ab234808f7b5698bdd9a8",
+            "line_range": [
+              17,
+              23
+            ],
+            "rank": 3,
+            "report_year": 2020,
+            "score": 0.74550664,
+            "section_path": [
+              "五、 经董事会审议的报告期利润分配预案或公积金转增股本预案"
+            ],
+            "semantic_tags": [
+              "financial",
+              "governance",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A603601_2020_A603601_再升科技_再升科技2020年年度报告.md",
+            "stock_code": "603601"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    },
+    "unrecognized_numeric": {
+      "fact_injection": {
+        "allow_text_numeric_answer": false,
+        "facts": [],
+        "numeric_source_policy": "phase6_selected_facts_only",
+        "recognized_metrics": [],
+        "status": "metric_not_recognized"
+      },
+      "question": "飞亚达2019年的广告费用是多少？",
+      "resolver": {
+        "candidate_count": 1,
+        "company_full": "飞亚达精密科技股份有限公司",
+        "company_query": "飞亚达",
+        "document_id": "A000026_飞亚达_2019年年度报告",
+        "report_year": 2019,
+        "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+        "status": "unique",
+        "stock_code": "000026",
+        "stock_name": "飞亚达",
+        "stock_symbol": "A000026"
+      },
+      "retrieval": {
+        "candidate_chunk_count": 386,
+        "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+        "candidate_prefilter": "company_year_resolver_document_allow_list",
+        "chunks": [
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2.本年投资活动产生的现金流量净额-166,063,346.68元，较去年同期-146,823,850.26元，增加支出19,239,496.42元，主要由于本年新开门店及柜台更新投入较去年同期增加。  \n3.本年筹资活动产生的现金流量净额-126,755,283.74元，较去年同期-207,831,024.31元，减少支出81,075,740.57元，主要由于本年银行借款增加、收到股权激励款及支付B股回购款。  \n4.本年现金及现金等价物净增加额152,470,505.12元，主要由于本年销售收入增加及当期税务政策带来经营性现金流入增加。报告期内公司经营活动产生的现金净流量与本年度净利润存在重大差异的原因说明  \n不适用",
+            "content_sha256": "91209e7a0f62d681e6cc02c6c9f1a20613fd95366ef712ff7c0f8ff636b73412",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-366dbeccb7623d3c36996ee26659b30c",
+            "line_range": [
+              304,
+              310
+            ],
+            "rank": 1,
+            "report_year": 2019,
+            "score": 0.62153494,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "5、现金流"
+            ],
+            "semantic_tags": [
+              "financial",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年度，飞亚达公司的主营业务收入为368,695.59万元。飞亚达公司的销售收入主要源于自产飞亚达表和代理品牌名表。销售模式上除自产飞亚达表存在少量直销及委托代销外，其余自产飞亚达表及代理品牌名表均采用商场门店及电商平台销售模式。与收入确认相关的会计政策见附注三、25。  \n由于营业收入是公司利润表的重要项目，是公司的主要利润来源，收入确认的准确性和完整性对公司利润影响较大，因此我们将收入确认作为关键审计事项。",
+            "content_sha256": "5fc6fd6b74c77ad8a23efb0fa2ce6205dbfd61f6c76ad2f8a5dc04c41d6b840c",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-4701b5bed80e435c5e3967dfc54cc1ab",
+            "line_range": [
+              1180,
+              1182
+            ],
+            "rank": 2,
+            "report_year": 2019,
+            "score": 0.59686941,
+            "section_path": [
+              "第八节可转换公司债券相关情况",
+              "1、事项描述"
+            ],
+            "semantic_tags": [
+              "business",
+              "financial"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          },
+          {
+            "company_name": "飞亚达",
+            "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+            "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+            "document_id": "A000026_飞亚达_2019年年度报告",
+            "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+            "line_range": [
+              153,
+              155
+            ],
+            "rank": 3,
+            "report_year": 2019,
+            "score": 0.5917502,
+            "section_path": [
+              "飞亚达精密科技股份有限公司",
+              "一、概述"
+            ],
+            "semantic_tags": [
+              "business",
+              "rd",
+              "shareholder"
+            ],
+            "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+            "stock_code": "000026"
+          }
+        ],
+        "prefilter_applied_before_scoring": true,
+        "retrieval_method": "a2rag_dpr_bge_m3",
+        "top_k": 3
+      },
+      "retriever_version": "phase7-type3-evidence-retriever-v2",
+      "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+      "status": "ok"
+    }
+  },
+  "checks": {
+    "growth_is_formula_required_without_level_fact": true,
+    "multiple_metric_years_fail_closed": true,
+    "report_year_2019_metric_year_2018": true,
+    "share_capital_explicit_shares_selects_only_shares": true,
+    "share_capital_without_unit_fails_ambiguous": true,
+    "two_profit_metrics_recognized_and_injected": true,
+    "unrecognized_numeric_fails_closed": true
+  },
+  "schema_version": "finglmqa.phase7.numeric_boundary_cases.v1"
+}

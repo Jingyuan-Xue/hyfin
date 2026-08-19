@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.fact_lookup_request.v1",
+  "title": "FactLookupRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "requirement_id", "document_id", "stock_code", "report_year", "metric_year", "canonical_metric", "normalized_unit"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.fact_lookup_request.v1"},
+    "requirement_id": {"type": "string", "minLength": 1},
+    "document_id": {"type": "string", "minLength": 1},
+    "stock_code": {"type": "string", "minLength": 1},
+    "report_year": {"type": "integer"},
+    "metric_year": {"type": "integer"},
+    "canonical_metric": {"type": "string", "minLength": 1},
+    "normalized_unit": {"type": "string", "minLength": 1}
+  }
+}

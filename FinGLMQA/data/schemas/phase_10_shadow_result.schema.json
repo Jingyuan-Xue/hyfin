@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase10.shadow_result.v1",
+  "title": "Phase10ShadowResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "eligibility", "generator_outcome", "subplan_count", "accepted_claim_count", "unsafe_accepted_count", "accepted_claim_projection", "gate_failure_codes", "result_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase10.shadow_result.v1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "eligibility": {"enum": ["answerable", "unanswerable_absent_evidence", "unanswerable_excluded_table_evidence"]},
+    "generator_outcome": {"enum": ["accepted", "generator_refused", "generator_invalid_output", "generator_rejected_by_gate"]},
+    "subplan_count": {"type": "integer", "minimum": 0},
+    "accepted_claim_count": {"type": "integer", "minimum": 0},
+    "unsafe_accepted_count": {"type": "integer", "minimum": 0},
+    "accepted_claim_projection": {"type": "array", "items": {"type": "object"}},
+    "gate_failure_codes": {"type": "array", "items": {"type": "string"}},
+    "result_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

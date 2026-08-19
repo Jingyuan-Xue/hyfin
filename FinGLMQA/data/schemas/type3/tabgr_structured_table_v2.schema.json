@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.tabgr.structured_table.v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "builder_version", "corpus_id", "document_id", "table_id",
+    "table_index", "source_markdown", "table_line_range", "raw_markdown_sha1",
+    "content_hash", "source_binding", "table_sha256", "caption", "nearby_text", "heading_path",
+    "semantic_tags", "matrix", "origin_cells", "span_validation", "header_bands",
+    "flattened_column_headers", "legacy_flattened_headers", "data_start_column", "header_resolution",
+    "unit", "accounting_scope", "ppr_graph", "row_evidence_ids", "parse_status",
+    "failure_reason"
+  ],
+  "properties": {
+    "schema_version": {"const": "finglmqa.type3.tabgr.structured_table.v2"},
+    "builder_version": {"const": "type3-tabgr-table-evidence-v2"},
+    "corpus_id": {"type": "string", "minLength": 1},
+    "document_id": {"type": "string", "minLength": 1},
+    "table_id": {"type": "string", "minLength": 1},
+    "table_index": {"type": "integer", "minimum": 1},
+    "source_markdown": {"type": "string", "minLength": 1},
+    "table_line_range": {"$ref": "#/$defs/lineRange"},
+    "raw_markdown_sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "content_hash": {"type": "string"},
+    "source_binding": {"type": "object", "required": ["status", "source_sha256", "raw_markdown_sha1", "raw_markdown_sha256", "char_range", "line_range"]},
+    "table_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "caption": {"type": "string"},
+    "nearby_text": {"type": "string"},
+    "heading_path": {"type": "array", "items": {"type": "string"}},
+    "semantic_tags": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "matrix": {"type": "array", "minItems": 1, "items": {"type": "array", "items": {"type": "string"}}},
+    "origin_cells": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/originCell"}},
+    "span_validation": {"type": "object", "required": ["status", "parser_overwrite_count", "matrix_sha256"]},
+    "header_bands": {"type": "object", "required": ["initial_header_rows", "embedded_header_resets", "header_strategy"]},
+    "flattened_column_headers": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "legacy_flattened_headers": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "data_start_column": {"type": "integer", "minimum": 0},
+    "header_resolution": {"type": "object", "required": ["raw_resolved_columns", "fallback_columns", "legacy_raw_resolved_columns", "total_columns"]},
+    "unit": {"$ref": "#/$defs/state"},
+    "accounting_scope": {"$ref": "#/$defs/state"},
+    "ppr_graph": {"type": "object", "required": ["runtime_sha256", "edge_list", "cells"]},
+    "row_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "parse_status": {"const": "ready"},
+    "failure_reason": {"type": "null"}
+  },
+  "$defs": {
+    "lineRange": {"type": "array", "minItems": 2, "maxItems": 2, "prefixItems": [{"type": "integer", "minimum": 1}, {"type": "integer", "minimum": 1}]},
+    "state": {"type": "object", "additionalProperties": false, "required": ["status", "value", "source", "candidates"], "properties": {"status": {"enum": ["resolved", "unknown", "conflict"]}, "value": {"type": ["string", "null"]}, "source": {"type": ["string", "null"]}, "candidates": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}},
+    "originCell": {"type": "object", "additionalProperties": false, "required": ["source_coordinate", "origin_coordinate", "rowspan", "colspan", "tag", "text", "cell_hash"], "properties": {"source_coordinate": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 0}}, "origin_coordinate": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 0}}, "rowspan": {"type": "integer", "minimum": 1}, "colspan": {"type": "integer", "minimum": 1}, "tag": {"type": "string"}, "text": {"type": "string"}, "cell_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}
+  }
+}

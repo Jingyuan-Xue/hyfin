@@ -1,0 +1,1123 @@
+{
+  "adversarial_company_boundary": {
+    "cases": {
+      "ambiguous_synthetic": {
+        "candidate_count": 2,
+        "candidates": [
+          "A000026_飞亚达_2019年年度报告",
+          "A000026_飞亚达_2019年年度报告_synthetic_duplicate"
+        ],
+        "company_query": "A000026",
+        "report_year": 2019,
+        "status": "ambiguous"
+      },
+      "concatenated_company": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "status": "not_attempted_resolver_not_unique"
+        },
+        "question": "主要风险是什么？",
+        "resolver": {
+          "candidate_count": 0,
+          "candidates": [],
+          "company_query": "飞亚达冠城大通",
+          "report_year": 2019,
+          "status": "missing"
+        },
+        "retrieval": null,
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "resolver_missing"
+      },
+      "missing_company": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "status": "not_attempted_resolver_not_unique"
+        },
+        "question": "该公司的主要风险是什么？",
+        "resolver": {
+          "candidate_count": 0,
+          "candidates": [],
+          "company_query": "不存在的公司",
+          "report_year": 2019,
+          "status": "missing"
+        },
+        "retrieval": null,
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "resolver_missing"
+      },
+      "stock_code_boundary": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "recognized_metrics": [],
+          "status": "not_numeric"
+        },
+        "question": "主要风险是什么？",
+        "resolver": {
+          "candidate_count": 1,
+          "company_full": "冠城大通股份有限公司",
+          "company_query": "600067",
+          "document_id": "A600067_冠城大通_2019年年度报告",
+          "report_year": 2019,
+          "source_markdown": "refs/source_markdown/A600067_2019_A600067_冠城大通_2019年年度报告.md",
+          "status": "unique",
+          "stock_code": "600067",
+          "stock_name": "冠城大通",
+          "stock_symbol": "A600067"
+        },
+        "retrieval": {
+          "candidate_chunk_count": 412,
+          "candidate_document_id": "A600067_冠城大通_2019年年度报告",
+          "candidate_prefilter": "company_year_resolver_document_allow_list",
+          "chunks": [
+            {
+              "company_name": "冠城大通",
+              "content_preview": "本公司的主要金融工具包括货币资金、应收款项、交易性金融资产、其他权益工具投资、长短期借款、应付款项、应付债券等，各项金融工具的详细情况说明见本附注五相关项目。  \n本公司在经营过程中面临的主要金融风险是：信用风险、利率风险和流动性风险。本公司从事风险管理的目标是在风险和收益之间取得平衡，将风险对本公司经营业绩的负面影响降至最低水平，使股东和其他权益投资者的利益最大化。基于该风险管理目标，本公司风险管理的基本策略是确认和分析本公司面临的各种风险，建立适当的风险承受底线和进行风险管理，并及时可靠地对各种风险进行监督，将风险控制在限定的范围内。",
+              "content_sha256": "d25646d72b4f2b354551d1e5be66169d7a8a43414346440f7e14e4fbbcef0895",
+              "document_id": "A600067_冠城大通_2019年年度报告",
+              "evidence_chunk_id": "chunk-7630a48c253637f247d8f5ac1c177bb4",
+              "line_range": [
+                4620,
+                4622
+              ],
+              "rank": 1,
+              "report_year": 2019,
+              "score": 0.5987733,
+              "section_path": [
+                "(八) 公司控制的结构化主体情况",
+                "√适用 □不适用"
+              ],
+              "semantic_tags": [
+                "risk",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A600067_2019_A600067_冠城大通_2019年年度报告.md",
+              "stock_code": "600067"
+            },
+            {
+              "company_name": "冠城大通",
+              "content_preview": "信用风险是指金融工具的一方不履行义务，造成另一方发生财务损失的风险。本公司的信用风险主要来自银行存款、委托理财产品和应收款项。  \n对于银行存款和委托理财产品，本公司将其存放于信用评级较高的金融机构，故其信用风险较低。  \n对于应收款项，本公司主要面临赊销导致的客户信用风险。在签订新合同之前，本公司会对新客户的信用风险进行评估，对新客户的销售收款政策分类为现销和赊销，并对每一赊销客户设置了赊销限额和赊销期。本公司通过对已有客户信用评级的定期监控、定期评估以及应收账款账龄分析的月度审核来确保本公司的整体信用风险在可控的范围内，以确保本公司不会面临重大坏账风险。",
+              "content_sha256": "647cca3ba8af400bcce570028b074521afc0b9a08b076ffa040b02afb14bdcc3",
+              "document_id": "A600067_冠城大通_2019年年度报告",
+              "evidence_chunk_id": "chunk-8a43eeed982e35b572755c68f7421c79",
+              "line_range": [
+                4626,
+                4630
+              ],
+              "rank": 2,
+              "report_year": 2019,
+              "score": 0.58532703,
+              "section_path": [
+                "(八) 公司控制的结构化主体情况",
+                "信用风险"
+              ],
+              "semantic_tags": [
+                "business",
+                "risk"
+              ],
+              "source_markdown": "refs/source_markdown/A600067_2019_A600067_冠城大通_2019年年度报告.md",
+              "stock_code": "600067"
+            },
+            {
+              "company_name": "冠城大通",
+              "content_preview": "利率风险，是指金融工具的公允价值或未来现金流量因市场利率变动而发生波动的风险。本公司面临的利率风险主要来源于金融机构借款，其受到中国人民银行基准贷款利率变动的影响。本公司金融机构借款由固定利率借款和浮动利率借款组成，对于浮动利率借款，在借款协议中均有利率定期调整机制，同时，对于固定利率借款和浮动利率借款，公司尽可能在借款合同中设定提前还款的约定条款。通过定期调整利率、提前还贷续贷以及提前还贷等多种方式，尽可能化解利率变动所带来的风险。",
+              "content_sha256": "c1624d76ba278f9de687ed28e36a382fc642423895fc128a3134c8110f3a1d2b",
+              "document_id": "A600067_冠城大通_2019年年度报告",
+              "evidence_chunk_id": "chunk-9ee2273da7b256db235939449c503fbe",
+              "line_range": [
+                4634,
+                4634
+              ],
+              "rank": 3,
+              "report_year": 2019,
+              "score": 0.56622386,
+              "section_path": [
+                "(八) 公司控制的结构化主体情况",
+                "利率风险"
+              ],
+              "semantic_tags": [
+                "risk",
+                "financial"
+              ],
+              "source_markdown": "refs/source_markdown/A600067_2019_A600067_冠城大通_2019年年度报告.md",
+              "stock_code": "600067"
+            }
+          ],
+          "prefilter_applied_before_scoring": true,
+          "retrieval_method": "a2rag_dpr_bge_m3",
+          "top_k": 3
+        },
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "ok"
+      },
+      "wrong_year": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "status": "not_attempted_resolver_not_unique"
+        },
+        "question": "主要风险是什么？",
+        "resolver": {
+          "candidate_count": 0,
+          "candidates": [],
+          "company_query": "飞亚达",
+          "report_year": 2020,
+          "status": "missing"
+        },
+        "retrieval": null,
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "resolver_missing"
+      }
+    },
+    "checks": {
+      "concatenated_alias_has_no_retrieval": true,
+      "missing_company_has_no_retrieval": true,
+      "stock_code_resolves_only_expected_document": true,
+      "synthetic_duplicate_fails_ambiguous": true,
+      "wrong_year_has_no_retrieval": true
+    },
+    "proof_scope": "Public resolver/query/worker boundary only. The retrieval-only adapter intentionally accepts a previously resolved document_id and is not itself a company-name resolver."
+  },
+  "all_checks_passed": true,
+  "commands": {
+    "build": "refs/a2rag_runtime/.venv/bin/python scripts/build_a2rag_text_index.py",
+    "validate": "FINGLMQA_EMBEDDING_CACHE=<local-cache> refs/a2rag_runtime/.venv/bin/python scripts/validate_phase_07.py --device auto",
+    "worker": "refs/a2rag_runtime/.venv/bin/python scripts/query_type3_evidence.py --serve --device auto"
+  },
+  "fresh_process_repeatability": {
+    "machine_readable_report": "runs/phase_08/reports/reports/fresh_worker_repeatability.json",
+    "rankings": [
+      [
+        [
+          "chunk-96b912fc5b6c4cfe15c8c777997b677f",
+          0.71185189
+        ],
+        [
+          "chunk-124ac6c44e75a8f11afa7a53452b6712",
+          0.69013178
+        ],
+        [
+          "chunk-21a867ba365e94915f9ca6987e348f0e",
+          0.66293687
+        ],
+        [
+          "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+          0.66162044
+        ],
+        [
+          "chunk-2eb50871ac141e32172ec188fc6da888",
+          0.65844542
+        ]
+      ],
+      [
+        [
+          "chunk-96b912fc5b6c4cfe15c8c777997b677f",
+          0.71185189
+        ],
+        [
+          "chunk-124ac6c44e75a8f11afa7a53452b6712",
+          0.69013178
+        ],
+        [
+          "chunk-21a867ba365e94915f9ca6987e348f0e",
+          0.66293687
+        ],
+        [
+          "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+          0.66162044
+        ],
+        [
+          "chunk-2eb50871ac141e32172ec188fc6da888",
+          0.65844542
+        ]
+      ]
+    ],
+    "stable_top_ids_and_scores": true
+  },
+  "generated_at_utc": "2026-07-13T14:03:09.528798+00:00",
+  "independent_markdown_trace_audit": {
+    "all_passed": true,
+    "checked": 61478,
+    "failure_samples": [],
+    "passed": 61478,
+    "proof_scope": "All emitted evidence rows; independently reparses Markdown headings and section ends, checks stored character slice under NFKC+collapsed whitespace, and rejects repeated compatible content.",
+    "reason_counts": {},
+    "rows_with_failures": 0
+  },
+  "index_counts": {
+    "alignment_methods": {
+      "section_constrained_unique_exact": 61478
+    },
+    "evidence_chunks": 61478,
+    "evidence_documents": 170,
+    "excluded_by_reason": {
+      "alignment_ambiguous": 3047,
+      "alignment_section_missing": 143,
+      "contains_table_html": 62374,
+      "source_alignment_failed": 669
+    },
+    "excluded_chunks": 66233,
+    "semantic_tag_counts": {
+      "business": 10923,
+      "financial": 19423,
+      "governance": 5237,
+      "management_discussion": 898,
+      "rd": 7190,
+      "risk": 5844,
+      "shareholder": 42372,
+      "staff": 5738
+    },
+    "source_dense_chunks": 127711,
+    "source_dense_parquet_rows": 127711,
+    "source_documents": 170,
+    "source_hash_matches": 170,
+    "table_exclusion_classification": {
+      "dividend": 905,
+      "financial_table": 9020,
+      "governance_or_other_non_financial": 4826,
+      "mixed_narrative": 44237,
+      "shareholder": 1668,
+      "staff_or_personnel": 1718
+    },
+    "table_subject_counts": {
+      "dividend": 5096,
+      "financial_table": 27834,
+      "governance_or_other_non_financial": 14353,
+      "shareholder": 8491,
+      "staff_or_personnel": 6600
+    }
+  },
+  "known_alignment_regressions": {
+    "all_passed": true,
+    "checks": {
+      "baichuan_heading_692_content_694": true,
+      "guancheng_checkbox_restored_to_2170": true,
+      "guancheng_cross_section_false_match_rejected": true,
+      "guancheng_equity_restored_without_global_fallback": true
+    }
+  },
+  "numeric_policy": {
+    "checks": {
+      "growth_is_formula_required_without_level_fact": true,
+      "multiple_metric_years_fail_closed": true,
+      "report_year_2019_metric_year_2018": true,
+      "share_capital_explicit_shares_selects_only_shares": true,
+      "share_capital_without_unit_fails_ambiguous": true,
+      "two_profit_metrics_recognized_and_injected": true,
+      "unrecognized_numeric_fails_closed": true
+    },
+    "machine_readable_report": "runs/phase_08/reports/reports/numeric_boundary_cases.json"
+  },
+  "phase6_immutable_baseline": {
+    "after": {
+      "financial_facts_duckdb": {
+        "mtime_ns": 1783937881374854515,
+        "sha256": "b3e8fed65ddc1ccd5954083a4df64f3eab2150294cae08a11424f3bc5744f278",
+        "size_bytes": 46149632
+      },
+      "financial_facts_jsonl": {
+        "mtime_ns": 1783937781436297442,
+        "sha256": "abeb4b3b221aac74705b84c80469c03b23fd8638d67004c75dd7a512c6841405",
+        "size_bytes": 21364828
+      }
+    },
+    "before": {
+      "financial_facts_duckdb": {
+        "mtime_ns": 1783937881374854515,
+        "sha256": "b3e8fed65ddc1ccd5954083a4df64f3eab2150294cae08a11424f3bc5744f278",
+        "size_bytes": 46149632
+      },
+      "financial_facts_jsonl": {
+        "mtime_ns": 1783937781436297442,
+        "sha256": "abeb4b3b221aac74705b84c80469c03b23fd8638d67004c75dd7a512c6841405",
+        "size_bytes": 21364828
+      }
+    },
+    "expected_sha256": {
+      "financial_facts_duckdb": "b3e8fed65ddc1ccd5954083a4df64f3eab2150294cae08a11424f3bc5744f278",
+      "financial_facts_jsonl": "abeb4b3b221aac74705b84c80469c03b23fd8638d67004c75dd7a512c6841405"
+    },
+    "pin_checks": {
+      "financial_facts_duckdb": true,
+      "financial_facts_jsonl": true
+    },
+    "pin_message": "Phase 6 immutable baseline matches the named regression pins.",
+    "unchanged_during_validation": true
+  },
+  "qualitative_retrieval_cases": [
+    {
+      "company_year_isolation_passed": true,
+      "expected_tag": "risk",
+      "expected_tag_hit": true,
+      "id": "risk_flyada_2019",
+      "result": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "recognized_metrics": [],
+          "status": "not_numeric"
+        },
+        "question": "飞亚达2019年主要经营风险和应对措施是什么？",
+        "resolver": {
+          "candidate_count": 1,
+          "company_full": "飞亚达精密科技股份有限公司",
+          "company_query": "飞亚达",
+          "document_id": "A000026_飞亚达_2019年年度报告",
+          "report_year": 2019,
+          "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+          "status": "unique",
+          "stock_code": "000026",
+          "stock_name": "飞亚达",
+          "stock_symbol": "A000026"
+        },
+        "retrieval": {
+          "candidate_chunk_count": 386,
+          "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+          "candidate_prefilter": "company_year_resolver_document_allow_list",
+          "chunks": [
+            {
+              "company_name": "飞亚达",
+              "content_preview": "1、2020年初突然爆发的新型冠状病毒肺炎疫情，对行业带来严重负面影响。面对疫情，公司迅速调整运营策略，坚持价值创造导向，多措并举，推行极限成本费用控制，强化现金流管理。疫情期间，公司推动全员营销，通过微信、直播等方式，主动建立与顾客的直接联动，并加大电商渠道的投入力度，尽量减少市场影响。公司也积极组织疫情防控，主动与供应链、生意合作伙伴沟通，争取各方支持，互相帮扶，共渡难关。公司所属航空工业集团也代表所有成员单位，向湖北捐助5000万元，并派出39名医疗队员，承担社会责任。3月开始，随着店面复工，市场也已逐步回升，预期在二季度经营将恢复到正常水平，但仍存在不确定因素，公司将密切关注和应对。  \n2、随着信息技术的快速发展和互联网经济的崛起，零售业态变化加剧，渠道对消费者的争夺更加激烈。公司将继续加强对消费者购物心理和购物行为的研究，加快推进数字化转型及全渠道建设，积极探索“网络直播”等新模式。  \n3、智能穿戴目前正处于一个快速发展的阶段，随着5G、柔性显示、物联网等科技的突飞猛进和深度应用，未来智能穿戴产品的功能将越来越丰富，应用场景将越来越多样化。公司坚信传统手表之于顾客的重要意义，亦加速推进智能手表业务探索和发展。",
+              "content_sha256": "d639c83413d8e5e8ea361a0c1ec8348a123ccfe00875881925482208526adb76",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-96b912fc5b6c4cfe15c8c777997b677f",
+              "line_range": [
+                430,
+                434
+              ],
+              "rank": 1,
+              "report_year": 2019,
+              "score": 0.71185189,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "五、可能面对的风险"
+              ],
+              "semantic_tags": [
+                "business",
+                "risk",
+                "rd",
+                "financial",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+              "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+              "line_range": [
+                153,
+                155
+              ],
+              "rank": 2,
+              "report_year": 2019,
+              "score": 0.69013178,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "一、概述"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "2020年，公司将继续在产品策划、终端形象、营销方式、流量转化和顾客服务方面下扎扎实实的功夫，打造品牌鲜明的特色，强化“品牌影响力”；继续优化产品的研发、设计、技术、品质、供应链等全流程运作，强化“产品竞争力”；着力推进渠道结构调整及店面运营能力提升，推进购物中心等优质渠道进驻，赋能一线店面运营，强化精细化管理，切实提升“渠道连接力”。",
+              "content_sha256": "b6e96f1f2f0b63227826153d0e7ff6e01c388d54cf1f3a018da5b0998520330d",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-21a867ba365e94915f9ca6987e348f0e",
+              "line_range": [
+                410,
+                410
+              ],
+              "rank": 3,
+              "report_year": 2019,
+              "score": 0.66293687,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "1、继续以“品牌力、产品力、渠道力”为核心，强化竞争优势"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "报告期内，公司依托专业制表所积累的精密科技优势和较成熟的产业基础，继续推动精密科技业务发展和智能表业务探索。2019年，精密科技业务继续深耕核心市场，与多个行业龙头企业开启了业务合作，营业收入同比增长29%；公司继续投入资源，加快智能手表业务布局，“Jeep”品牌智能手表联合专业团队共同推进产品迭代开发和技术升级，发布智能全境界F02、F02 ESIM版及强续航A01三款新品，其中ESIM版成为中国联通官方首批认证的智能手表，奠定了在通讯领域的技术优势，公司智能手表业务继续保持较快增长。  \n2019年主要财务项目变动情况如下：",
+              "content_sha256": "428a07fddc1d1b708e3081a343fcfb387fbe74be1c9b268113a608de65f244ee",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+              "line_range": [
+                175,
+                177
+              ],
+              "rank": 4,
+              "report_year": 2019,
+              "score": 0.66162044,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "五、培育新增长点，新业务继续保持了较快的增长"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "公司董事会、监事会及董事、监事、高级管理人员保证年度报告内容的真实、准确、完整，不存在虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法律责任。  \n公司负责人黄勇峰、主管会计工作负责人陈卓及会计机构负责人(会计主管人员)田辉声明：保证年度报告中财务报告的真实、准确、完整。  \n所有董事均已出席了审议本报告的董事会会议。  \n本年度报告涉及的未来计划、发展战略等前瞻性描述不构成公司对投资者的实质承诺，敬请投资者注意投资风险。  \n公司已在本报告中详细描述了存在的宏观经济风险、经营风险，敬请查阅第四节管理层讨论与分析中关于公司未来发展展望可能面对的风险因素及对策部分的内容。  \n公司经本次董事会审议通过的利润分配预案为：以利润分配方案未来实施时股权登记日的股本总数为基数，向全体股东每 10 股派发现金红利 2 元（含税），送红股 0 股（含税），不以公积金转增股本。",
+              "content_sha256": "05cbc75a2e98bbfa25de1dca6b328096a048ed5bfe9aa59a5a899910aa74751d",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-2eb50871ac141e32172ec188fc6da888",
+              "line_range": [
+                9,
+                19
+              ],
+              "rank": 5,
+              "report_year": 2019,
+              "score": 0.65844542,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "第一节重要提示、目录和释义"
+              ],
+              "semantic_tags": [
+                "risk",
+                "staff",
+                "management_discussion",
+                "financial",
+                "governance",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            }
+          ],
+          "prefilter_applied_before_scoring": true,
+          "retrieval_method": "a2rag_dpr_bge_m3",
+          "top_k": 5
+        },
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "ok"
+      }
+    },
+    {
+      "company_year_isolation_passed": true,
+      "expected_tag": "rd",
+      "expected_tag_hit": true,
+      "id": "rd_gigadevice_2019",
+      "result": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "recognized_metrics": [],
+          "status": "not_numeric"
+        },
+        "question": "兆易创新2019年在研发和技术创新方面有哪些重点进展？",
+        "resolver": {
+          "candidate_count": 1,
+          "company_full": "北京兆易创新科技股份有限公司",
+          "company_query": "兆易创新",
+          "document_id": "A603986_兆易创新_2019年年度报告",
+          "report_year": 2019,
+          "source_markdown": "refs/source_markdown/A603986_2019_A603986_兆易创新_2019年年度报告.md",
+          "status": "unique",
+          "stock_code": "603986",
+          "stock_name": "兆易创新",
+          "stock_symbol": "A603986"
+        },
+        "retrieval": {
+          "candidate_chunk_count": 377,
+          "candidate_document_id": "A603986_兆易创新_2019年年度报告",
+          "candidate_prefilter": "company_year_resolver_document_allow_list",
+          "chunks": [
+            {
+              "company_name": "兆易创新",
+              "content_preview": "2019年，在第一季度产品价格下降及年内中美贸易摩擦、宏观经济增速放缓的情形下，公司全体同仁齐心协力，凭借多年扎实的技术研发积累，深耕市场细分领域，公司经营业绩自第二季度显著回暖，全年呈现低开高走的良好态势。2019 年度公司实现营业收入 320,291.71 万元，比2018 年同期增长 42.62%，归属于上市公司股东的净利润 60,692.21 万元，比 2018 年同期增长49.85%。  \n现将2019年度公司经营情况总结报告如下：",
+              "content_sha256": "a0bea20f1087f34a6f6acd0d0670084036b829218b0fa3dc49f353ab57841982",
+              "document_id": "A603986_兆易创新_2019年年度报告",
+              "evidence_chunk_id": "chunk-443d28f5241565ec2331b05c63ebabbf",
+              "line_range": [
+                262,
+                264
+              ],
+              "rank": 1,
+              "report_year": 2019,
+              "score": 0.75628895,
+              "section_path": [
+                "北京兆易创新科技股份有限公司2019 年年度报告",
+                "一、经营情况讨论与分析"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "management_discussion",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A603986_2019_A603986_兆易创新_2019年年度报告.md",
+              "stock_code": "603986"
+            },
+            {
+              "company_name": "兆易创新",
+              "content_preview": "在NOR Flash 产品方面，公司致力于成为具有全系列 NOR Flash 产品的领导厂商，持续扩大经营规模和市场占有率。2020年公司将实现55nm工艺产品全面量产，并提升产品容量，针对5G基站、AIOT、智慧城市、可穿戴式应用等领域持续推出具有竞争力的多样化产品。公司将加强与上下游产业链协作，协同保证产品品质和产能供应，提高整体运营效率。  \n在NAND Flash 产品上，抓住产业形态的转化机遇，丰富SLC NAND产品类型，拓展市场渠道、提升市场影响力。2020年公司将实现24nm工艺平台产品量产，同时针对SLC NAND 产品，提升产品容量，推出中高容量解决方案，以满足移动终端、智能化产品及中高容量市场需求，在5G 带动的 AIOT 领域持续开辟新增长点。  \n在 MCU 产品方面，公司通用产品系列将向高性能、超低功耗两个方向推进。高性能、高可靠性产品主要面向高级工控领域，实现高主频、高速数字信号处理，高精度控制、器件级、系统及可靠性。低功耗产品主要面向可穿戴及其他电池供电低功耗应用，实现片内低功耗系统设计、器件级功耗优化。并不断加强产品安全功能，为客户提供安全可靠，功能丰富的无线 MCU。同时配合通用 MCU 产品，拓展电源管理和电机驱动控制产品，为消费、工业和新能源技术提供低功耗高性能电源解决方案。针对一些细分市场量足够大的市场，公司也将灵活根据市场需求推出特殊产品",
+              "content_sha256": "1b81e76526a20d38a31906e23226a2db0ad5020f67d63b4b9afda52567443b75",
+              "document_id": "A603986_兆易创新_2019年年度报告",
+              "evidence_chunk_id": "chunk-3abe20d1c9db769988df8d5b5280098b",
+              "line_range": [
+                566,
+                572
+              ],
+              "rank": 2,
+              "report_year": 2019,
+              "score": 0.74547982,
+              "section_path": [
+                "北京兆易创新科技股份有限公司2019 年年度报告",
+                "1、强化技术和产品的核心竞争力"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A603986_2019_A603986_兆易创新_2019年年度报告.md",
+              "stock_code": "603986"
+            },
+            {
+              "company_name": "兆易创新",
+              "content_preview": "加大产品宣传和市场信息收集力度，提升销售服务能力和品牌影响力。依托 5G、物联网、人工智能等新兴领域，不断提高产品在智能手机、消费类电子、以及工控、汽车电子等高端应用领域的渗透率。积极实施市场多元化战略，细化营销管理，优化整个营销网络系统的资金流、物流与信息流，不断提高企业的服务能力、客户满意度和市场美誉度。  \n公司将持续开拓国际市场。扩大在欧美、东南亚等地区的市场影响力，并进一步落实在汽车、工业等领域的战略布局，争取更多的市场份额。公司将通过境内境外市场的拓展，巩固和提升公司市场地位。",
+              "content_sha256": "6e1a8fc5e5c69ed84874c3e3389f3a057026d54ecd26f92bd23181b087294ea6",
+              "document_id": "A603986_兆易创新_2019年年度报告",
+              "evidence_chunk_id": "chunk-5d4ea0fd22bb59fe8dc645980194d38c",
+              "line_range": [
+                576,
+                578
+              ],
+              "rank": 3,
+              "report_year": 2019,
+              "score": 0.74245048,
+              "section_path": [
+                "北京兆易创新科技股份有限公司2019 年年度报告",
+                "2、积极开拓市场"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A603986_2019_A603986_兆易创新_2019年年度报告.md",
+              "stock_code": "603986"
+            },
+            {
+              "company_name": "兆易创新",
+              "content_preview": "公司的现有业务布局分为存储、MCU和传感器三大方向。  \n2019年度，Flash持续开发新产品和技术升级。（1）NOR Flash 产品，累计出货量已经超过100 亿颗；针对物联网、可穿戴、消费类市场，推出业界最小封装 1.5mm x 1.5mm USON8低功耗宽电压产品线；针对有高性能要求的应用领域推出了国内首颗符合 JEDEC 规范的 8 通道 SPI 产品；针对工控、汽车电子等高可靠性及高性能领域推出 256Mb、512Mb 等产品；并依据 AEC-Q100标准认证了 GD25 全系列产品，为汽车前装市场以及需要车规级产品的特定应用提供高性能和高可靠性的闪存解决方案。（2）NAND Flash 产品上，高可靠性的 38nm SLC Nand 制程产品已稳定量产，具备业界领先的性能和可靠性，并持续推进 24nm 制程产品进程，完善中小容量 NANDFlash 产品系列。2019年，得益于公司 Flash产品的技术创新，以及TWS 耳机等驱动的 Nor Flash产品需求增加，根据 CINNO Research 产业研究，公司 NOR Flash 全球市场份额在第二季度实现突破，上升至全球第四，并在第三季度跃居全球第三。  \nMCU 产品，累计出货数量已超过 3 亿颗，客户数量超过 2 万家。报告期内，公司发布基于Arm® Cortex®-M23 内核 MCU 的最新产品，G",
+              "content_sha256": "0d6555827f3a81a5b8268b1ef1fc79ed3ed1d461b41e10480e45b70b625d5ceb",
+              "document_id": "A603986_兆易创新_2019年年度报告",
+              "evidence_chunk_id": "chunk-8bbaddb5f19c8e488f4eb44b91b02074",
+              "line_range": [
+                268,
+                274
+              ],
+              "rank": 4,
+              "report_year": 2019,
+              "score": 0.73773503,
+              "section_path": [
+                "北京兆易创新科技股份有限公司2019 年年度报告",
+                "（一）优化产品线，提升竞争力"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A603986_2019_A603986_兆易创新_2019年年度报告.md",
+              "stock_code": "603986"
+            },
+            {
+              "company_name": "兆易创新",
+              "content_preview": "2020年，公司将加强跨事业部的合作，协调具有共性的技术和产品，进行早期的产品研究和孵化。通过前瞻性研究，为公司未来 5到 10年发展提供强有力的技术和产品布局。同时集合资源，协同各事业部发展，做好产品的定义、销售和信息收集等工作。",
+              "content_sha256": "ab9bf58c794d8e37b2d448934cc84bbb6b978a07cdb8c4802fa7bc7a8aa75db2",
+              "document_id": "A603986_兆易创新_2019年年度报告",
+              "evidence_chunk_id": "chunk-121be2635988d3297d2c29f59e7b9441",
+              "line_range": [
+                590,
+                590
+              ],
+              "rank": 5,
+              "report_year": 2019,
+              "score": 0.73660344,
+              "section_path": [
+                "北京兆易创新科技股份有限公司2019 年年度报告",
+                "5、集合资源，加强跨事业部合作"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A603986_2019_A603986_兆易创新_2019年年度报告.md",
+              "stock_code": "603986"
+            }
+          ],
+          "prefilter_applied_before_scoring": true,
+          "retrieval_method": "a2rag_dpr_bge_m3",
+          "top_k": 5
+        },
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "ok"
+      }
+    },
+    {
+      "company_year_isolation_passed": true,
+      "expected_tag": "business",
+      "expected_tag_hit": true,
+      "id": "business_kailun_2020",
+      "result": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "recognized_metrics": [],
+          "status": "not_numeric"
+        },
+        "question": "开润股份2020年的主要业务、产品和经营模式是什么？",
+        "resolver": {
+          "candidate_count": 1,
+          "company_full": "安徽开润股份有限公司",
+          "company_query": "开润股份",
+          "document_id": "A300577_开润股份_2020年年度报告",
+          "report_year": 2020,
+          "source_markdown": "refs/source_markdown/A300577_2020_A300577_开润股份_2020年年度报告.md",
+          "status": "unique",
+          "stock_code": "300577",
+          "stock_name": "开润股份",
+          "stock_symbol": "A300577"
+        },
+        "retrieval": {
+          "candidate_chunk_count": 394,
+          "candidate_document_id": "A300577_开润股份_2020年年度报告",
+          "candidate_prefilter": "company_year_resolver_document_allow_list",
+          "chunks": [
+            {
+              "company_name": "开润股份",
+              "content_preview": "公司董事会、监事会及董事、监事、高级管理人员保证年度报告内容的真实、准确、完整，不存在虚假记载、误导性陈述或者重大遗漏，并承担个别和连带的法律责任。  \n公司负责人范劲松、主管会计工作负责人段会阳及会计机构负责人(会计主管人员)俞珊珊声明：保证本年度报告中财务报告的真实、准确、完整。  \n所有董事均已出席了审议本报告的董事会会议。  \n2020 年，新冠疫情对出行市场、箱包等行业造成较大影响，公司实现归属于上市公司股东的净利润 7,795.41 万元，同比下降 65.51%，与行业趋势一致，公司持续经营能力不存在重大风险。报告期内，公司在做好疫情防控的同时，以战略愿景驱动业务发展，采取了推行降本增效方案、丰富产品品类、拓展新兴渠道如网红直播带货等措施，努力降低疫情影响。同时，公司引进了优秀的组织人才和信息建设方面的专家，深练企业内功，努力完善人才体系、信息化数据体系、财务基础体系、以及其他内部治理体系建设，为公司保持长期健康发展夯实内部治理基石。  \n自 2016 年 12 月上市以来，公司管理层聚焦核心主业，扎实推进各项战略实施，在疫情之前取得了高速、稳定的业绩增长。2020 年受疫情影响公司自上市以来业绩首次出现下滑，但从长远来看，我国箱包及消费品市场空间仍然巨大，公司跨界管理团队差异化优势突出，在国力和民族自信心日益提升、产业链日趋成熟的背景下，国产制造和自主品牌也将迎来时代",
+              "content_sha256": "8c610888c93721f2ac0ebb97f0eac0227bd1322170ad514f1f89d1d18f1e5943",
+              "document_id": "A300577_开润股份_2020年年度报告",
+              "evidence_chunk_id": "chunk-a23112d2685641c811b1fb4639e4c568",
+              "line_range": [
+                7,
+                19
+              ],
+              "rank": 1,
+              "report_year": 2020,
+              "score": 0.72635615,
+              "section_path": [
+                "第一节 重要提示、目录和释义"
+              ],
+              "semantic_tags": [
+                "business",
+                "risk",
+                "staff",
+                "financial",
+                "governance",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A300577_2020_A300577_开润股份_2020年年度报告.md",
+              "stock_code": "300577"
+            },
+            {
+              "company_name": "开润股份",
+              "content_preview": "2020年度，开润股份合并口径主营业务收入1,913,674,779.40元，为开润股份合并利润表重要组成项目，且不同销售模式下主营业务收入确认时点存在差异化，因此我们确定主营业务收入的真实性和截止性为关键审计事项。根据开润股份会计政策，公司收入主要来源于箱包产品和其他相关配件。其中采用FOB模式交易的，公司以产品完成报关出口离岸作为收入确认时点，在取得经海关审验的产品出口报关单和货代公司出具的货运提单后，公司按照合同或订单约定价格计量确认收入；采用DDP或DAP模式交易的，公司以客户提货并签收确认作为收入确认时点，在取得经客户验收并签字确认的签收单后，公司按照合同或订单约定价格计量确认收入；采用成本价采购/毛利分成模式的，公司以客户签收大货为收入确认时点，公司按照客户出具的大货对账单金额，加上预期有权收取的对价金额（即预计分成金额）确认收入。",
+              "content_sha256": "1751ff3a24de757f8f0cd57740498890b534814842800bcbe08d33a9319d31ab",
+              "document_id": "A300577_开润股份_2020年年度报告",
+              "evidence_chunk_id": "chunk-d8e89cc3319ca4aa61f47f3e1af4a748",
+              "line_range": [
+                1698,
+                1698
+              ],
+              "rank": 2,
+              "report_year": 2020,
+              "score": 0.71733534,
+              "section_path": [
+                "1、事项描述"
+              ],
+              "semantic_tags": [
+                "business",
+                "financial",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A300577_2020_A300577_开润股份_2020年年度报告.md",
+              "stock_code": "300577"
+            },
+            {
+              "company_name": "开润股份",
+              "content_preview": "公司专注于做优质出行及生活消费品，主要经营业务为休闲包袋、旅行箱、商务包袋、服饰及相关配件等产品的研发、设计、生产和销售。公司基于对传统行业及互联网模式的深度理解，为用户提供出行及生活消费品，并将高科技融入其中，改善人们的装备和体验，同时利用强大的供应链能力，让产品不仅好看、好用，而且价格合适。公司按照业务模式主要分为代工制造业务和品牌经营业务，具体情况如下：  \n1、代工制造业务方面，公司坚持做优质客户战略，与耐克、迪卡侬、VF集团、优衣库、戴尔、惠普等世界知名品牌开展合作，产品品类涵盖运动休闲包袋、商务包袋、其他功能性软包、服装、拉杆箱等，公司通过自动化、智能化、精益管理等方式持续改善生产效率，不断巩固行业地位和竞争壁垒。  \n报告期内，公司全资子公司滁州米润收购了优衣库针织服装核心供应商上海嘉乐28.70%股权，此次交易推进公司代工制造业务的产品品类从箱包领域延伸至纺织服装及面料生产制造领域，开拓了市场空间更大的新品类、新赛道，对于公司业务保持长期发展、规模增长具有重要意义。  \n2、品牌经营业务方面，公司初步形成了以“90分”、“小米”、“Paul Frank（大嘴猴）”的品牌矩阵，具体情况如下：",
+              "content_sha256": "acb959f5d3533f84fc4158ed1ef5eecb464ed0703025bb0c4570481afa322a58",
+              "document_id": "A300577_开润股份_2020年年度报告",
+              "evidence_chunk_id": "chunk-ce1c828babf55f2c5e577ef980db4b04",
+              "line_range": [
+                136,
+                142
+              ],
+              "rank": 3,
+              "report_year": 2020,
+              "score": 0.69299376,
+              "section_path": [
+                "（一）公司主要业务及产品"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd"
+              ],
+              "source_markdown": "refs/source_markdown/A300577_2020_A300577_开润股份_2020年年度报告.md",
+              "stock_code": "300577"
+            },
+            {
+              "company_name": "开润股份",
+              "content_preview": "公司品牌经营业务主要通过与小米、天猫、京东等电商渠道开展，也包括团购礼品等其他渠道。报告期内，公司在充分做好小米、天猫、京东等渠道基本盘的基础上，在网红直播带货、明星合作、店铺直播等新兴渠道方式上积极探索，强化对目标消费群的渗透和招募，公司自有品牌“90分”整体渠道策略向品牌整体形象逐步转型，产品及品牌的曝光度和知名度稳步提升。",
+              "content_sha256": "daaf8a7597abc149ef5a6eb3b8d69989547f9c3c42a5237ff8b0f2139c2721d1",
+              "document_id": "A300577_开润股份_2020年年度报告",
+              "evidence_chunk_id": "chunk-0adcddb0e1ad7c61cbe021a20a1479d6",
+              "line_range": [
+                308,
+                308
+              ],
+              "rank": 4,
+              "report_year": 2020,
+              "score": 0.69295031,
+              "section_path": [
+                "（三）渠道：电商为主，积极拓展新兴渠道"
+              ],
+              "semantic_tags": [
+                "business"
+              ],
+              "source_markdown": "refs/source_markdown/A300577_2020_A300577_开润股份_2020年年度报告.md",
+              "stock_code": "300577"
+            },
+            {
+              "company_name": "开润股份",
+              "content_preview": "报告期内，疫情对公司所处行业造成较大影响，公司在做好疫情防控的同时，以战略愿景驱动业务发展，采取了推行降本增效方案、丰富产品品类、拓展新兴渠道如网红直播带货等措施，努力降低疫情影响。同时，公司引进了优秀的组织人才和信息建设方面的专家，深练企业内功，努力完善人才体系、信息化数据体系、财务基础体系、以及其他内部治理体系建设，为公司保持长期健康发展夯实内部治理基石。",
+              "content_sha256": "b1197bd61f872fb686887e5a5f7aefaae9e71fe7894cd14fccb84dc08164bddc",
+              "document_id": "A300577_开润股份_2020年年度报告",
+              "evidence_chunk_id": "chunk-4488cc3e0c977bc2df5a4952077c6627",
+              "line_range": [
+                284,
+                284
+              ],
+              "rank": 5,
+              "report_year": 2020,
+              "score": 0.68841994,
+              "section_path": [
+                "一、概述"
+              ],
+              "semantic_tags": [
+                "business"
+              ],
+              "source_markdown": "refs/source_markdown/A300577_2020_A300577_开润股份_2020年年度报告.md",
+              "stock_code": "300577"
+            }
+          ],
+          "prefilter_applied_before_scoring": true,
+          "retrieval_method": "a2rag_dpr_bge_m3",
+          "top_k": 5
+        },
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "ok"
+      }
+    },
+    {
+      "company_year_isolation_passed": true,
+      "expected_tag": "staff",
+      "expected_tag_hit": true,
+      "id": "staff_flyada_2019",
+      "result": {
+        "fact_injection": {
+          "allow_text_numeric_answer": false,
+          "facts": [],
+          "numeric_source_policy": "phase6_selected_facts_only",
+          "recognized_metrics": [],
+          "status": "not_numeric"
+        },
+        "question": "飞亚达2019年的员工培训和人员发展情况如何？",
+        "resolver": {
+          "candidate_count": 1,
+          "company_full": "飞亚达精密科技股份有限公司",
+          "company_query": "飞亚达",
+          "document_id": "A000026_飞亚达_2019年年度报告",
+          "report_year": 2019,
+          "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+          "status": "unique",
+          "stock_code": "000026",
+          "stock_name": "飞亚达",
+          "stock_symbol": "A000026"
+        },
+        "retrieval": {
+          "candidate_chunk_count": 386,
+          "candidate_document_id": "A000026_飞亚达_2019年年度报告",
+          "candidate_prefilter": "company_year_resolver_document_allow_list",
+          "chunks": [
+            {
+              "company_name": "飞亚达",
+              "content_preview": "2019年，国内零售消费增长放缓、分化明显，国产品牌遭遇了来自消费升级、渠道升级、智能穿戴等诸多方面的压力。面对挑战，公司以“降本增效”、“创新发展”为主线，沉着应对市场下行压力，共同推动经营业绩的持续突破，实现竞争能力的进一步提升。报告期内，公司实现营业收入370,421.07万元，同比增长8.93%，实现利润总额27,623.36万元，同比增长19.48%，营业收入和利润总额再创历史新高。  \n报告期内，公司重点开展了如下工作：",
+              "content_sha256": "2c1f6bb5feb9782e3917485610cf13e5de0e98d543ab09c43b7d97b03278c783",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-124ac6c44e75a8f11afa7a53452b6712",
+              "line_range": [
+                153,
+                155
+              ],
+              "rank": 1,
+              "report_year": 2019,
+              "score": 0.68128455,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "一、概述"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "报告期内，公司依托专业制表所积累的精密科技优势和较成熟的产业基础，继续推动精密科技业务发展和智能表业务探索。2019年，精密科技业务继续深耕核心市场，与多个行业龙头企业开启了业务合作，营业收入同比增长29%；公司继续投入资源，加快智能手表业务布局，“Jeep”品牌智能手表联合专业团队共同推进产品迭代开发和技术升级，发布智能全境界F02、F02 ESIM版及强续航A01三款新品，其中ESIM版成为中国联通官方首批认证的智能手表，奠定了在通讯领域的技术优势，公司智能手表业务继续保持较快增长。  \n2019年主要财务项目变动情况如下：",
+              "content_sha256": "428a07fddc1d1b708e3081a343fcfb387fbe74be1c9b268113a608de65f244ee",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+              "line_range": [
+                175,
+                177
+              ],
+              "rank": 2,
+              "report_year": 2019,
+              "score": 0.6733079,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "五、培育新增长点，新业务继续保持了较快的增长"
+              ],
+              "semantic_tags": [
+                "business",
+                "rd",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "报告期内，公司围绕成本费用控制、精益供应链建设等扎实推进降本增效，继续优化组织运作模式，积极推进动力机制建设和全覆盖。得益于提质增效各项工作的落实，公司资产效率、运营效率、人员效率、组织效率均持续提升，报告期内，公司存货周转率达1.23次，较去年同期提升0.13次，核心渠道单产同比提升超过10%，人均利润同比提升超20%。在高质量发展持续突破的同时，组织能力进一步强化。",
+              "content_sha256": "d420858b7208564675256d10cf2d904715ef1b6dbcb9fb2ba9239957ed820b6b",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-9fa4791e259148e0f732a701203a8e6c",
+              "line_range": [
+                159,
+                159
+              ],
+              "rank": 3,
+              "report_year": 2019,
+              "score": 0.67295802,
+              "section_path": [
+                "飞亚达精密科技股份有限公司",
+                "一、扎实推进提质增效，高质量发展取得进一步突破"
+              ],
+              "semantic_tags": [
+                "staff",
+                "shareholder"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "报告期内，董事会提名、薪酬与考核委员会严格按照法律法规、《公司章程》及《董事会提名、薪酬与考核委员会实施细则》履行自己的职能，于2019年1月11日召开提名、薪酬与考核委员会2019年第一次会议，审议通过了调整公司2018年A股限制性股票激励计划首次授予激励对象名单及首次授予数量、向公司2018年A股限制性股票激励计划（第一期）激励对象授予限制性股票的事项；于2019年3月13日召开提名、薪酬与考核委员会2019年第二次会议，审议通过了审定2018年度董事及高级管理人员薪酬的事项；于2019年9月29日召开提名、薪酬与考核委员会2019年第三次会议，审议通过了聘任公司副总经理的事项；于2019年11月19日召开提名、薪酬与考核委员会2019年第四次会议，审议通过了变更公司董事会秘书的事项。",
+              "content_sha256": "c3434089d99fd46ebb6e56fa03f261c327bdf2544e2a6025b05f7f196138ead5",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-4188fa6f0f9a66a363bdaaada1fbbc1f",
+              "line_range": [
+                1074,
+                1074
+              ],
+              "rank": 4,
+              "report_year": 2019,
+              "score": 0.67116678,
+              "section_path": [
+                "第八节可转换公司债券相关情况",
+                "董事会下设的提名、薪酬与考核委员会的履职情况汇总报告："
+              ],
+              "semantic_tags": [
+                "staff",
+                "governance"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            },
+            {
+              "company_name": "飞亚达",
+              "content_preview": "公司专注于钟表行业，坚持以品牌战略统领各项业务，放眼国际，确立了“成为领先的国际化手表品牌企业”的愿景。公司在快速发展的同时，坚信“做品牌就要融入品牌的工作和生活方式”，组织和员工的核心专长、员工的品牌人素质更是决定公司未来发展的重要因素。因此，在员工培训方面，公司依托飞亚达学院，将学院作为宣贯企业文化、推动战略落地和助力一线专业人才发展的重要阵地。基于学院公司搭建各类人才培养体系，聚焦梯级领导力、新人培养及一线专业人才赋能工作。",
+              "content_sha256": "302e082debaf0fa2cefddf60d5fd790e33a7e84f7209408a02b71aac6d138687",
+              "document_id": "A000026_飞亚达_2019年年度报告",
+              "evidence_chunk_id": "chunk-8b405ee83bce11d10762418fa53d7524",
+              "line_range": [
+                950,
+                950
+              ],
+              "rank": 5,
+              "report_year": 2019,
+              "score": 0.66735613,
+              "section_path": [
+                "第八节可转换公司债券相关情况",
+                "（一）组织学习、人才培养，生态循环发展"
+              ],
+              "semantic_tags": [
+                "business",
+                "staff"
+              ],
+              "source_markdown": "refs/source_markdown/A000026_2019_A000026_飞亚达_2019年年度报告.md",
+              "stock_code": "000026"
+            }
+          ],
+          "prefilter_applied_before_scoring": true,
+          "retrieval_method": "a2rag_dpr_bge_m3",
+          "top_k": 5
+        },
+        "retriever_version": "phase7-type3-evidence-retriever-v2",
+        "schema_version": "finglmqa.phase7.type3_evidence_result.v1",
+        "status": "ok"
+      }
+    }
+  ],
+  "regression_fixture_governance": {
+    "fixture": {
+      "canonical_metric": "营业收入",
+      "metric_year": 2019,
+      "name": "flyada_2019_revenue_phase6_regression_pin",
+      "normalized_unit": "元",
+      "normalized_value": "3704210734.9"
+    },
+    "passed": true,
+    "stale_pin_message": "If a separately audited Phase 6 rebuild legitimately changes this value, update this named regression fixture and its decision record; a mismatch alone is not evidence of data corruption."
+  },
+  "schema_audit": {
+    "absolute_source_path_rows": 0,
+    "document_count": 170,
+    "evidence_rows": 61478,
+    "expected_document_count_from_manifest": 170,
+    "global_fallback_count": 0,
+    "missing_required_field_rows": 0,
+    "missing_required_field_samples": [],
+    "required_fields": [
+      "company_name",
+      "content",
+      "document_id",
+      "line_range",
+      "report_year",
+      "section_path",
+      "semantic_tags",
+      "source_markdown",
+      "stock_code"
+    ]
+  },
+  "schema_version": "finglmqa.phase7.type3_evidence_report.v2",
+  "table_exclusion_audit": {
+    "classification_artifact": "runs/phase_07/reports/table_exclusion_classification.jsonl",
+    "classification_counts": {
+      "dividend": 905,
+      "financial_table": 9020,
+      "governance_or_other_non_financial": 4826,
+      "mixed_narrative": 44237,
+      "shareholder": 1668,
+      "staff_or_personnel": 1718
+    },
+    "classified_chunks": 62374,
+    "mixed_narrative_by_subject": {
+      "dividend": 4191,
+      "financial_table": 18814,
+      "governance_or_other_non_financial": 9527,
+      "shareholder": 6823,
+      "staff_or_personnel": 4882
+    },
+    "policy": "All table-bearing chunks remain excluded; mixed narrative is not recovered without fragment-level vector/provenance support.",
+    "sample_artifact": "runs/phase_07/reports/table_exclusion_samples.jsonl",
+    "sample_count_by_stratum": {
+      "dividend": 20,
+      "financial_table": 20,
+      "governance_or_other_non_financial": 20,
+      "mixed_narrative": 20,
+      "mixed_narrative:dividend": 20,
+      "mixed_narrative:financial_table": 20,
+      "mixed_narrative:governance_or_other_non_financial": 20,
+      "mixed_narrative:shareholder": 20,
+      "mixed_narrative:staff_or_personnel": 20,
+      "shareholder": 20,
+      "staff_or_personnel": 20
+    },
+    "schema_version": "finglmqa.phase7.table_exclusion_audit.v1",
+    "subject_counts": {
+      "dividend": 5096,
+      "financial_table": 27834,
+      "governance_or_other_non_financial": 14353,
+      "shareholder": 8491,
+      "staff_or_personnel": 6600
+    }
+  },
+  "validation_model": {
+    "independent_evidence_checks": {
+      "adversarial_public_boundary_checks": true,
+      "fresh_worker_lifecycles_same_top_ids_and_scores": true,
+      "independent_markdown_trace_all_rows": true,
+      "known_alignment_regressions": true,
+      "numeric_policy_boundaries": true,
+      "qualitative_public_query_isolation": true,
+      "qualitative_tag_hits": true
+    },
+    "note": "Evidence checks, structural invariants, and regression pins have different proof strength and are reported separately; there is no aggregate N/N claim.",
+    "regression_pins": {
+      "flyada_2019_revenue_phase6_regression_pin": true,
+      "phase6_duckdb_sha256": true,
+      "phase6_facts_jsonl_sha256": true,
+      "phase6_files_unchanged_during_validation": true
+    },
+    "structural_invariants": {
+      "all_cursor_updates_monotonic": true,
+      "all_successful_alignments_have_unique_section_match": true,
+      "document_allow_lists_are_disjoint": true,
+      "document_coverage_matches_manifest": true,
+      "evidence_chunk_ids_unique": true,
+      "evidence_schema_complete": true,
+      "generated_evidence_source_paths_are_workspace_relative": true,
+      "no_unexplained_global_fallback": true,
+      "table_classification_covers_all_excluded_table_chunks": true
+    }
+  },
+  "validator_version": "phase7-type3-evidence-validator-v2"
+}

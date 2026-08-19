@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.phase10_service_projection.v1",
+  "title": "Phase10ServiceProjection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answer", "status", "citations", "errors", "warnings", "demo_trace"],
+  "properties": {
+    "answer": {"type": "string"},
+    "status": {"type": "string"},
+    "citations": {"type": "array"},
+    "errors": {"type": "array"},
+    "warnings": {"type": "array"},
+    "demo_trace": {"type": "object"}
+  }
+}

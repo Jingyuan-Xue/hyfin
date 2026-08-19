@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.missing_fact_request.v1",
+  "title": "MissingFactRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "requirement_id", "origin_operation", "formula_id", "operand_role", "subplan_id", "document_id", "stock_code", "report_year", "metric_year", "canonical_metric", "normalized_unit", "candidate_table_ids"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.missing_fact_request.v1"},
+    "requirement_id": {"type": "string"},
+    "origin_operation": {"type": "string"},
+    "formula_id": {"type": ["string", "null"]},
+    "operand_role": {"type": ["string", "null"]},
+    "subplan_id": {"type": "string"},
+    "document_id": {"type": "string"},
+    "stock_code": {"type": "string"},
+    "report_year": {"type": "integer"},
+    "metric_year": {"type": "integer"},
+    "canonical_metric": {"type": "string"},
+    "normalized_unit": {"type": "string"},
+    "candidate_table_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+  }
+}

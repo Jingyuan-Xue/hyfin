@@ -1,0 +1,147 @@
+{
+  "Company": {
+    "company_id": "A000514",
+    "company_name": "渝开发",
+    "report_year": "2023",
+    "source_doc_id": "A000514_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "政策风险",
+      "Category": "政策监管",
+      "Subcategory": "宏观政策变动",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（1）政策风险：房地产受政府宏观政策影响较大，未来房地产行业政策亦可能存在进一步的调整，或出台新的调控政策。若公司未来不能适应不断变动的行业政策，则公司的业务发展和财务状况可能受到一定影响。",
+          "Interpretation": "公司明确将政策风险列为首要风险，说明政策变动对业务和财务有潜在重大影响。"
+        }
+      ],
+      "Reason": "年报明确披露政策风险，并指出若不能适应则业务发展和财务状况可能受影响，暴露程度中等。",
+      "Mitigants": [
+        "紧密跟踪政策变化，及时调整公司经营策略。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "市场需求下行风险",
+      "Category": "需求周期",
+      "Subcategory": "房地产行业深度调整",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（2）经营风险：中心城区商品房市占率回调上涨，市场持续承压，新房容量低位企稳，随着宏观政策端降低首付比例及公积金贷款利率；开发利润率降低等经营风险，可能会对公司的经营业绩产生一定的影响。",
+          "Interpretation": "公司描述市场持续承压、利润率降低，直接威胁经营业绩，显示需求周期下行风险。"
+        },
+        {
+          "EvidenceQuote": "资产减值损失 -193,594,946.20 元，较上年同期增加 1007.96%，主要系房地产市场深度调整，计提车库存货跌价准备所致。",
+          "Interpretation": "因房地产市场深度调整，公司计提大额存货跌价准备1.94亿元，同比暴增10倍，直接减少利润，暴露程度高。"
+        }
+      ],
+      "Reason": "市场持续承压和存货跌价准备大幅增加表明需求下行已实质影响公司资产价值和利润，暴露程度高。",
+      "Mitigants": [
+        "及时调整开发节奏和营销策略，加快开发周转速度。"
+      ],
+      "MetricHints": [
+        "存货跌价准备金额及同比增幅"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "信用减值风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "应收款项坏账",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "信用减值损失 -28,746,747.82 元，较上年同期增加 906.31%，主要系本期计提应收南樾天宸二期团购应收款坏账准备所致。",
+          "Interpretation": "公司信用减值损失同比大增906%，因特定应收款计提坏账，表明客户信用风险已导致实际损失。"
+        }
+      ],
+      "Reason": "信用减值损失大幅增加，直接减少当期利润，暴露程度中等。",
+      "Mitigants": [],
+      "MetricHints": [
+        "信用减值损失金额及同比增幅"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户集中度风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "销售集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名客户合计销售金额（元) 709,296,167. 50 前五名客户合计销售金额占年度销售总额比例 53.35%",
+          "Interpretation": "前五名客户销售额占年度销售总额超过53%，其中单一客户占比可能更高，存在客户集中度风险。"
+        }
+      ],
+      "Reason": "公司销售高度集中，一旦主要客户出现问题将严重影响收入，暴露程度中等。",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名客户销售占比"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "财务流动性风险",
+      "Category": "财务流动性",
+      "Subcategory": "融资环境与现金流",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（3）财务风险：房地产开发行业属于资金密集型行业，在国家房地产调控的大背景下，融资环境的变化可能导致公司的融资受到限制或公司的融资成本上升，从而对公司的生产经营产生不利影响。",
+          "Interpretation": "公司明确财务风险源自融资环境变化，可能限制融资或提高成本，直接影响生产经营。"
+        },
+        {
+          "EvidenceQuote": "经营活动产生的现金流量净额 -189,955,616.17 元，较上年同期下降114.26%",
+          "Interpretation": "经营活动现金流由正转负且大幅下降，显示公司自身造血能力不足，流动性压力大。"
+        }
+      ],
+      "Reason": "公司依赖外部融资且经营活动现金流为负，融资环境恶化会严重威胁流动性，暴露程度高。",
+      "Mitigants": [
+        "合理安排融资计划，不断拓展多种融资方式，保证公司财务成本处于合理范围。",
+        "全面保障各项预算支出，偿债率确保100%"
+      ],
+      "MetricHints": [
+        "经营活动现金流量净额及同比变化"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "按揭贷款担保风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "或有负债",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至2023年12月31日，公司按房地产经营惯例为商品房承购人提供按揭贷款担保合计11,327.80万元。",
+          "Interpretation": "公司为购房者提供按揭担保，形成或有负债，若购房者违约可能需承担代偿责任。"
+        }
+      ],
+      "Reason": "担保金额相对于公司规模较小且为行业惯例，暴露程度低。",
+      "Mitigants": [],
+      "MetricHints": [
+        "担保金额"
+      ],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "客户信用/集中度",
+      "Aliases": [
+        "信用减值风险",
+        "客户集中度风险",
+        "按揭贷款担保风险"
+      ],
+      "MergeReason": "同属客户信用或集中度类别，合并后便于集中评估整体信用风险暴露。"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "证据清晰，包括明确的风险披露和财务数据，可支撑风险暴露判断。"
+  }
+}

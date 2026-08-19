@@ -1,0 +1,118 @@
+{
+  "Company": {
+    "company_id": "A000897",
+    "company_name": "津滨发展",
+    "report_year": "2023",
+    "source_doc_id": "A000897_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "预售款下降导致收入不确定性",
+      "Category": "需求周期",
+      "Subcategory": "预售收入下降",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "经营活动现金流入同比减少 37.58%，主要系本期预售房款较上年同期减少所致",
+          "Interpretation": "预售房款减少表明未来收入可能下降，反映了房地产市场需求减弱的风险"
+        },
+        {
+          "EvidenceQuote": "报告期内经营活动产生的现金净流量为负主要系报告期内支付税费、支付竞拍土地保证金较多所致",
+          "Interpretation": "经营活动现金净流量为负进一步反映了资金回笼压力，与预售款减少相关"
+        }
+      ],
+      "Reason": "预售款减少直接导致经营活动现金流入大幅下降，虽年报中收入增长但预售下滑预示未来收入可能受需求周期影响",
+      "Mitigants": [],
+      "MetricHints": [
+        "经营活动现金流入同比-37.58%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中度过高",
+      "Category": "供应链",
+      "Subcategory": "供应商集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 321,288,227.23\n前五名供应商合计采购金额占年度采购总额比例 | 63.39%",
+          "Interpretation": "前五名供应商采购金额占年度采购总额63.39%，集中度高，依赖少数供应商"
+        },
+        {
+          "EvidenceQuote": "1 | 供应商1 | 228,892,251. 34 | 45.16%",
+          "Interpretation": "第一大供应商占采购总额45.16%，单一供应商依赖度极高，若供应中断将影响项目进度"
+        }
+      ],
+      "Reason": "供应商高度集中，尤其第一大供应商占比45.16%，一旦出现问题可能导致成本上升或供应链中断",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名供应商采购占比63.39%",
+        "第一大供应商占比45.16%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "经营现金流为负且融资困难",
+      "Category": "财务流动性",
+      "Subcategory": "现金流压力",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "报告期内经营活动产生的现金净流量为负主要系报告期内支付税费、支付竞拍土地保证金较多所致",
+          "Interpretation": "经营活动现金净流量为负，表明公司主营无法产生正向现金流，需依赖外部融资"
+        },
+        {
+          "EvidenceQuote": "筹资活动现金流入同比减少 99.66%，筹资活动现金流出同比减少 24.22%，主要系上年同期借入资金和支付到期债务较本 期较多所致",
+          "Interpretation": "筹资活动现金流入几乎归零，反映公司融资能力大幅减弱，加剧流动性风险"
+        },
+        {
+          "EvidenceQuote": "短期借款 |  | 97,891,320.23 | -100.00%",
+          "Interpretation": "短期借款余额降为零，公司偿还到期借款后未获得新融资，进一步印证融资困境"
+        }
+      ],
+      "Reason": "经营现金流为负且筹资活动现金流入减少99.66%，短期借款清零，公司面临严重流动性压力，可能影响持续经营",
+      "Mitigants": [],
+      "MetricHints": [
+        "经营活动现金净流量为负",
+        "筹资活动现金流入同比-99.66%",
+        "短期借款余额0"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户按揭担保违约风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "按揭担保",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至本期末，本公司为客户的按揭贷款提供担保总额约人民币 6.49亿元，报告期内出现一笔客户违约情况，公司履行阶段性担保金额 126.09万元。",
+          "Interpretation": "公司为客户按揭贷款提供6.49亿元担保，已发生一笔违约，虽金额较小但未来违约可能增加"
+        }
+      ],
+      "Reason": "担保总额6.49亿元，但实际违约仅126万元且已收回，公司认为无重大影响，故暴露程度低",
+      "Mitigants": [
+        "本公司已于财务报告报出日前将该房屋收回"
+      ],
+      "MetricHints": [
+        "担保总额6.49亿元",
+        "违约金额126.09万元"
+      ],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "供应链集中度",
+      "Aliases": [
+        "供应商集中度"
+      ],
+      "MergeReason": "同义风险归并理由：不同表述均指向同一风险属性"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "根据年报文本提取了4个主要风险，证据明确，覆盖需求、供应链、流动性和信用担保领域"
+  }
+}

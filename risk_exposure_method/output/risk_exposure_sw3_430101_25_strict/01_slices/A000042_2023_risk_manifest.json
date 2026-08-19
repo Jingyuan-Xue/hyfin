@@ -1,0 +1,22 @@
+{
+  "doc_id": "A000042_2023",
+  "metadata": {
+    "company_id": "A000042",
+    "company_name": "中洲控股",
+    "report_year": "2023",
+    "source_doc_id": "A000042_2023"
+  },
+  "paths": {
+    "manifest": "output/risk_exposure_sw3_430101_25_strict/01_slices/A000042_2023_risk_manifest.json",
+    "risk_relevant": "output/risk_exposure_sw3_430101_25_strict/01_slices/A000042_2023_risk_relevant.md",
+    "risk_structured": "output/risk_exposure_sw3_430101_25_strict/01_slices/A000042_2023_risk_structured.md"
+  },
+  "source": "/home/coder/demo/exposure_pipeline_workspace/outputs/structured/cleaned_reports/A000042_2023.md",
+  "stats": {
+    "risk_relevant_chars": 26390,
+    "risk_span_count": 12,
+    "risk_structured_chars": 13212,
+    "risk_table_count": 12,
+    "source_chars": 572104
+  }
+}

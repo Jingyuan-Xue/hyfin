@@ -1,0 +1,196 @@
+{
+  "Company": {
+    "company_id": "A000006",
+    "company_name": "深振业Ａ",
+    "report_year": "2023",
+    "source_doc_id": "A000006_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "房地产市场需求下行",
+      "Category": "需求周期",
+      "Subcategory": "房产销售下降",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "房产销售营业收入比上年同期增减 -26.09%",
+          "Interpretation": "房产销售收入同比下降超过四分之一，直接反映市场需求减弱"
+        },
+        {
+          "EvidenceQuote": "经营活动现金流入小计 2023 年较上年减少 42.30% ，主要系销售回款减少所致。",
+          "Interpretation": "销售回款大幅减少，进一步证实销售疲软对现金流的冲击"
+        }
+      ],
+      "Reason": "房产销售是公司核心收入来源，收入同比下降26.09%，同时销售回款减少导致经营性现金流大幅下降42.30%，直接表明市场需求周期下行风险处于高位",
+      "Mitigants": [
+        "公司将加快项目去化速度，保证公司现金流的安全稳定"
+      ],
+      "MetricHints": [
+        "房产销售收入同比变化",
+        "经营活动现金流入同比变化"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "现金流紧张与流动性压力",
+      "Category": "财务流动性",
+      "Subcategory": "现金流恶化",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "经营活动现金流入小计 2023 年较上年减少 42.30% ，主要系销售回款减少所致。",
+          "Interpretation": "经营活动现金流入大幅减少，削弱公司短期支付能力"
+        },
+        {
+          "EvidenceQuote": "筹资活动现金流出小计 2023 年较上年增加 35.58% ，主要系偿还债务支付的现金增加所致。",
+          "Interpretation": "偿债支出增加，进一步消耗现金储备"
+        },
+        {
+          "EvidenceQuote": "现金及现金等价物净增加额 -148.88%",
+          "Interpretation": "现金净流量大幅负增长，流动性状况显著恶化"
+        }
+      ],
+      "Reason": "经营活动现金流入减少42.30%、筹资活动现金流出增加35.58%、现金净增加额下降148.88%，三重信号指向流动性压力极大",
+      "Mitigants": [
+        "公司计划加快项目去化速度，保证现金流安全稳定"
+      ],
+      "MetricHints": [
+        "经营活动现金流入同比变化",
+        "筹资活动现金流出同比变化",
+        "现金及现金等价物净增加额"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "存货减值风险",
+      "Category": "市场价格",
+      "Subcategory": "资产减值",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "本年度计提存货减值准备 8.42亿元，导致本期净利润为负值。",
+          "Interpretation": "大额存货减值直接导致净利润亏损，反映房地产市场价值下跌风险"
+        }
+      ],
+      "Reason": "计提8.42亿元存货减值准备，金额巨大且直接导致净利润为负，表明存货市值下跌风险极高",
+      "Mitigants": [],
+      "MetricHints": [
+        "存货减值金额",
+        "净利润"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "按揭担保或有负债风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "担保集中度",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至 2023 年 12 月 31 日，公司累计为商品房承购人向银行提供抵押贷款担保金额合计约 36.22 亿元",
+          "Interpretation": "公司为购房者承担大规模担保，若购房者违约，公司可能需承担代偿责任"
+        }
+      ],
+      "Reason": "担保金额高达36.22亿元，相当于公司重要或有负债，虽为行业惯例但集中度风险不可忽视",
+      "Mitigants": [
+        "该担保至商品房承购人所购房产取得房地产权利证书并办妥抵押登记手续止"
+      ],
+      "MetricHints": [
+        "担保金额",
+        "购房人违约率"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中度风险",
+      "Category": "供应链",
+      "Subcategory": "供应商集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元）630,587,114.18 前五名供应商合计采购金额占年度采购总额比例22.57%",
+          "Interpretation": "前五名供应商采购额占比超过22%，存在一定集中依赖风险"
+        }
+      ],
+      "Reason": "前五名供应商采购占比22.57%，且最大供应商中铁十二局占7.51%，集中度中等，可能影响议价能力和供应稳定性",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名供应商采购占比"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "偿债压力与融资风险",
+      "Category": "财务流动性",
+      "Subcategory": "债务偿还",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "筹资活动现金流出小计 2023 年较上年增加 35.58% ，主要系偿还债务支付的现金增加所致。",
+          "Interpretation": "偿债支出大幅增加，显示公司面临较大债务到期压力"
+        },
+        {
+          "EvidenceQuote": "长期借款 2023年末3,921,626,245.36元，2023年初6,034,464,194.70元，比重增减-7.73%",
+          "Interpretation": "长期借款余额下降，反映公司主动或被动偿还债务"
+        }
+      ],
+      "Reason": "偿债支出同比增加35.58%，长期借款减少约21亿元，表明公司正承受较高偿债压力，再融资能力可能受限",
+      "Mitigants": [],
+      "MetricHints": [
+        "筹资活动现金流出同比",
+        "长期借款余额"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "重大诉讼仲裁风险",
+      "Category": "诉讼合规治理",
+      "Subcategory": "诉讼仲裁",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "十一、重大诉讼、仲裁事项 ☑适用 □不适用 [表格见下方风险表格区]",
+          "Interpretation": "公司确认存在重大诉讼仲裁事项，但年报未披露具体金额和影响，风险暴露程度不明"
+        }
+      ],
+      "Reason": "公司明确标注存在重大诉讼仲裁，但缺乏具体金额和进展，初步判断为低暴露，需人工复核",
+      "Mitigants": [],
+      "MetricHints": [
+        "涉诉金额",
+        "仲裁结果"
+      ],
+      "NeedHumanReview": true
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "房地产市场需求下行",
+      "Aliases": [
+        "房产销售下滑",
+        "需求周期下行"
+      ],
+      "MergeReason": "同义风险，均指需求减弱导致收入下降"
+    },
+    {
+      "CanonicalRisk": "现金流紧张与流动性压力",
+      "Aliases": [
+        "流动性风险",
+        "现金流恶化"
+      ],
+      "MergeReason": "同义风险，均指向现金流不足和流动性困难"
+    },
+    {
+      "CanonicalRisk": "存货减值风险",
+      "Aliases": [
+        "资产减值风险",
+        "存货跌价"
+      ],
+      "MergeReason": "同义风险，均指存货价值下跌导致的损失"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "主要风险均有明确证据支撑，诉讼仲裁风险因缺乏具体数据需人工复核"
+  }
+}

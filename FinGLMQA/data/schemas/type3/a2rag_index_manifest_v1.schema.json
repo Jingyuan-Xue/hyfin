@@ -1,0 +1,1 @@
+{"$id":"finglmqa.type3.a2rag.index_manifest.v1","$schema":"https://json-schema.org/draft/2020-12/schema","additionalProperties":true,"required":["schema_version","builder_version","corpus_id","embedding_model","document_count","unit_count","documents","artifacts"],"type":"object"}

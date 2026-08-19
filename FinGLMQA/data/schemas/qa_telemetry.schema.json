@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.qa_telemetry.v1",
+  "title": "QATelemetry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "started_at_utc", "finished_at_utc", "elapsed_seconds", "process_id", "runtime"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.qa_telemetry.v1"},
+    "request_id": {"type": "string"},
+    "started_at_utc": {"type": "string"},
+    "finished_at_utc": {"type": "string"},
+    "elapsed_seconds": {"type": "number", "minimum": 0},
+    "process_id": {"type": "integer", "minimum": 1},
+    "runtime": {"type": "object"}
+  }
+}

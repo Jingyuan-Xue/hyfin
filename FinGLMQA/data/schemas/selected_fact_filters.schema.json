@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.selected_fact_filters.v1",
+  "title": "SelectedFactFilters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "document_ids", "stock_codes", "report_years", "metric_years", "canonical_metrics", "normalized_units"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.selected_fact_filters.v1"},
+    "document_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "stock_codes": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "report_years": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}},
+    "metric_years": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}},
+    "canonical_metrics": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "normalized_units": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+  }
+}

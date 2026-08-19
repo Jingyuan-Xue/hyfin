@@ -1,0 +1,1 @@
+{"dependencies":[{"file_count":597,"installed_tree_sha256":"183cdf8ad9a8dd17fb4bc7d43d8dd4c42a4c61d2672020d5531b7121119c4410","name":"networkx","version":"3.5"}],"install_command":"uv pip install --python .venv/bin/python networkx==3.5","python_implementation":"CPython","python_version":"3.14.5","schema_version":"finglmqa.phase9.dependency_manifest.v1"}

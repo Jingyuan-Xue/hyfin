@@ -1,0 +1,36 @@
+.backend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  padding: 7px 10px;
+  color: #66716c;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  background: #f7f9f7;
+  font-size: 11px;
+  font-weight: 700;
+}
+.backend-badge i { width: 7px; height: 7px; border-radius: 50%; background: #a5aea9; }
+.backend-badge.online { color: var(--green); border-color: #b9d9cb; background: var(--green-soft); }
+.backend-badge.online i { background: #35b47d; box-shadow: 0 0 0 3px rgba(53,180,125,.12); }
+.backend-badge.error { color: #a55218; border-color: #efc6aa; background: var(--orange-soft); }
+.backend-badge.error i { background: var(--orange); }
+.case-line > #run-demo { margin-left: 0; }
+
+.run-detail {
+  display: none;
+  padding: 9px 17px;
+  color: #68736e;
+  border: 1px solid var(--line);
+  border-top: 0;
+  background: #f7f9f7;
+  font-size: 11px;
+}
+.run-detail.visible { display: flex; justify-content: space-between; }
+.run-detail strong { color: var(--green); }
+
+@media (max-width: 700px) {
+  .case-line { flex-wrap: wrap; }
+  .backend-badge { order: 3; width: 100%; justify-content: center; margin-top: 7px; }
+}

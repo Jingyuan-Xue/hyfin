@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.tabgr.cell_literal_authorization_rejection_audit.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "corpus_id",
+    "reason",
+    "rejected_count",
+    "examples"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.type3.tabgr.cell_literal_authorization_rejection_audit.v1"
+    },
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reason": {
+      "enum": [
+        "header_fallback_or_ambiguous",
+        "literal_not_single_numeric_fragment",
+        "merged_cell",
+        "not_data_cell",
+        "numeric_authorization_integrity_conflict",
+        "numeric_authorization_precedence",
+        "period_unresolved_or_conflicting",
+        "row_evidence_binding_invalid",
+        "row_label_missing_or_ambiguous",
+        "row_label_numeric_or_forbidden",
+        "scope_conflicting",
+        "semantic_slot_conflict",
+        "semantic_state_mismatch",
+        "source_cell_binding_mismatch",
+        "table_anomaly",
+        "table_not_ready",
+        "table_source_binding_invalid",
+        "table_span_invalid",
+        "unit_unresolved_or_conflicting"
+      ]
+    },
+    "rejected_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "examples": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "document_id",
+          "row_evidence_id",
+          "table_id",
+          "coordinate",
+          "raw_value_sha256"
+        ],
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "row_evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "table_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coordinate": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "prefixItems": [
+              {
+                "type": "integer",
+                "minimum": 0
+              },
+              {
+                "type": "integer",
+                "minimum": 0
+              }
+            ],
+            "items": false
+          },
+          "raw_value_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

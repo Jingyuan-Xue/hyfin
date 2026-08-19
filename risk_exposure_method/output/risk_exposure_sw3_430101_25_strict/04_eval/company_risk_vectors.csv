@@ -1,0 +1,25 @@
+﻿company_id,company_name,report_years,risk_count,max_exposure_score,feature_count,features
+A000002,万科Ａ,2023,6,3.0,4,category:市场价格=1.000; category:汇率利率=0.667; category:财务流动性=0.667; category:需求周期=1.000
+A000006,深振业Ａ,2023,5,3.0,5,category:供应链=0.667; category:客户信用/集中度=0.667; category:市场价格=1.000; category:财务流动性=1.000; category:需求周期=1.000
+A000011,深物业A,2023,7,3.0,6,category:供应链=1.000; category:客户信用/集中度=1.000; category:汇率利率=0.333; category:诉讼合规治理=0.667; category:财务流动性=0.667; category:需求周期=1.000
+A000014,沙河股份,2023,5,3.0,5,category:供应链=0.667; category:客户信用/集中度=0.667; category:市场价格=0.667; category:财务流动性=0.667; category:需求周期=1.000
+A000029,深深房Ａ,2023,4,3.0,3,category:供应链=1.000; category:财务流动性=0.667; category:需求周期=1.000
+A000036,华联控股,2023,4,3.0,3,category:政策监管=0.667; category:财务流动性=1.000; category:需求周期=1.000
+A000042,中洲控股,2023,4,3.0,4,category:供应链=0.667; category:客户信用/集中度=0.667; category:市场价格=1.000; category:需求周期=1.000
+A000090,天健集团,2023,2,3.0,2,category:客户信用/集中度=1.000; category:市场价格=1.000
+A000517,荣安地产,2023,4,3.0,4,category:市场价格=1.000; category:财务流动性=1.000; category:运营安全环保=0.667; category:需求周期=0.667
+A000573,粤宏远Ａ,2023,4,3.0,4,category:供应链=0.667; category:客户信用/集中度=0.333; category:市场价格=1.000; category:财务流动性=1.000
+A000609,中迪投资,2023,5,3.0,3,category:供应链=0.667; category:财务流动性=1.000; category:需求周期=0.667
+A000631,顺发恒业,2023,7,3.0,5,category:供应链=0.333; category:客户信用/集中度=1.000; category:市场价格=1.000; category:财务流动性=0.667; category:需求周期=0.667
+A000668,荣丰控股,2023,5,3.0,5,category:供应链=0.667; category:客户信用/集中度=0.667; category:政策监管=1.000; category:财务流动性=0.667; category:需求周期=1.000
+A000718,苏宁环球,2023,8,3.0,5,category:供应链=0.667; category:市场价格=0.667; category:诉讼合规治理=1.000; category:财务流动性=1.000; category:需求周期=0.667
+A000736,中交地产,2023,4,3.0,4,category:供应链=0.667; category:市场价格=0.667; category:财务流动性=1.000; category:需求周期=1.000
+A000797,中国武夷,2023,3,3.0,3,category:汇率利率=0.667; category:财务流动性=0.667; category:需求周期=1.000
+A000809,铁岭新城,2023,7,3.0,6,category:供应链=0.667; category:客户信用/集中度=1.000; category:政策监管=0.667; category:诉讼合规治理=1.000; category:财务流动性=0.667; category:需求周期=1.000
+A000838,财信发展,2023,6,3.0,4,category:客户信用/集中度=0.667; category:诉讼合规治理=1.000; category:财务流动性=1.000; category:需求周期=1.000
+A000863,三湘印象,2023,7,3.0,5,category:供应链=0.667; category:客户信用/集中度=0.667; category:市场价格=0.667; category:财务流动性=0.667; category:需求周期=1.000
+A000897,津滨发展,2023,4,3.0,4,category:供应链=0.667; category:客户信用/集中度=0.333; category:财务流动性=1.000; category:需求周期=0.667
+A000909,ST数源,2023,6,3.0,6,category:客户信用/集中度=1.000; category:市场价格=0.667; category:政策监管=0.333; category:诉讼合规治理=1.000; category:财务流动性=1.000; category:需求周期=0.333
+A000926,福星股份,2023,7,3.0,6,category:供应链=0.667; category:市场价格=1.000; category:政策监管=0.667; category:财务流动性=1.000; category:运营安全环保=0.333; category:需求周期=1.000
+A000961,中南建设,2023,6,3.0,3,category:市场价格=0.667; category:财务流动性=1.000; category:需求周期=0.667
+A000965,天保基建,2023,9,3.0,5,category:供应链=0.667; category:市场价格=1.000; category:政策监管=0.667; category:财务流动性=1.000; category:需求周期=0.667

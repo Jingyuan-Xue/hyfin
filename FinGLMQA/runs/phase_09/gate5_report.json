@@ -1,0 +1,1 @@
+{"checks":{"duckdb_decisions_reconcile":true,"duckdb_has_three_tables":true,"duckdb_jsonl_facts_reconcile":true,"phase6_and_other_immutable_inputs_unchanged":true},"details":{"changed_inputs":[],"decision_rows":1421,"fact_rows":0},"gate":5,"schema_version":"finglmqa.phase9.gate_report.v1","status":"passed"}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.numeric_authorization_set.v1",
+  "title": "NumericAuthorizationSet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "items",
+    "set_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.numeric_authorization_set.v1"},
+    "items": {
+      "type": "array",
+      "items": {"$ref": "numeric_authorization.schema.json"}
+    },
+    "set_fingerprint": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

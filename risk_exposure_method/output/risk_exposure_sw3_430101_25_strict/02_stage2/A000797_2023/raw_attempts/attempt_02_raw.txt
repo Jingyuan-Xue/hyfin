@@ -1,0 +1,139 @@
+{
+  "Company": {
+    "company_id": "A000797",
+    "company_name": "中国武夷",
+    "report_year": "2023",
+    "source_doc_id": "A000797_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "汇率利率波动",
+      "Category": "汇率利率",
+      "Subcategory": "外汇波动",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "国际业务受国际政治、经济、汇率波动等多种风险因素影响。",
+          "Interpretation": "公司明确承认汇率波动是影响国际业务的主要风险因素之一。"
+        },
+        {
+          "EvidenceQuote": "为有效防范外汇风险，公司制订了外汇风险管理办法，采取争取有利的结算货币、加强款项结算与催收、及时结售汇等措施；公司制订了远期外汇交易管理制度，开展远期结售汇业务，最大限度规避因汇率波动带来的外汇风险。",
+          "Interpretation": "公司披露了专门的外汇风险管理办法和远期结售汇业务，表明汇率风险已对财务产生实质性影响，需主动管理。"
+        }
+      ],
+      "Reason": "国际业务收入占比高，汇率波动直接影响工程承包收入和成本，公司已建立专门管理制度并开展套期保值，暴露程度高。",
+      "Mitigants": [
+        "争取有利的结算货币",
+        "加强款项结算与催收",
+        "及时结售汇",
+        "开展远期结售汇业务"
+      ],
+      "MetricHints": [
+        "远期结售汇合约金额",
+        "汇率变动对净利润的影响"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "工程款回收风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "政府客户付款能力",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "部分所在国因经济下行，财政收入降低、汇率贬值以及负债水平提高等因素导致基础设施投资预算不足，对公司部分项目工程款回收造成了一定的影响。",
+          "Interpretation": "直接指出所在国财政困难导致工程款回收受影响，属于客户信用风险，有具体原因描述但未量化影响金额。"
+        }
+      ],
+      "Reason": "工程款回收已实际受到不利影响，涉及多个国家和地区，但公司未披露具体坏账金额，暴露程度中等。",
+      "Mitigants": [
+        "加强项目全周期成本过程管控",
+        "进一步加大项目合同计量索赔力度"
+      ],
+      "MetricHints": [
+        "应收账款余额",
+        "工程款回收周期"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中度风险",
+      "Category": "供应链",
+      "Subcategory": "供应商集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元）2,898,791,702.20前五名供应商合计采购金额占年度采购总额比例42.83%",
+          "Interpretation": "前五名供应商采购占比达42.83%，集中度较高，若个别供应商出现问题可能影响采购稳定性。"
+        },
+        {
+          "EvidenceQuote": "前五名供应商采购额中关联方采购额占年度采购总额比例12.81%",
+          "Interpretation": "关联方采购占比较高，可能带来关联交易风险和供应链依赖。"
+        }
+      ],
+      "Reason": "供应商集中度较高且包含关联方，存在潜在供应中断或价格波动风险，但公司未披露相关缓解措施。",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名供应商采购占比"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "宏观经济环境风险",
+      "Category": "需求周期",
+      "Subcategory": "宏观经济",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "公司面临的风险主要有：宏观经济环境风险、房地产行业市场风险和国际业务经营风险等。",
+          "Interpretation": "公司披露宏观经济环境风险，但无具体数据或影响描述，属于一般性披露。"
+        }
+      ],
+      "Reason": "宏观经济环境风险已被识别但未见量化证据，暴露程度低。",
+      "Mitigants": [],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "房地产行业市场风险",
+      "Category": "需求周期",
+      "Subcategory": "房地产周期",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "公司面临的风险主要有：宏观经济环境风险、房地产行业市场风险和国际业务经营风险等。",
+          "Interpretation": "公司披露房地产行业市场风险，但未提供具体市场下行或价格波动的量化证据。"
+        }
+      ],
+      "Reason": "房地产行业市场风险已被识别但未见量化证据，暴露程度低。",
+      "Mitigants": [],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "宏观经济环境风险",
+      "Aliases": [],
+      "MergeReason": ""
+    },
+    {
+      "CanonicalRisk": "房地产行业市场风险",
+      "Aliases": [],
+      "MergeReason": ""
+    },
+    {
+      "CanonicalRisk": "国际业务经营风险",
+      "Aliases": [
+        "汇率利率波动",
+        "工程款回收风险"
+      ],
+      "MergeReason": "汇率利率波动和工程款回收风险均属于国际业务经营风险的子项，但因证据充分且影响路径不同，单独列出更清晰。"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "根据提供的年报证据，识别出5项风险，均从原文直接引用，证据数量和质量满足要求。"
+  }
+}

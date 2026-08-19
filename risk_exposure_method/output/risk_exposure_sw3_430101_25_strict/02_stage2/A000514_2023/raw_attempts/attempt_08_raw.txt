@@ -1,0 +1,191 @@
+{
+  "Company": {
+    "company_id": "A000514",
+    "company_name": "渝开发",
+    "report_year": "2023",
+    "source_doc_id": "A000514_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "存货跌价风险",
+      "Category": "需求周期",
+      "Subcategory": "存货减值",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "资产减值损失 | -193,594,946.20 | -17,473,091.99 | 1007.96% | 主要系房地产市场深度调整，计提车库存货跌价准备所致。",
+          "Interpretation": "因房地产市场深度调整，公司计提巨额存货跌价准备，资产减值损失同比增加1007.96%，直接导致营业利润和净利润大幅下降，暴露高存货跌价风险。"
+        }
+      ],
+      "Reason": "房地产市场深度调整导致存货价值大幅下跌，公司计提1.94亿元跌价准备，对利润产生重大负面冲击。",
+      "Mitigants": [],
+      "MetricHints": ["资产减值损失金额", "同比变动百分比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "应收账款坏账风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "信用减值",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "信用减值损失 | -28,746,747.82 | -2,856,649.30 | 906.31% | 主要系本期计提应收南樾天宸二期团购应收款坏账准备所致。",
+          "Interpretation": "信用减值损失同比暴增906.31%，主要因计提特定应收款坏账准备，表明客户违约或回款风险显著上升。"
+        }
+      ],
+      "Reason": "应收账款坏账准备大幅增加，信用减值损失达2875万元，直接侵蚀利润，反映客户信用风险暴露。",
+      "Mitigants": [],
+      "MetricHints": ["信用减值损失金额", "同比变动百分比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户集中度风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "客户集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名客户合计销售金额占年度销售总额比例 | 53.35%",
+          "Interpretation": "前五名客户销售占比超过一半，收入来源高度集中。"
+        },
+        {
+          "EvidenceQuote": "1 | 客户一 | 645,638,832.11 | 48.56%",
+          "Interpretation": "单一最大客户贡献近半数营业收入，依赖度极高。"
+        }
+      ],
+      "Reason": "前五名客户销售额占比53.35%，其中客户一占48.56%，若主要客户流失或违约，将严重影响公司收入。",
+      "Mitigants": [],
+      "MetricHints": ["前五名客户销售占比", "最大客户销售占比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "项目集中度风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "项目集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "本期确认收入合计占公司本期房地产业收入比为93.70%",
+          "Interpretation": "房地产业收入几乎全部来自五个项目，项目集中度极高。"
+        }
+      ],
+      "Reason": "收入高度集中于少数项目，若某个项目销售或交付出现问题，将导致收入大幅波动。",
+      "Mitigants": [],
+      "MetricHints": ["项目收入占比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "政策调控风险",
+      "Category": "政策监管",
+      "Subcategory": "房地产政策",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（1）政策风险：房地产受政府宏观政策影响较大，未来房地产行业政策亦可能存在进一步的调整，或出台新的调控政策。若公司未来不能适应不断变动的行业政策，则公司的业务发展和财务状况可能受到一定影响。",
+          "Interpretation": "公司明确承认房地产政策风险，政策变动可能影响业务和财务。"
+        }
+      ],
+      "Reason": "房地产行业受政府宏观调控影响大，政策变化可能直接冲击公司经营和财务状况。",
+      "Mitigants": ["紧密跟踪政策变化，及时调整公司经营策略。"],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "市场下行风险",
+      "Category": "需求周期",
+      "Subcategory": "市场承压",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（2）经营风险：中心城区商品房市占率回调上涨，市场持续承压，新房容量低位企稳，随着宏观政策端降低首付比例及公积金贷款利率；开发利润率降低等经营风险，可能会对公司的经营业绩产生一定的影响。",
+          "Interpretation": "市场持续承压，开发利润率降低，公司经营业绩可能受到影响。"
+        }
+      ],
+      "Reason": "中心城区商品房市场容量低位企稳，开发利润率降低，构成经营层面的需求周期风险。",
+      "Mitigants": ["及时调整开发节奏和营销策略，加快开发周转速度。"],
+      "MetricHints": ["商品房市占率", "开发利润率"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "融资风险",
+      "Category": "财务流动性",
+      "Subcategory": "融资环境",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（3）财务风险：房地产开发行业属于资金密集型行业，在国家房地产调控的大背景下，融资环境的变化可能导致公司的融资受到限制或公司的融资成本上升，从而对公司的生产经营产生不利影响。",
+          "Interpretation": "公司高度依赖融资，融资环境变化可能限制融资或推高成本，影响生产经营。"
+        }
+      ],
+      "Reason": "行业资金密集，融资环境收紧可能导致资金链紧张或成本上升。",
+      "Mitigants": ["合理安排融资计划，不断拓展多种融资方式，保证公司财务成本处于合理范围。"],
+      "MetricHints": ["融资成本变化", "融资渠道数量"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "现金流风险",
+      "Category": "财务流动性",
+      "Subcategory": "经营现金流",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "经营活动产生的现金流量净额 | -189,955,616.17 | 1,331,825,484.56 | -114.26% | 主要系上期收回代垫联营企业骏励公司土地款。",
+          "Interpretation": "经营活动现金流由正转负，净流出1.9亿元，同比下降114.26%，流动性压力显著。"
+        }
+      ],
+      "Reason": "经营活动现金流大幅负向，可能导致公司短期偿债能力不足，增加流动性风险。",
+      "Mitigants": [],
+      "MetricHints": ["经营活动现金流量净额", "同比变动百分比"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "按揭担保风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "担保",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至2023年12月31日，公司按房地产经营惯例为商品房承购人提供按揭贷款担保合计11,327.80万元。",
+          "Interpretation": "公司为购房者提供按揭担保，若购房者违约，公司需承担代偿责任，形成或有负债。"
+        }
+      ],
+      "Reason": "1.13亿元按揭担保构成潜在代偿义务，若客户违约率上升，可能产生实际损失。",
+      "Mitigants": [],
+      "MetricHints": ["按揭担保金额"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "利润波动风险",
+      "Category": "需求周期",
+      "Subcategory": "盈利能力",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "2023年度，公司实现营业收入1,329,659,341.22元，较上年同期增长48.47%；归属于母公司所有者的净利润105,730,824.17元，较上年同期下降35.03%",
+          "Interpretation": "营业收入大幅增长但净利润反而显著下降，呈现增收不增利现象，反映成本攀升或资产减值侵蚀利润。"
+        }
+      ],
+      "Reason": "收入增长48%但净利润下降35%，表明盈利能力恶化，主要受存货跌价和信用减值影响。",
+      "Mitigants": [],
+      "MetricHints": ["营业收入增长率", "净利润增长率", "毛利率"],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "存货跌价风险",
+      "Aliases": ["资产减值风险"],
+      "MergeReason": "存货跌价准备导致资产减值损失，属同一风险类别。"
+    },
+    {
+      "CanonicalRisk": "客户集中度风险",
+      "Aliases": ["项目集中度风险"],
+      "MergeReason": "两者均反映收入来源集中，可归并为集中度风险。"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "证据覆盖主要风险，包含具体金额、比例和披露内容，可支撑评级。"
+  }
+}

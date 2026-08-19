@@ -1,0 +1,210 @@
+{
+  "CanonicalizationHints": [
+    {
+      "Aliases": [
+        "行业集中风险"
+      ],
+      "CanonicalRisk": "业务模式单一",
+      "MergeReason": "两者均描述对单一房地产行业的依赖风险。"
+    },
+    {
+      "Aliases": [
+        "需求周期波动"
+      ],
+      "CanonicalRisk": "收入大幅波动",
+      "MergeReason": "同属需求周期类，可合并为需求周期风险。"
+    }
+  ],
+  "Company": {
+    "company_id": "A000965",
+    "company_name": "天保基建",
+    "report_year": "2023",
+    "source_doc_id": "A000965_2023"
+  },
+  "QualityFlag": {
+    "NeedHumanReview": false,
+    "Notes": "证据包括明确的风险描述、财务数据表格和子公司经营细节，支撑了9条风险暴露的提取。",
+    "Sufficiency": "sufficient"
+  },
+  "RiskExposures": [
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "公司目前经营主业是住宅类房地产开发，对新业务拓展和培育处于起步阶段，目前业务类型较为单一，易受政策和市场的双重影响。",
+          "Interpretation": "公司明确披露业务类型单一，易受政策和市场双重影响，构成需求周期风险。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "房地产销售收入占营业收入95.99%"
+      ],
+      "Mitigants": [
+        "在做好房地产主业和产业园区双主业的同时，加强多元产业拓展，培育发展动能。",
+        "进一步优化业务布局，坚持多赛道发力，加大在产业园区运营、物业管理、酒店管理等新业务领域深耕力度。"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "该风险直接来自经营风险披露，表明公司收入高度依赖单一业务，市场或政策变化将显著冲击业绩。",
+      "RiskName": "业务模式单一",
+      "Subcategory": "行业集中"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "资产规模和净资产规模较小，资金实力有限，限制了公司的发展速度，在市场竞争日益激烈的环境中，存在资产规模偏小的风险。",
+          "Interpretation": "公司披露资产和净资产规模小，资金实力有限，限制发展，形成财务流动性风险。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "总资产约135亿元",
+        "净资产约73亿元"
+      ],
+      "Mitigants": [
+        "创新资产经营模式，建立规范经营机制，规范资产管理。",
+        "同时采用联合开发、合作等方式规避自身资金实力不足，提高资产规模和资金实力。"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "风险披露明确，资产规模小影响融资能力和抗风险能力。",
+      "RiskName": "资产规模偏小",
+      "Subcategory": "资本实力"
+    },
+    {
+      "Category": "政策监管",
+      "Evidence": [
+        {
+          "EvidenceQuote": "银行和房管的资金监管降低了资金使用效益。",
+          "Interpretation": "公司指出银行和房管资金监管导致资金使用效益降低，构成政策监管风险。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [],
+      "Mitigants": [
+        "为满足公司资金需求，保障公司资金链的安全，在做好加大销售回款的同时，一方面充分运用上市公司融资平台，围绕公司战略，着力筹划新资本运作策略；另一方面，加强全面预算管理，合理安排资金的使用，增强资金使用的计划性，提高资金使用效率。"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "监管政策直接限制资金使用效率，影响现金流和财务灵活性。",
+      "RiskName": "资金管理受限",
+      "Subcategory": "资金监管"
+    },
+    {
+      "Category": "市场价格",
+      "Evidence": [
+        {
+          "EvidenceQuote": "房地产销售成本与去年同期相比增加 54.07%，主要是报告期内满足结转收入条件的项目毛利降低所致。",
+          "Interpretation": "成本同比大幅增加54.07%，毛利率降低，显示市场价格风险对利润的直接冲击。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "房地产销售成本同比增加54.07%",
+        "毛利率比上年同期增减-15.90%"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "成本上升直接压缩毛利，且幅度巨大（54.07%），对盈利产生重大影响。",
+      "RiskName": "房地产销售成本上升",
+      "Subcategory": "建安成本"
+    },
+    {
+      "Category": "供应链",
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 2,629,834,836.58\n前五名供应商合计采购金额占年度采购总额比例 | 68.99%",
+          "Interpretation": "前五名供应商集中度高达68.99%，显示对少数供应商依赖，构成供应链风险。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "前五名供应商合计采购金额占年度采购总额比例68.99%"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "集中度高可能导致议价能力弱或供应中断风险。",
+      "RiskName": "供应商集中度高",
+      "Subcategory": "供应商依赖"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "经营活动产生的现金流量净额 | -1,436,090,642.46 | 799,866,184.03 | -282,303,047.64 | -325,824,544.62",
+          "Interpretation": "经营活动现金流净额各季度均为负或波动巨大，显示流动性压力。"
+        },
+        {
+          "EvidenceQuote": "1、经营活动现金流出同比增加 147.13%，主要是本期支付的土地款增加所致；",
+          "Interpretation": "现金流流出大幅增加，主要因支付土地款，加剧流动性风险。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "经营活动现金流量净额全年累计约-1.24亿元（根据季度数据计算）",
+        "经营活动现金流出同比增加147.13%"
+      ],
+      "Mitigants": [
+        "为满足公司资金需求，保障公司资金链的安全，在做好加大销售回款的同时，一方面充分运用上市公司融资平台，围绕公司战略，着力筹划新资本运作策略；另一方面，加强全面预算管理，合理安排资金的使用，增强资金使用的计划性，提高资金使用效率。"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "大额负现金流直接危及公司短期偿债能力和持续经营。",
+      "RiskName": "经营活动现金流大幅流出",
+      "Subcategory": "现金净流出"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "存货 | 9,504,544,776.46 | 70.41% | 9,102,741,756.46 | 71.01% | -0.60%",
+          "Interpretation": "存货占总资产70.41%，金额巨大且占比极高，存在减值风险和流动性沉淀。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "存货占总资产比例70.41%",
+        "存货金额95.05亿元"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "高存货占用大量资金，市场下行时易引发减值损失。",
+      "RiskName": "存货高企",
+      "Subcategory": "存货减值"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "净利润为-21,639.43万元，比上年同期减少1,313.75万元，减少6.46%。报告期内营业利润、净利润较上年同期减少，主要是报告期内计提资产减值损失增加所致。",
+          "Interpretation": "子公司天保盛源净利润亏损，因计提资产减值损失增加，显示资产质量恶化和子公司经营困境。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "净利润为-21,639.43万元",
+        "主要因计提资产减值损失增加"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "子公司亏损直接影响合并净利润，且减值损失增加表明资产价值下降。",
+      "RiskName": "子公司亏损及资产减值",
+      "Subcategory": "子公司经营"
+    },
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "报告期内，滨海开元公司实现营业收入为 30,904.01 万元，比上年同期减少 81,661.16万元，减少 72.55%。",
+          "Interpretation": "子公司营业收入同比暴跌72.55%，显示房地产销售收入高度波动，构成需求周期风险。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "营业收入同比减少72.55%"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "收入剧烈波动反映市场需求不稳定，影响业绩可预测性。",
+      "RiskName": "收入大幅波动",
+      "Subcategory": "销售波动"
+    }
+  ]
+}

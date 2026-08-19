@@ -1,0 +1,109 @@
+{
+  "Company": {
+    "company_id": "A000042",
+    "company_name": "中洲控股",
+    "report_year": "2023",
+    "source_doc_id": "A000042_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "房地产市场需求下行",
+      "Category": "需求周期",
+      "Subcategory": "行业周期",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "2023 年房地产行业仍受重挫，尽管政策已基本筑底，市场在逐步恢复，但当前市场端的转暖以及政策端利好传导到末端的中小型民营企业仍有待时间去验证，且居民收入预期弱、房价下跌预期仍在，该因素依然制约着市场修复的节奏。",
+          "Interpretation": "年报明确描述2023年房地产行业受重挫，市场转暖传导缓慢，居民收入预期弱、房价下跌预期持续，直接制约市场修复，说明公司面临巨大的需求端风险。"
+        }
+      ],
+      "Reason": "该证据直接说明行业整体下行、需求疲软且预期不佳，公司作为房地产企业销售和收入受严重影响，证据中未提及缓释措施，暴露程度高。",
+      "Mitigants": [
+        "公司采取一城一策、一盘一策营销原则，全力推行全民营销",
+        "加强政策及市场研判，及时调整经营策略"
+      ],
+      "MetricHints": [
+        "房地产销售面积、销售金额同比变化",
+        "营业收入同比变化"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "房地产项目资产减值",
+      "Category": "市场价格",
+      "Subcategory": "资产价值波动",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "受部分房地产项目计提资产减值准备影响，归属于上市公司股东的净利润-18.45亿元。",
+          "Interpretation": "年报显示净利润亏损18.45亿元，直接原因是部分房地产项目计提资产减值准备，表明资产价值下跌对利润产生了重大负面冲击。"
+        }
+      ],
+      "Reason": "该证据明确量化了资产减值对净利润的直接损失，金额巨大，暴露程度高。",
+      "Mitigants": [
+        "公司开展存量物业盘活，出租率及租金收入超额完成任务",
+        "严控资金，保障现金流平稳"
+      ],
+      "MetricHints": [
+        "资产减值损失金额（如存货跌价准备）",
+        "净利润、毛利率变化"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户信用风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "信用损失",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "本集团对债务人已发生事实违约、经营风险增加或财务状况恶化等情况的应收账款因信用风险已显著变化而单项评估确定信用损失。",
+          "Interpretation": "公司针对应收账款单项计提信用损失准备的判断标准表明存在因债务人违约或财务状况恶化导致的信用风险，且年报中合同资产也采用类似判断标准。"
+        }
+      ],
+      "Reason": "会计政策显示公司面临信用风险，但未披露具体金额或违约比例，暴露程度中等。",
+      "Mitigants": [
+        "公司采用信用风险特征组合计提信用损失准备",
+        "对已发生事实违约的应收账款单项评估确定信用损失"
+      ],
+      "MetricHints": [
+        "信用减值损失金额",
+        "应收账款及合同资产坏账准备余额"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中度",
+      "Category": "供应链",
+      "Subcategory": "采购集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 789, 562,715. 57  前五名供应商合计采购金额占年度采购总额比例 | 56.51%",
+          "Interpretation": "供应商集中度高达56.51%，其中最大供应商占比41.36%，表明公司采购来源高度集中，可能面临供应链依赖风险。"
+        }
+      ],
+      "Reason": "该证据量化了供应商集中度，比例超过50%且单一供应商超过40%，风险中等。",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名供应商采购额占比",
+        "最大供应商采购额占比"
+      ],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "房地产市场需求下行",
+      "Aliases": [
+        "市场风险"
+      ],
+      "MergeReason": "年报中市场风险主要指房地产市场下行风险，同义归并。"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "Evidence quotes are directly from the annual report, covering key risk areas with quantifiable data for two high-severity risks and clear descriptions for moderate risks."
+  }
+}

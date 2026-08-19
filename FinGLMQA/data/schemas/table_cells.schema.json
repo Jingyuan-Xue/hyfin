@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase4.table_cell.v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "document_id",
+    "table_id",
+    "row_index",
+    "col_index",
+    "cell_role",
+    "column_label",
+    "row_label",
+    "raw_value",
+    "source_markdown",
+    "line_range",
+    "unit_hint",
+    "section_path",
+    "metadata"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.phase4.table_cell.v1"
+    },
+    "document_id": {
+      "type": "string"
+    },
+    "table_id": {
+      "type": "string"
+    },
+    "row_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "col_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cell_role": {
+      "enum": [
+        "data",
+        "header",
+        "row_header"
+      ]
+    },
+    "column_label": {
+      "type": "string"
+    },
+    "row_label": {
+      "type": "string"
+    },
+    "raw_value": {
+      "type": "string"
+    },
+    "source_markdown": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "line_range": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      ]
+    },
+    "unit_hint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "section_path": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

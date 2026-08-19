@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.composition_plan.v1",
+  "title": "CompositionPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "composition_plan_id", "pattern_id", "pattern_version", "registry_semantic_sha256", "registry_file_sha256", "scope_plan", "scope_plan_id", "subplans", "composition_policy", "output_kind", "numeric_answer_policy", "limit_evaluation", "dynamic_expansion", "plan_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.composition_plan.v1"},
+    "composition_plan_id": {"type": "string"},
+    "pattern_id": {"enum": ["single_node", "parallel_concerns", "entity_list", "entity_compare", "period_list", "period_compare", "single_document_bundle", "entity_section_bundle", "period_section_bundle"]},
+    "pattern_version": {"type": "string"},
+    "registry_semantic_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "registry_file_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "scope_plan": {"type": "object"},
+    "scope_plan_id": {"type": "string"},
+    "subplans": {"type": "array", "minItems": 1, "maxItems": 12, "items": {"$ref": "#/$defs/subplan"}},
+    "composition_policy": {"$ref": "#/$defs/policy"},
+    "output_kind": {"type": "string"},
+    "numeric_answer_policy": {"type": "object"},
+    "limit_evaluation": {"$ref": "#/$defs/limits"},
+    "dynamic_expansion": {"const": false},
+    "plan_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "scopeKind": {"enum": ["single_document", "company_documents", "multi_company_documents", "explicit_document_set", "corpus"]},
+    "subplan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subplan_id", "ordinal", "planning_state", "backend", "operation", "entity_key", "period_key", "concern_key", "scope_ref", "depends_on_subplan_ids", "authorization_source_subplan_ids", "required", "declared_scope", "payload", "planning_failure"],
+      "properties": {
+        "subplan_id": {"type": "string", "pattern": "^sp_[0-9a-f]{16}$"},
+        "ordinal": {"type": "integer", "minimum": 0, "maximum": 11},
+        "planning_state": {"enum": ["ready", "blocked"]},
+        "backend": {"enum": ["fact", "sql", "formula", "evidence"]},
+        "operation": {"type": "string"},
+        "entity_key": {"type": ["string", "null"]},
+        "period_key": {"type": ["string", "null"]},
+        "concern_key": {"type": "string"},
+        "scope_ref": {"type": "string"},
+        "depends_on_subplan_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "authorization_source_subplan_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "required": {"const": true},
+        "declared_scope": {"type": "object", "additionalProperties": false, "required": ["scope_kind", "document_ids"], "properties": {"scope_kind": {"$ref": "#/$defs/scopeKind"}, "document_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}},
+        "payload": {"type": ["object", "null"]},
+        "planning_failure": {"type": ["object", "null"]}
+      }
+    },
+    "quorum": {"type": "object", "additionalProperties": false, "required": ["group_by", "distinct_key", "eligible_backends", "eligible_operations", "count"], "properties": {"group_by": {"enum": ["concern", "global"]}, "distinct_key": {"enum": ["entity_key", "period_key", "concern_key"]}, "eligible_backends": {"type": "array", "uniqueItems": true, "items": {"enum": ["fact", "sql", "formula"]}}, "eligible_operations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "count": {"type": "integer", "minimum": 2, "maximum": 5}}},
+    "policy": {"type": "object", "additionalProperties": false, "required": ["policy_id", "required_subplan_ids", "optional_subplan_ids", "minimum_usable_results", "quorum_selector", "section_axis", "comparison_measure_compatibility", "allow_cross_document_claims", "allow_cross_entity_causal_inference"], "properties": {"policy_id": {"type": "string"}, "required_subplan_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "optional_subplan_ids": {"type": "array", "maxItems": 0}, "minimum_usable_results": {"const": 1}, "quorum_selector": {"anyOf": [{"$ref": "#/$defs/quorum"}, {"type": "null"}]}, "section_axis": {"enum": ["none", "entity", "period", "concern"]}, "comparison_measure_compatibility": {"enum": ["not_applicable", "same_unit", "same_measure_and_unit"]}, "allow_cross_document_claims": {"const": false}, "allow_cross_entity_causal_inference": {"const": false}}},
+    "limits": {"type": "object", "additionalProperties": false, "required": ["company_count", "output_period_count", "subplan_count", "evidence_chunk_budget", "within_limits"], "properties": {"company_count": {"type": "integer", "minimum": 0, "maximum": 5}, "output_period_count": {"type": "integer", "minimum": 0, "maximum": 5}, "subplan_count": {"type": "integer", "minimum": 1, "maximum": 12}, "evidence_chunk_budget": {"type": "integer", "minimum": 0, "maximum": 25}, "within_limits": {"const": true}}}
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase5.canonical_metric_candidate.v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "document_id",
+    "table_id",
+    "row_index",
+    "col_index",
+    "canonical_metric",
+    "metric_label",
+    "metric_source",
+    "row_label",
+    "column_label",
+    "raw_value",
+    "raw_unit",
+    "parsed_value",
+    "normalized_value",
+    "normalized_unit",
+    "parse_status",
+    "unit_rule_id",
+    "unit_source",
+    "source_markdown",
+    "line_range",
+    "section_path",
+    "metadata"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.phase5.canonical_metric_candidate.v1"
+    },
+    "candidate_id": {
+      "type": "string"
+    },
+    "document_id": {
+      "type": "string"
+    },
+    "table_id": {
+      "type": "string"
+    },
+    "table_index": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "row_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "col_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "canonical_metric": {
+      "type": "string"
+    },
+    "metric_label": {
+      "type": "string"
+    },
+    "metric_source": {
+      "enum": [
+        "row_label",
+        "column_label"
+      ]
+    },
+    "row_label": {
+      "type": "string"
+    },
+    "column_label": {
+      "type": "string"
+    },
+    "raw_value": {
+      "type": "string"
+    },
+    "raw_unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parsed_value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalized_value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalized_unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parse_status": {
+      "enum": [
+        "parsed",
+        "missing",
+        "unparseable"
+      ]
+    },
+    "parse_error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unit_rule_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unit_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_markdown": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "line_range": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      ]
+    },
+    "section_path": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

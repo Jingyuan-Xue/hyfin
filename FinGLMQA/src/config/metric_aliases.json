@@ -1,0 +1,182 @@
+{
+  "schema_version": "finglmqa.phase5.metric_aliases.v1",
+  "description": "Conservative canonical metric aliases for Phase 5 candidate extraction. High-risk near-synonyms are intentionally excluded unless they are explicitly listed for the target canonical metric.",
+  "normalization": {
+    "strip_bracketed_units": true,
+    "remove_whitespace": true,
+    "prefer_row_label": true,
+    "fallback_to_column_label": true
+  },
+  "metrics": [
+    {
+      "canonical_metric": "营业收入",
+      "aliases": [
+        "营业收入",
+        "营业总收入"
+      ],
+      "patterns": [
+        "^营业收入$",
+        "^营业总收入$"
+      ],
+      "exclude_patterns": [
+        "主营业务收入",
+        "其他业务收入",
+        "利息收入",
+        "手续费及佣金收入"
+      ]
+    },
+    {
+      "canonical_metric": "归属于上市公司股东的净利润",
+      "aliases": [
+        "归属于上市公司股东的净利润",
+        "归属于母公司所有者的净利润",
+        "归属于母公司股东的净利润",
+        "归属母公司股东的净利润"
+      ],
+      "patterns": [
+        "^归属于(?:上市公司股东|母公司所有者|母公司股东)的净利润$",
+        "^归属母公司股东的净利润$"
+      ],
+      "exclude_patterns": [
+        "扣除非经常性损益",
+        "扣非"
+      ]
+    },
+    {
+      "canonical_metric": "扣除非经常性损益后的净利润",
+      "aliases": [
+        "扣除非经常性损益后的净利润",
+        "扣除非经常性损益的净利润",
+        "扣非净利润",
+        "归属于上市公司股东的扣除非经常性损益的净利润",
+        "归属于母公司所有者的扣除非经常性损益的净利润",
+        "归属于母公司股东的扣除非经常性损益的净利润"
+      ],
+      "patterns": [
+        "^(?:归属于(?:上市公司股东|母公司所有者|母公司股东)的)?扣除非经常性损益(?:后|的)?净利润$",
+        "^归属于(?:上市公司股东|母公司所有者|母公司股东)的扣除非经常性损益的净利润$",
+        "^扣非净利润$"
+      ],
+      "exclude_patterns": []
+    },
+    {
+      "canonical_metric": "总资产",
+      "aliases": [
+        "总资产",
+        "资产总计"
+      ],
+      "patterns": [
+        "^总资产$",
+        "^资产总计$"
+      ],
+      "exclude_patterns": [
+        "资产合计",
+        "流动资产",
+        "非流动资产"
+      ]
+    },
+    {
+      "canonical_metric": "净资产",
+      "aliases": [
+        "净资产",
+        "归属于上市公司股东的净资产",
+        "归属于母公司所有者的净资产",
+        "归属于母公司股东的净资产"
+      ],
+      "patterns": [
+        "^净资产$",
+        "^归属于(?:上市公司股东|母公司所有者|母公司股东)的净资产$"
+      ],
+      "exclude_patterns": [
+        "净资产收益率",
+        "净资产份额"
+      ]
+    },
+    {
+      "canonical_metric": "经营活动产生的现金流量净额",
+      "aliases": [
+        "经营活动产生的现金流量净额",
+        "经营活动现金流量净额",
+        "经营现金流量净额"
+      ],
+      "patterns": [
+        "^经营活动产生的现金流量净额$",
+        "^经营活动现金流量净额$",
+        "^经营现金流量净额$"
+      ],
+      "exclude_patterns": []
+    },
+    {
+      "canonical_metric": "基本每股收益",
+      "aliases": [
+        "基本每股收益"
+      ],
+      "patterns": [
+        "^基本每股收益$"
+      ],
+      "exclude_patterns": [
+        "稀释每股收益"
+      ]
+    },
+    {
+      "canonical_metric": "稀释每股收益",
+      "aliases": [
+        "稀释每股收益"
+      ],
+      "patterns": [
+        "^稀释每股收益$"
+      ],
+      "exclude_patterns": [
+        "基本每股收益"
+      ]
+    },
+    {
+      "canonical_metric": "加权平均净资产收益率",
+      "aliases": [
+        "加权平均净资产收益率",
+        "加权平均净资产收益率(%)",
+        "加权平均净资产收益率（%）"
+      ],
+      "patterns": [
+        "^加权平均净资产收益率$"
+      ],
+      "exclude_patterns": []
+    },
+    {
+      "canonical_metric": "股本",
+      "aliases": [
+        "股本",
+        "总股本",
+        "实收资本",
+        "实收资本或股本",
+        "实收资本（或股本）"
+      ],
+      "patterns": [
+        "^股本$",
+        "^总股本$",
+        "^实收资本(?:或股本)?$"
+      ],
+      "exclude_patterns": [
+        "股本溢价"
+      ]
+    }
+  ],
+  "ambiguous_terms": [
+    {
+      "term": "主营业务收入",
+      "reason": "Do not collapse into 营业收入; it can exclude other operating revenue."
+    },
+    {
+      "term": "净利润",
+      "reason": "Do not collapse generic 净利润 into 归母净利润."
+    },
+    {
+      "term": "每股收益",
+      "reason": "Generic 每股收益 does not distinguish basic and diluted EPS."
+    },
+    {
+      "term": "净资产收益率",
+      "reason": "Generic ROE is not always 加权平均净资产收益率."
+    }
+  ]
+}

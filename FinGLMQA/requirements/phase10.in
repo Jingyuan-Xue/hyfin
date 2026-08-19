@@ -1,0 +1,6 @@
+duckdb==1.5.4
+fastapi==0.136.3
+httpx==0.28.1
+networkx==3.5
+pydantic==2.13.4
+uvicorn==0.48.0

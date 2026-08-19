@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.a2rag_tabgr.semantic_trace.v1",
+  "title": "Type 3 deterministic fusion semantic trace",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pipeline_version",
+    "arm",
+    "input",
+    "manifest_binding",
+    "facets",
+    "retrieval",
+    "fusion",
+    "numeric_safety",
+    "composer",
+    "semantic_trace_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": "finglmqa.type3.a2rag_tabgr.semantic_trace.v1"},
+    "arm": {"type": "string"},
+    "input": {
+      "type": "object",
+      "required": ["corpus_id", "document_id", "question"],
+      "not": {"required": ["question_id"]}
+    },
+    "semantic_trace_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

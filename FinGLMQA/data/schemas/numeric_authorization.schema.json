@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.numeric_authorization.v2",
+  "title": "NumericAuthorization",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "authorization_id", "source_subplan_id", "source_backend", "source_result_row", "entity_key", "company", "document_id", "measure", "normalized_value", "normalized_unit", "output_kind", "precision", "rounding", "allowed_renderings", "source_citation_ids", "provenance_citation_ids"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.numeric_authorization.v2"},
+    "authorization_id": {"type": "string"},
+    "source_subplan_id": {"type": "string"},
+    "source_backend": {"enum": ["fact", "sql", "formula"]},
+    "source_result_row": {"type": "integer", "minimum": 0},
+    "entity_key": {"type": "string"},
+    "company": {"type": "string"},
+    "document_id": {"type": ["string", "null"]},
+    "measure": {"oneOf": [{"$ref": "#/$defs/factMeasure"}, {"$ref": "#/$defs/formulaMeasure"}, {"$ref": "#/$defs/sqlMeasure"}]},
+    "normalized_value": {"type": "string"},
+    "normalized_unit": {"type": "string"},
+    "output_kind": {"type": "string"},
+    "precision": {"type": "integer", "minimum": 0, "maximum": 12},
+    "rounding": {"type": "string"},
+    "allowed_renderings": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "source_citation_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "provenance_citation_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+  },
+  "$defs": {
+    "factMeasure": {"type": "object", "additionalProperties": false, "required": ["kind", "canonical_metric", "metric_year"], "properties": {"kind": {"const": "canonical_fact"}, "canonical_metric": {"type": "string"}, "metric_year": {"type": "integer"}}},
+    "formulaMeasure": {"type": "object", "additionalProperties": false, "required": ["kind", "formula_id", "formula_version", "target_year", "operand_years"], "properties": {"kind": {"const": "formula_result"}, "formula_id": {"type": "string"}, "formula_version": {"type": "string"}, "target_year": {"type": "integer"}, "operand_years": {"type": "array", "items": {"type": "integer"}}}},
+    "sqlMeasure": {"type": "object", "additionalProperties": false, "required": ["kind", "query_spec_id", "result_row_id", "measure_id", "canonical_metric", "metric_year"], "properties": {"kind": {"const": "sql_result"}, "query_spec_id": {"type": "string"}, "result_row_id": {"type": "string"}, "measure_id": {"type": "string"}, "canonical_metric": {"type": "string"}, "metric_year": {"type": "integer"}}}
+  }
+}

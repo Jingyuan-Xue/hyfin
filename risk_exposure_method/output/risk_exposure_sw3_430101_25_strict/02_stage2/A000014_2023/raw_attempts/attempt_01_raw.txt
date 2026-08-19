@@ -1,0 +1,96 @@
+{
+  "Company": {
+    "company_id": "A000014",
+    "company_name": "沙河股份",
+    "report_year": "2023",
+    "source_doc_id": "A000014_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "存货减值风险",
+      "Category": "财务流动性",
+      "Subcategory": "存货价值",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "我们在审计中识别出的关键审计事项为存货可变现净值的评估",
+          "Interpretation": "关键审计事项是审计师认为最重要的风险领域，存货可变现净值的评估直接影响存货计量和利润，表明公司面临存货减值风险。"
+        }
+      ],
+      "Reason": "关键审计事项是审计师识别的重大风险，存货占资产比例高，但未披露具体减值金额，因此暴露程度为中等。",
+      "Mitigants": [],
+      "MetricHints": ["存货占总资产比例62.45%"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "按揭贷款担保风险",
+      "Category": "财务流动性",
+      "Subcategory": "或有负债",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "报告期内，公司共向商品房承购人因银行抵押贷款提供 32,044.52万元担保，其中：长沙公司 15,151.26万元，新乡公司 16,810.81 万元。",
+          "Interpretation": "公司为购房者提供大额按揭贷款担保，若购房者违约，公司将承担连带偿还责任，可能对现金流和利润造成重大影响。"
+        }
+      ],
+      "Reason": "担保金额超过3.2亿元，相对于公司规模较大，且是直接义务，暴露程度高。",
+      "Mitigants": [],
+      "MetricHints": ["担保金额32,044.52万元"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "业务区域集中风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "地区集中度",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "湖南长沙 | 712,207,897. 02 | 51.27% | 741,031,743. 25 | 97.04% | -3.89% 广东深圳 | 653,487,374. 05 | 47.04% | 9,431,191.31 | 1.24% | 6,829.00%",
+          "Interpretation": "公司营业收入中51.27%来自湖南长沙，47.04%来自广东深圳，地区集中度高，任一区域市场下行将严重影响公司收入。"
+        }
+      ],
+      "Reason": "两个地区合计收入占比超过98%，集中度高，但两个地区市场环境不同，有一定分散，暴露程度中等。",
+      "Mitigants": [],
+      "MetricHints": ["长沙占比51.27%","深圳占比47.04%"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中风险",
+      "Category": "供应链",
+      "Subcategory": "供应商集中度",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 92,383,315. 10 前五名供应商合计采购金额占年度采购总额比例 | 41. 57%",
+          "Interpretation": "前五名供应商采购金额占总采购额41.57%，集中度较高，若供应商出现问题可能影响项目施工和成本。"
+        }
+      ],
+      "Reason": "供应商集中度超过40%，但单个供应商占比不超过11%，暴露程度中等。",
+      "Mitigants": [],
+      "MetricHints": ["前五名供应商采购占比41.57%"],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "筹资活动现金流风险",
+      "Category": "财务流动性",
+      "Subcategory": "现金流风险",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "筹资活动产生的现金流量净额 | -500,736,101.19 | 29,316,730.85 | -1,808.02% 报告期内偿还借款所致",
+          "Interpretation": "筹资活动现金流净流出5.007亿元，同比大幅下降1808.02%，主要因偿还借款，表明公司偿债压力大，可能影响再融资能力和流动性。"
+        }
+      ],
+      "Reason": "筹资活动现金流大幅负值且同比降幅巨大，直接影响公司现金水平和偿债能力，暴露程度高。",
+      "Mitigants": [],
+      "MetricHints": ["筹资活动现金流量净额-5.007亿元","同比-1,808.02%"],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "证据充分，包括关键审计事项、担保金额、收入地区集中度、供应商集中度、筹资现金流数据，均来自年报原文，可审计。"
+  }
+}

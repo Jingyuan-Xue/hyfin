@@ -1,0 +1,166 @@
+{
+  "CanonicalizationHints": [
+    {
+      "Aliases": [
+        "房地产销售下滑"
+      ],
+      "CanonicalRisk": "房地产行业需求下行",
+      "MergeReason": "同义风险，均指向行业需求不足导致的销售萎缩。"
+    },
+    {
+      "Aliases": [
+        "资产负债恶化风险"
+      ],
+      "CanonicalRisk": "财务流动性风险",
+      "MergeReason": "同义风险，均描述公司财务和资产状况恶化。"
+    }
+  ],
+  "Company": {
+    "company_id": "A000838",
+    "company_name": "财信发展",
+    "report_year": "2023",
+    "source_doc_id": "A000838_2023"
+  },
+  "QualityFlag": {
+    "NeedHumanReview": false,
+    "Notes": "证据均来自年报原文，覆盖主要风险领域，数据详实。",
+    "Sufficiency": "sufficient"
+  },
+  "RiskExposures": [
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "签约销售面积 | 平方米 | 146,633 | 260,669.00 | -43.75%",
+          "Interpretation": "签约销售面积同比下降43.75%，说明销售规模大幅萎缩，直接影响收入。"
+        },
+        {
+          "EvidenceQuote": "签约销售金额 | 万元 | 75,434 | 174,051.00 | -56.66%",
+          "Interpretation": "签约销售金额同比下降56.66%，降幅超过面积降幅，反映单价或去化困难。"
+        },
+        {
+          "EvidenceQuote": "我国宏观经济面临下行压力，叠加中长期住房需求动能释放减弱，行业持续低迷，2023 年销售持续疲软",
+          "Interpretation": "公司自身将销售下滑归因于宏观和行业需求走弱，验证需求周期风险。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "签约销售面积同比变化",
+        "签约销售金额同比变化"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "签约销售面积和金额双双大幅下降，且公司明确归因为行业需求低迷，对营业收入产生直接影响，暴露程度高。",
+      "RiskName": "房地产行业需求下行",
+      "Subcategory": "行业周期"
+    },
+    {
+      "Category": "客户信用/集中度",
+      "Evidence": [
+        {
+          "EvidenceQuote": "重庆分部 | 2,201,876,211.48 | 54.79% | 1,015,437,658.72 | 24.20% | 116.84%",
+          "Interpretation": "重庆分部收入占公司总收入的54.79%，且同比大幅增长，单一地区依赖度高。"
+        },
+        {
+          "EvidenceQuote": "江苏分部 | 556,127,535.02 | 13.84% | 1,884,413,510.47 | 44.91% | -70.49%",
+          "Interpretation": "江苏分部收入占比由44.91%骤降至13.84%，收入波动大，地区间不平衡。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "各分部收入占比"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "公司收入高度集中于重庆地区（54.79%），其他地区收入波动剧烈，存在地区集中度风险，暴露程度中等。",
+      "RiskName": "地区收入集中度风险",
+      "Subcategory": "地区集中度"
+    },
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "环保板块收入 | 90,966,084.93 | 2.26% | 132,881,364.45 | 3.17% | -31.54%",
+          "Interpretation": "环保板块收入同比下降31.54%，降幅显著，对整体收入造成负面影响。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "环保板块收入同比变化",
+        "环保板块收入占比"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "环保板块收入同比大幅下滑31.54%，且占比下降，表明该板块面临需求或经营压力，暴露程度中等。",
+      "RiskName": "环保板块收入下滑",
+      "Subcategory": "环保业务"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "总资产（元） | 4,241,713,180.92 | 10,695,055,091.32 | -60.34%",
+          "Interpretation": "总资产较上年下降60.34%，资产规模大幅缩减。"
+        },
+        {
+          "EvidenceQuote": "归属于上市公司股东的净资产（元） | 680,669,522.77 | 967,168,449.90 | -29.62%",
+          "Interpretation": "净资产同比下降29.62%，所有者权益严重侵蚀。"
+        },
+        {
+          "EvidenceQuote": "扣除非经常损益前后的净利润孰低者为负值 是 □否",
+          "Interpretation": "公司最近一个会计年度扣非前后净利润孰低为负，表明经营亏损。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "总资产同比变化",
+        "净资产同比变化",
+        "净利润正负"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "总资产和净资产大幅下降，且净利润为负，表明公司财务流动性紧张、偿债能力削弱，暴露程度高。",
+      "RiskName": "财务流动性风险",
+      "Subcategory": "资产负债恶化"
+    },
+    {
+      "Category": "诉讼合规治理",
+      "Evidence": [
+        {
+          "EvidenceQuote": "2023 年，公司抽查往年事项发现 2020 年公司对间接参股公司深圳市财信新领航置业有限公司提供财务资助 2,000 万元，由于旧改项目未最终落地，前述财务资助于 2021 年转至非关联方深圳信展投资控股有限公司。上述对外提供财务资助事项，公司未签订协议，未履行审议程序并及时进行临时公告。同时，2024 年 3 月中国证券监督管理委员会重庆监管局针对此事项发布行政监管措施决定书【2024】6 号《关于对财信地产发展集团股份有限公司采取责令改正措施的决定》。",
+          "Interpretation": "公司存在未履行审议程序的财务资助违规行为，并收到证监局责令改正决定，面临监管处罚和整改压力。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "财务资助金额2000万元",
+        "行政监管措施决定书编号"
+      ],
+      "Mitigants": [
+        "公司已补签协议、召开董事会审议补充确认、发布公告、进行内部整改"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "违规提供财务资助、未履行审议程序已被监管出具责令改正措施，暴露公司治理和合规风险，暴露程度高。",
+      "RiskName": "诉讼及合规风险",
+      "Subcategory": "监管处罚"
+    },
+    {
+      "Category": "客户信用/集中度",
+      "Evidence": [
+        {
+          "EvidenceQuote": "截止本报告期末，公司为商品房承购人因银行抵押贷款提供的担保余额为 77,198.57 万元。",
+          "Interpretation": "公司为商品房承购人提供大额担保余额，若承购人违约，公司可能承担偿付责任。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [
+        "担保余额金额"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "大额担保余额（约7.72亿元）构成重大或有负债，可能影响公司现金流和财务状况，暴露程度中等。",
+      "RiskName": "按揭贷款担保风险",
+      "Subcategory": "或有负债"
+    }
+  ]
+}

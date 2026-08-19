@@ -1,0 +1,80 @@
+{
+  "lifecycles": [
+    {
+      "cleanup": "shutdown_ack_then_exit_0",
+      "elapsed_seconds": 8.187,
+      "message_types": [
+        "ready",
+        "result",
+        "shutdown_ack"
+      ]
+    },
+    {
+      "cleanup": "shutdown_ack_then_exit_0",
+      "elapsed_seconds": 8.047,
+      "message_types": [
+        "ready",
+        "result",
+        "shutdown_ack"
+      ]
+    }
+  ],
+  "protocol": {
+    "cleanup": "shutdown/shutdown_ack/exit-0; timeout client kills process",
+    "flush": "after every message",
+    "ready_first": true,
+    "request_id_required": true,
+    "single_concurrency": true,
+    "stderr": "logs",
+    "stdout": "JSONL only",
+    "timeout_seconds": 180.0
+  },
+  "rankings": [
+    [
+      [
+        "chunk-96b912fc5b6c4cfe15c8c777997b677f",
+        0.71185189
+      ],
+      [
+        "chunk-124ac6c44e75a8f11afa7a53452b6712",
+        0.69013178
+      ],
+      [
+        "chunk-21a867ba365e94915f9ca6987e348f0e",
+        0.66293687
+      ],
+      [
+        "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+        0.66162044
+      ],
+      [
+        "chunk-2eb50871ac141e32172ec188fc6da888",
+        0.65844542
+      ]
+    ],
+    [
+      [
+        "chunk-96b912fc5b6c4cfe15c8c777997b677f",
+        0.71185189
+      ],
+      [
+        "chunk-124ac6c44e75a8f11afa7a53452b6712",
+        0.69013178
+      ],
+      [
+        "chunk-21a867ba365e94915f9ca6987e348f0e",
+        0.66293687
+      ],
+      [
+        "chunk-23f59e14bbc959a7da0a3dfb9ff8cd7d",
+        0.66162044
+      ],
+      [
+        "chunk-2eb50871ac141e32172ec188fc6da888",
+        0.65844542
+      ]
+    ]
+  ],
+  "schema_version": "finglmqa.phase7.fresh_worker_repeatability.v1",
+  "stable_top_ids_and_scores": true
+}

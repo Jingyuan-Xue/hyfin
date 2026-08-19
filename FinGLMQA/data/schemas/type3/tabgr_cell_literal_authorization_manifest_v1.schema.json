@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.tabgr.cell_literal_authorization_manifest.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile_version",
+    "builder_version",
+    "corpus_id",
+    "corpus_profile_sha256",
+    "document_count",
+    "authorization_count",
+    "documents_with_authorizations",
+    "counts",
+    "input_artifacts",
+    "code_and_schema_closure",
+    "source_snapshot",
+    "document_manifest",
+    "rejection_audit",
+    "build_contract",
+    "manifest_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.type3.tabgr.cell_literal_authorization_manifest.v1"
+    },
+    "profile_version": {
+      "const": "tabgr-cell-literal-exact-v1"
+    },
+    "builder_version": {
+      "const": "type3-phase51-tabgr-cell-literal-builder-v1"
+    },
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "corpus_profile_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "document_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "authorization_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "documents_with_authorizations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tables_scanned",
+        "rows_scanned",
+        "physical_numeric_cells_considered",
+        "authorizations_emitted",
+        "rejections",
+        "semantic_conflict_groups"
+      ],
+      "properties": {
+        "tables_scanned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rows_scanned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "physical_numeric_cells_considered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "authorizations_emitted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejections": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "semantic_conflict_groups": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "input_artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/fileBinding"
+      }
+    },
+    "code_and_schema_closure": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/fileBinding"
+      }
+    },
+    "source_snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_count",
+        "semantic_sha256_before",
+        "semantic_sha256_after",
+        "unchanged"
+      ],
+      "properties": {
+        "document_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "semantic_sha256_before": {
+          "$ref": "#/$defs/sha256"
+        },
+        "semantic_sha256_after": {
+          "$ref": "#/$defs/sha256"
+        },
+        "unchanged": {
+          "const": true
+        }
+      }
+    },
+    "document_manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "record_count"
+      ],
+      "properties": {
+        "path": {
+          "const": "document_manifest.jsonl"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "record_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "rejection_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "record_count",
+        "rejected_count"
+      ],
+      "properties": {
+        "path": {
+          "const": "rejection_audit.jsonl"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "record_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejected_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "build_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_markdown_read_only_hash_verification",
+        "gold_or_scoring_inputs_read",
+        "numeric_authorization_priority",
+        "exact_literal_only",
+        "hidden_staging_atomic_publish",
+        "all_records_closed_schema_validated"
+      ],
+      "properties": {
+        "source_markdown_read_only_hash_verification": {
+          "const": true
+        },
+        "gold_or_scoring_inputs_read": {
+          "const": false
+        },
+        "numeric_authorization_priority": {
+          "const": true
+        },
+        "exact_literal_only": {
+          "const": true
+        },
+        "hidden_staging_atomic_publish": {
+          "const": true
+        },
+        "all_records_closed_schema_validated": {
+          "const": true
+        }
+      }
+    },
+    "manifest_fingerprint": {
+      "$ref": "#/$defs/sha256"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "fileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "path",
+        "sha256_before",
+        "sha256_after"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256_before": {
+          "$ref": "#/$defs/sha256"
+        },
+        "sha256_after": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  }
+}

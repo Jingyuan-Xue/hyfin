@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.subplan_result.v1",
+  "title": "SubPlanResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "subplan_id", "backend", "operation", "planning_state", "execution_state", "status", "result", "claims", "citations", "failure_code", "errors", "warnings", "missing_fact_requests", "trace"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.subplan_result.v1"},
+    "subplan_id": {"type": "string"},
+    "backend": {"enum": ["fact", "sql", "formula", "evidence"]},
+    "operation": {"type": "string"},
+    "planning_state": {"enum": ["ready", "blocked"]},
+    "execution_state": {"enum": ["executed", "not_executed"]},
+    "status": {"enum": ["ok", "partial", "needs_clarification", "not_found", "unsupported", "fallback_required", "blocked", "error"]},
+    "result": {"type": ["object", "null"]},
+    "claims": {"type": "array"},
+    "citations": {"type": "array"},
+    "failure_code": {"type": ["string", "null"]},
+    "errors": {"type": "array"},
+    "warnings": {"type": "array"},
+    "missing_fact_requests": {"type": "array"},
+    "trace": {"type": "object"}
+  }
+}

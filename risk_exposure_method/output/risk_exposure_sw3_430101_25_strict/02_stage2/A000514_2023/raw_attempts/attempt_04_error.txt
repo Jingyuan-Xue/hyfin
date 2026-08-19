@@ -1,0 +1,1 @@
+RiskExposures[0].Evidence[0].EvidenceQuote must be an exact quote from the supplied evidence text.

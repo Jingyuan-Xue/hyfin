@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.tabgr.cell_literal_authorization_document_manifest.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "corpus_id",
+    "document_id",
+    "source_sha256",
+    "shard_path",
+    "shard_sha256",
+    "row_evidence_count",
+    "authorization_count"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.type3.tabgr.cell_literal_authorization_document_manifest.v1"
+    },
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "shard_path": {
+      "type": "string",
+      "pattern": "^documents/[0-9a-f]{20}\\.jsonl$"
+    },
+    "shard_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "row_evidence_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "authorization_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

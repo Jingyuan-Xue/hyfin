@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase10.shadow_eligibility.v1",
+  "title": "Phase10ShadowEligibility",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "question_sha256", "eligibility", "basis", "review_state"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase10.shadow_eligibility.v1"},
+    "case_id": {"type": "string", "minLength": 1},
+    "question_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "eligibility": {"enum": ["answerable", "unanswerable_absent_evidence", "unanswerable_excluded_table_evidence"]},
+    "basis": {"type": "array", "items": {"type": "string"}},
+    "review_state": {"enum": ["mechanical", "human_confirmed"]}
+  }
+}

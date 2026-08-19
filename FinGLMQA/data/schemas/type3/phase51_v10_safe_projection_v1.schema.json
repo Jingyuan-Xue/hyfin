@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.type3.phase51.v10_safe_projection.v1",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "range": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {"type": "integer", "minimum": 0},
+        {"type": "integer", "minimum": 0}
+      ],
+      "items": false
+    },
+    "legacyCitation": {
+      "type": "object",
+      "required": [
+        "citation_kind",
+        "corpus_id",
+        "document_id",
+        "citation_id",
+        "candidate_id",
+        "source_kind",
+        "source_markdown",
+        "line_range",
+        "content_sha256",
+        "heading_path"
+      ],
+      "properties": {
+        "citation_kind": {"const": "legacy_evidence"},
+        "corpus_id": {"type": "string", "minLength": 1},
+        "document_id": {"type": "string", "minLength": 1},
+        "citation_id": {"type": "string", "minLength": 1},
+        "candidate_id": {"type": "string", "minLength": 1},
+        "source_kind": {"type": "string", "minLength": 1},
+        "source_markdown": {"type": "string", "minLength": 1},
+        "line_range": {"$ref": "#/$defs/range"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "heading_path": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "answer": {
+      "type": "object",
+      "required": [
+        "question_id",
+        "question",
+        "document_id",
+        "answer_safe_text",
+        "citations"
+      ],
+      "properties": {
+        "question_id": {"type": "string", "minLength": 1},
+        "question": {"type": "string", "minLength": 1},
+        "document_id": {"type": "string", "minLength": 1},
+        "answer_safe_text": {"type": "string", "minLength": 1},
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/legacyCitation"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "frozenArtifact": {
+      "type": "object",
+      "required": ["path", "sha256_before", "sha256_after"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256_before": {"$ref": "#/$defs/sha256"},
+        "sha256_after": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": false
+    },
+    "outputArtifact": {
+      "type": "object",
+      "required": ["path", "row_count", "sha256"],
+      "properties": {
+        "path": {"const": "answers.jsonl"},
+        "row_count": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": false
+    },
+    "manifest": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "profile_version",
+        "corpus_id",
+        "question_profile_id",
+        "question_profile_sha256",
+        "questions",
+        "source_v10",
+        "source_artifacts",
+        "code",
+        "projection_contract",
+        "artifacts",
+        "run_fingerprint"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "finglmqa.type3.phase51.v10_safe_projection_manifest.v1"
+        },
+        "profile_version": {
+          "const": "type3-phase51-v10-safe-projection-v1"
+        },
+        "corpus_id": {"type": "string", "minLength": 1},
+        "question_profile_id": {"type": "string", "minLength": 1},
+        "question_profile_sha256": {"$ref": "#/$defs/sha256"},
+        "questions": {
+          "type": "object",
+          "required": [
+            "count",
+            "question_ids_sha256",
+            "question_records_sha256",
+            "question_order_sha256"
+          ],
+          "properties": {
+            "count": {"type": "integer", "minimum": 1},
+            "question_ids_sha256": {"$ref": "#/$defs/sha256"},
+            "question_records_sha256": {"$ref": "#/$defs/sha256"},
+            "question_order_sha256": {"$ref": "#/$defs/sha256"}
+          },
+          "additionalProperties": false
+        },
+        "source_v10": {
+          "type": "object",
+          "required": [
+            "profile_version",
+            "freeze_manifest_fingerprint",
+            "results_sha256"
+          ],
+          "properties": {
+            "profile_version": {
+              "const": "type3-qwen36-hybrid-coverage-v10"
+            },
+            "freeze_manifest_fingerprint": {"$ref": "#/$defs/sha256"},
+            "results_sha256": {"$ref": "#/$defs/sha256"}
+          },
+          "additionalProperties": false
+        },
+        "source_artifacts": {
+          "type": "object",
+          "required": [
+            "v10_results",
+            "v10_freeze",
+            "v10_run_report",
+            "questions",
+            "question_profile"
+          ],
+          "properties": {
+            "v10_results": {"$ref": "#/$defs/frozenArtifact"},
+            "v10_freeze": {"$ref": "#/$defs/frozenArtifact"},
+            "v10_run_report": {"$ref": "#/$defs/frozenArtifact"},
+            "questions": {"$ref": "#/$defs/frozenArtifact"},
+            "question_profile": {"$ref": "#/$defs/frozenArtifact"}
+          },
+          "additionalProperties": false
+        },
+        "code": {
+          "type": "object",
+          "required": ["builder", "schema"],
+          "properties": {
+            "builder": {"$ref": "#/$defs/frozenArtifact"},
+            "schema": {"$ref": "#/$defs/frozenArtifact"}
+          },
+          "additionalProperties": false
+        },
+        "projection_contract": {
+          "type": "object",
+          "required": [
+            "allowed_answer_fields",
+            "allowed_legacy_citation_fields",
+            "forbidden_annotation_key_fragments",
+            "annotation_fields_projected",
+            "raw_envelope_retained",
+            "source_artifacts_read_only",
+            "closed_schema_validated"
+          ],
+          "properties": {
+            "allowed_answer_fields": {
+              "const": [
+                "question_id",
+                "question",
+                "document_id",
+                "answer_safe_text",
+                "citations"
+              ]
+            },
+            "allowed_legacy_citation_fields": {
+              "const": [
+                "citation_kind",
+                "corpus_id",
+                "document_id",
+                "citation_id",
+                "candidate_id",
+                "source_kind",
+                "source_markdown",
+                "line_range",
+                "content_sha256",
+                "heading_path"
+              ]
+            },
+            "forbidden_annotation_key_fragments": {
+              "const": [
+                "oracle",
+                "gold",
+                "score",
+                "delta",
+                "loss",
+                "win",
+                "reference",
+                "answer_key"
+              ]
+            },
+            "annotation_fields_projected": {"const": false},
+            "raw_envelope_retained": {"const": false},
+            "source_artifacts_read_only": {"const": true},
+            "closed_schema_validated": {"const": true}
+          },
+          "additionalProperties": false
+        },
+        "artifacts": {
+          "type": "object",
+          "required": ["answers.jsonl"],
+          "properties": {
+            "answers.jsonl": {"$ref": "#/$defs/outputArtifact"}
+          },
+          "additionalProperties": false
+        },
+        "run_fingerprint": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/answer"},
+    {"$ref": "#/$defs/manifest"}
+  ]
+}

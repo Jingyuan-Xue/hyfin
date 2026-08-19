@@ -1,0 +1,14 @@
+{
+  "input_json_count": 24,
+  "invalid_json_count": 0,
+  "outputs": {
+    "company_risk_matrix": "output/risk_exposure_sw3_430101_25_strict/03_dataset/company_risk_matrix.csv",
+    "human_audit_sample": "output/risk_exposure_sw3_430101_25_strict/03_dataset/human_audit_sample.csv",
+    "invalid_jsons": null,
+    "risk_exposure_csv": "output/risk_exposure_sw3_430101_25_strict/03_dataset/risk_exposure_records.csv",
+    "risk_exposure_jsonl": "output/risk_exposure_sw3_430101_25_strict/03_dataset/risk_exposure_records.jsonl",
+    "risk_factor_library": "output/risk_exposure_sw3_430101_25_strict/03_dataset/risk_factor_library.csv"
+  },
+  "record_count": 129,
+  "valid_json_count": 24
+}

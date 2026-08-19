@@ -1,0 +1,1 @@
+{"$id":"finglmqa.type3.a2rag.retrieval_unit.v1","$schema":"https://json-schema.org/draft/2020-12/schema","additionalProperties":true,"required":["schema_version","unit_id","corpus_id","document_id","atom_ids","content","content_sha256","line_range","char_range","byte_range","source_markdown","source_sha256","heading_path","adjacent_table_ids"],"type":"object"}

@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase4.tabgr_table_corpus.v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "document_id",
+    "table_id",
+    "table_index",
+    "header",
+    "rows",
+    "matrix",
+    "matrix_text",
+    "edge_list",
+    "source_markdown",
+    "line_range",
+    "caption",
+    "nearby_text",
+    "unit_hint",
+    "section_path",
+    "raw_markdown_sha1",
+    "metadata",
+    "stats",
+    "tabgr_ready"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.phase4.tabgr_table_corpus.v1"
+    },
+    "document_id": {
+      "type": "string"
+    },
+    "table_id": {
+      "type": "string"
+    },
+    "table_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "header": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "matrix": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "matrix_text": {
+      "type": "string"
+    },
+    "edge_list": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_markdown": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "line_range": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      ]
+    },
+    "caption": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nearby_text": {
+      "type": "string"
+    },
+    "unit_hint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "section_path": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "raw_markdown_sha1": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "stats": {
+      "type": "object"
+    },
+    "tabgr_ready": {
+      "type": "boolean"
+    }
+  }
+}

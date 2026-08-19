@@ -1,0 +1,145 @@
+{
+  "Company": {
+    "company_id": "A000514",
+    "company_name": "渝开发",
+    "report_year": "2023",
+    "source_doc_id": "A000514_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "存货跌价风险",
+      "Category": "需求周期",
+      "Subcategory": "房地产市场价格下行",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "资产减值损失 | -193,594,946.20 | -17,473,091.99 | 1007.96% | 主要系房地产市场深度调整，计提车库存货跌价准备所致。",
+          "Interpretation": "该证据直接显示公司因房地产市场深度调整计提了1.94亿元的存货跌价准备，金额巨大且同比增加1007.96%，对利润产生重大负面影响，属于高暴露风险。"
+        }
+      ],
+      "Reason": "存货跌价准备直接减少当期利润，且规模高达1.94亿元，表明公司对房地产市场价格下行有高暴露。",
+      "Mitigants": [],
+      "MetricHints": [
+        "存货跌价准备金额-193,594,946.20元",
+        "同比变动1007.96%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户集中度风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "单一客户依赖",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "1 | 客户一 | 645, 638,832. 11 | 48.56%",
+          "Interpretation": "客户一销售额占公司年度销售总额48.56%，接近一半，表明公司对单一客户存在高度依赖，一旦该客户违约或订单减少，将严重影响公司收入。"
+        }
+      ],
+      "Reason": "单个客户贡献近一半收入，集中度极高，属于高暴露风险。",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名客户合计销售金额占年度销售总额比例53.35%",
+        "客户一销售占比48.56%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "应收款坏账风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "应收款信用损失",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "信用减值损失 | -28,746,747.82 | -2,856,649.30 | 906.31% | 主要系本期计提应收南樾天宸二期团购应收款坏账准备所致。",
+          "Interpretation": "信用减值损失为2875万元，同比增加906.31%，主要因应收南樾天宸二期团购款项计提坏账准备，表明客户信用风险显著增加，对公司利润构成一定拖累。"
+        }
+      ],
+      "Reason": "坏账损失金额较大（相当于营业利润的22%），且同比激增，但相对于整体收入规模占比约2%，属于中等暴露。",
+      "Mitigants": [],
+      "MetricHints": [
+        "信用减值损失金额-28,746,747.82元",
+        "同比变动906.31%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "按揭贷款担保风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "或有负债",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至 2023 年 12 月 31 日，公司按房地产经营惯例为商品房承购人提供按揭贷款担保合计 11,327.80 万元。",
+          "Interpretation": "公司为购房者提供按揭担保1.13亿元，若购房者违约，公司需承担保证责任，构成或有负债，可能影响现金流。"
+        }
+      ],
+      "Reason": "担保金额超过1亿元，但属于行业常规做法，风险暴露程度中等，通常情况下违约率可控。",
+      "Mitigants": [],
+      "MetricHints": [
+        "按揭贷款担保金额11,327.80万元"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "政策调控风险",
+      "Category": "政策监管",
+      "Subcategory": "房地产宏观调控",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（1）政策风险：房地产受政府宏观政策影响较大，未来房地产行业政策亦可能存在进一步的调整，或出台新的调控政策。若公司未来不能适应不断变动的行业政策，则公司的业务发展和财务状况可能受到一定影响。",
+          "Interpretation": "公司明确披露了政策风险，指出宏观政策变化可能对业务和财务产生不利影响，但未量化具体影响。"
+        }
+      ],
+      "Reason": "房地产行业受政策影响大，但公司已明确识别，且应对措施存在，属于中等暴露。",
+      "Mitigants": [
+        "紧密跟踪政策变化，及时调整公司经营策略。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "市场下行经营风险",
+      "Category": "需求周期",
+      "Subcategory": "商品房销售承压",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（2）经营风险：中心城区商品房市占率回调上涨，市场持续承压，新房容量低位企稳，随着宏观政策端降低首付比例及公积金贷款利率；开发利润率降低等经营风险，可能会对公司的经营业绩产生一定的影响。",
+          "Interpretation": "公司指出市场持续承压、开发利润率降低，可能影响经营业绩，反映了需求周期下行的风险。"
+        }
+      ],
+      "Reason": "市场下行和利润率降低是行业共性，公司已披露，但未量化具体财务影响，属于中等暴露。",
+      "Mitigants": [
+        "及时调整开发节奏和营销策略，加快开发周转速度。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "融资环境变化风险",
+      "Category": "财务流动性",
+      "Subcategory": "融资成本与可得性",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "（3）财务风险：房地产开发行业属于资金密集型行业，在国家房地产调控的大背景下，融资环境的变化可能导致公司的融资受到限制或公司的融资成本上升，从而对公司的生产经营产生不利影响。",
+          "Interpretation": "公司披露了融资环境变化可能导致融资受限或成本上升，影响生产经营，属于典型的流动性风险。"
+        }
+      ],
+      "Reason": "房地产是资金密集型行业，融资环境变化对现金流和成本有影响，公司已识别并制定应对措施，属于中等暴露。",
+      "Mitigants": [
+        "合理安排融资计划，不断拓展多种融资方式，保证公司财务成本处于合理范围。"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "证据均来自年报原文，包含具体金额、比例和明确的风险描述，足以支撑风险识别与评分。"
+  }
+}

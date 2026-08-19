@@ -1,0 +1,10 @@
+{
+  "schema_version": "finglmqa.phase8.company_aliases.v1",
+  "aliases": [
+    {"alias": "太龙股份", "stock_code": "300650"},
+    {"alias": "北京首创生态环保集团股份有限公司", "stock_code": "600008"},
+    {"alias": "文灿集团股份有限公司", "stock_code": "603348"},
+    {"alias": "乐鑫信息科技上海股份有限公司", "stock_code": "688018"},
+    {"alias": "水发燃气", "stock_code": "603318"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.qa_answer.v1",
+  "title": "QAAnswer",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "status", "composition_pattern_id", "document_scope", "subplans", "answer_text", "result", "citations", "trace", "errors", "warnings", "missing_fact_requests"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.qa_answer.v1"},
+    "request_id": {"type": "string"},
+    "status": {"enum": ["ok", "partial", "needs_clarification", "not_found", "unsupported", "fallback_required", "blocked", "error"]},
+    "composition_pattern_id": {"type": ["string", "null"]},
+    "document_scope": {"type": ["object", "null"]},
+    "subplans": {"type": "array", "maxItems": 12},
+    "answer_text": {"type": "string"},
+    "result": {},
+    "citations": {"type": "array"},
+    "trace": {},
+    "errors": {"type": "array"},
+    "warnings": {"type": "array"},
+    "missing_fact_requests": {"type": "array"}
+  }
+}

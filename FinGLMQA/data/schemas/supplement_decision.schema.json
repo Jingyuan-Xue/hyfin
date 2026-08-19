@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase9.supplement_decision.v1",
+  "title": "Phase 9 Supplement Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "slot_key", "slot_fingerprint", "requirement_id", "decision_status", "failure_code", "request_class", "conflict_group_ids", "shortlist", "ranked_cell_fingerprints", "rejected_values", "accepted_fact_id", "audit_counts", "trace_fingerprint"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase9.supplement_decision.v1"},
+    "slot_key": {"type": "array", "minItems": 6, "maxItems": 6},
+    "slot_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "requirement_id": {"type": "string", "minLength": 1},
+    "decision_status": {"enum": ["accepted", "rejected"]},
+    "failure_code": {"type": ["string", "null"]},
+    "request_class": {"type": "string", "minLength": 1},
+    "conflict_group_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "shortlist": {"type": "array", "items": {"type": "object"}},
+    "ranked_cell_fingerprints": {"type": "array", "items": {"type": "string"}},
+    "rejected_values": {"type": "array"},
+    "accepted_fact_id": {"type": ["string", "null"]},
+    "audit_counts": {"type": "object"},
+    "trace_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

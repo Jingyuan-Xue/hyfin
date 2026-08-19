@@ -1,0 +1,166 @@
+{
+  "Company": {
+    "company_id": "A000863",
+    "company_name": "三湘印象",
+    "report_year": "2023",
+    "source_doc_id": "A000863_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "房地产销售下滑",
+      "Category": "需求周期",
+      "Subcategory": "房地产销售",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "房地产销售 | 757, 854,422. 15 | 315,020,565.99 | 58.43% | -36.27% | -45.26% | 6.83%",
+          "Interpretation": "房地产销售收入757,854,422.15元，同比下降36.27%，表明公司核心房地产业务遭遇市场需求下行，收入显著萎缩。"
+        }
+      ],
+      "Reason": "房地产销售收入同比下降36.27%，占营业收入比重最大，直接导致公司整体收入下滑，对经营业绩有重大负面影响。",
+      "Mitigants": [],
+      "MetricHints": [
+        "房地产销售营业收入同比增速",
+        "房地产销售毛利率同比变化"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "客户按揭担保风险",
+      "Category": "客户信用/集中度",
+      "Subcategory": "按揭担保",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "截至2023年12 月31日，本公司为客户购房按揭贷款提供的阶段性担保总额为 163,539.71万元。",
+          "Interpretation": "公司为客户按揭贷款提供16.35亿元的阶段性担保，若购房者违约可能需代偿，形成潜在信用风险。"
+        }
+      ],
+      "Reason": "担保金额高达16.35亿元，若房地产市场需求持续下滑导致购房者还款能力下降，公司可能面临代偿损失，影响现金流。",
+      "Mitigants": [],
+      "MetricHints": [
+        "阶段性担保总额"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "供应商集中风险",
+      "Category": "供应链",
+      "Subcategory": "采购集中",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "前五名供应商合计采购金额（元） | 371,699,597. 86 前五名供应商合计采购金额占年度采购总额比例 | 38.09%",
+          "Interpretation": "前五大供应商采购占比38.09%，采购集中度较高，一旦主要供应商出现问题可能影响供应链稳定。"
+        }
+      ],
+      "Reason": "前五名供应商采购额占年度采购总额38.09%，存在供应商依赖风险，可能因供应商问题导致成本上升或供应中断。",
+      "Mitigants": [],
+      "MetricHints": [
+        "前五名供应商采购占比"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "流动性风险",
+      "Category": "财务流动性",
+      "Subcategory": "现金流",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "报告期内公司经营活动产生的现金净流量 4,508,524.05 元",
+          "Interpretation": "经营活动现金流量净额仅450.85万元，远低于净利润，表明盈利质量较差，经营性现金流紧张。"
+        },
+        {
+          "EvidenceQuote": "筹资活动现金流入小计 | 160,854, 519. 46 | 323,100,000.00 | -50.22%",
+          "Interpretation": "筹资活动现金流入1.61亿元，同比下降50.22%，外部融资能力减弱。"
+        }
+      ],
+      "Reason": "经营现金流极低且筹资流入大幅下降，公司可能面临短期偿债及运营资金压力。",
+      "Mitigants": [],
+      "MetricHints": [
+        "经营活动现金流量净额",
+        "筹资活动现金流入同比变化"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "投资基金公允价值波动",
+      "Category": "市场价格",
+      "Subcategory": "金融资产公允价值",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "公允价值变动损益 | -38,980,285. 34 | 156.56% | 主要系本期投资基金公允价值变动损益 | 否",
+          "Interpretation": "公允价值变动损失3898万元，占利润总额156.56%，对利润冲击巨大。"
+        }
+      ],
+      "Reason": "公允价值变动损益（损失）占利润总额比例超过100%，说明公司盈利高度依赖金融资产公允价值变动，存在较大不确定性。",
+      "Mitigants": [],
+      "MetricHints": [
+        "公允价值变动损益金额",
+        "公允价值变动损益占利润总额比例"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "股权投资减值风险",
+      "Category": "市场价格",
+      "Subcategory": "资产减值",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "资产减值 | -6,510,971. 26 | 26.15% | 主要系本期公司持有的维康金杖股权计提减值所致 | 否",
+          "Interpretation": "对维康金杖股权投资计提减值651万元，占利润总额26.15%，表明所持股权价值下降。"
+        }
+      ],
+      "Reason": "股权减值占利润总额四分之一以上，若未来继续减值将损害盈利。",
+      "Mitigants": [],
+      "MetricHints": [
+        "资产减值损失金额",
+        "资产减值损失占利润总额比例"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "存货高企风险",
+      "Category": "需求周期",
+      "Subcategory": "房地产存货",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "存货 | 4,304,228, 960. 87 | 61.32% | 4,129,319,506. 04 | 59.68% | 1. 64%",
+          "Interpretation": "存货43.04亿元，占总资产61.32%，占比极高且同比上升，若市场恶化可能发生跌价。"
+        }
+      ],
+      "Reason": "存货占总资产比例超过60%，且同比上升，若房地产销售持续下滑，存货可能面临较大减值风险。",
+      "Mitigants": [],
+      "MetricHints": [
+        "存货占总资产比例",
+        "存货同比变化"
+      ],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "房地产销售下滑",
+      "Aliases": [
+        "房地产销售收入下降"
+      ],
+      "MergeReason": "同一业务收入下滑的不同表述"
+    },
+    {
+      "CanonicalRisk": "流动性风险",
+      "Aliases": [
+        "现金流风险"
+      ],
+      "MergeReason": "均指公司资金短缺或融资能力下降"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "从年报中提取了7条风险暴露，使用了金额、比例、同比等可审计信息，证据质量高。"
+  }
+}

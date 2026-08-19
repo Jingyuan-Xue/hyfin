@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HyFin · ICDM Demo</title>
+  <link rel="stylesheet" href="styles.css?v=20260722-2" />
+  <link rel="stylesheet" href="large-type.css?v=20260722-2" />
+  <link rel="stylesheet" href="backend.css?v=20260722-2" />
+  <link rel="stylesheet" href="cases.css?v=20260724-1" />
+  <link rel="stylesheet" href="qa-integration.css?v=20260723-1" />
+  <link rel="stylesheet" href="risk-integration.css?v=20260725-6" />
+  <link rel="stylesheet" href="product.css?v=20260725-6" />
+  <link rel="stylesheet" href="qa-chat.css?v=20260724-2" />
+  <link rel="stylesheet" href="qa-simple.css?v=20260814-2" />
+  <link rel="stylesheet" href="presentation.css?v=20260807-1" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><strong>HyFin</strong></div>
+      <nav>
+        <small>DEMO</small>
+        <button class="nav-item active" data-view="live"><i></i><span>Industry Analytics</span></button>
+        <button class="nav-item" data-view="risk"><i></i><span>Risk Exposure</span></button>
+        <button class="nav-item" data-view="qa"><i></i><span>QA</span></button>
+        <small>RESULTS</small>
+        <button class="nav-item" data-view="experiments"><i></i><span>Experiments</span></button>
+      </nav>
+      <div class="side-footer"><a href="#">Paper</a><a href="#">Code</a><span>ICDM Demo</span></div>
+    </aside>
+
+    <main>
+      <section class="view active" id="live-view">
+        <header class="title-block"><h1>Industry Analytics</h1><p>Identify a company’s fine-grained business lines from narrative and financial evidence.</p></header>
+        <div class="view-body live-body">
+          <section class="case-line">
+            <div><span class="avatar">GE</span><div><strong>Gree Electric Appliances</strong><small>000651.SZ · Annual Report 2021</small></div></div>
+            <button id="run-demo">▶ Run demo</button>
+          </section>
+
+          <div class="steps">
+            <div class="step"><b>1</b><span>Parse</span></div>
+            <div class="step"><b>2</b><span>Retrieve</span></div>
+            <div class="step"><b>3</b><span>Align</span></div>
+            <div class="step"><b>4</b><span>Generate</span></div>
+          </div>
+
+          <section class="demo-card">
+            <div class="demo-toolbar">
+              <div class="channel-tabs"><button class="active" data-channel="text">Text evidence</button><button data-channel="table">Table evidence</button></div>
+              <div class="mode-tabs"><span>Mode</span><button class="active" data-mode="hybrid">Hybrid</button></div>
+            </div>
+            <div class="demo-grid">
+              <article class="evidence-panel">
+                <div class="panel-heading"><span>EVIDENCE</span><small id="source-name">Management discussion · Main business</small></div>
+                <div id="text-evidence" class="evidence-content">
+                  <blockquote>格力电器的消费领域产品涵盖家用空调、暖通空调、冰箱、洗衣机、热水器、厨房电器等。2021 年家用空调内销销量以 37.4% 的份额排名行业第一。</blockquote>
+                  <div class="evidence-foot"><span>Supports</span><b>Air Conditioner Manufacturing</b></div>
+                </div>
+                <div id="table-evidence" class="evidence-content hidden">
+                  <table><thead><tr><th>Segment</th><th>Revenue</th><th>Share</th><th>YoY</th></tr></thead><tbody>
+                    <tr class="focus"><td>Air conditioner</td><td>¥131.71B</td><td>70.11%</td><td>+13.96%</td></tr>
+                    <tr><td>Home appliances</td><td>¥4.88B</td><td>2.60%</td><td>+7.96%</td></tr>
+                    <tr><td>Intelligent equipment</td><td>¥0.86B</td><td>0.46%</td><td>+42.77%</td></tr>
+                  </tbody></table>
+                  <p class="table-note">Air conditioners contribute 70.11% of total revenue and are the economically dominant business line.</p>
+                </div>
+              </article>
+              <aside class="label-panel">
+                <div class="panel-heading"><span>GENERATED LABELS</span><small id="active-mode">HYBRID</small></div>
+                <div id="generated-labels"></div>
+                <p class="decision-note" id="decision-note"></p>
+              </aside>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="qa-view">
+        <header class="title-block">
+          <h1>Annual report Q&amp;A</h1>
+          <p>Ask a company-specific question and verify the answer against cited disclosure.</p>
+        </header>
+        <div class="view-body qa-body">
+          <section class="qa-service-line">
+            <div>
+              <span class="qa-section-label">FINGLMQA</span>
+              <strong id="qa-service-title">Evidence-grounded annual report QA</strong>
+            </div>
+          </section>
+
+          <div class="qa-workspace">
+            <aside class="qa-catalog">
+              <div class="qa-panel-title">
+                <span>01 / DOCUMENT</span>
+                <h2 id="qa-catalog-title">Choose an annual report</h2>
+                <p id="qa-catalog-description">Search by company or stock code.</p>
+              </div>
+              <div class="qa-catalog-controls">
+                <input id="qa-document-search" type="search" maxlength="100" placeholder="Search company or stock code" />
+                <select id="qa-document-year" aria-label="Report year">
+                  <option value="">All years</option>
+                </select>
+              </div>
+              <div class="qa-document-summary" id="qa-document-count">Loading catalog…</div>
+              <div class="qa-document-list" id="qa-document-list">
+                <div class="qa-empty">Loading annual reports…</div>
+              </div>
+            </aside>
+
+            <section class="qa-question-panel">
+              <div class="qa-panel-title qa-question-heading">
+                <div>
+                  <span>02 / QUESTION</span>
+                  <h2 id="qa-question-title">Ask about the selected report</h2>
+                </div>
+                <small id="qa-character-count">0 / 1000</small>
+              </div>
+
+              <div id="qa-selected-document" class="qa-selected-document empty">
+                <span class="qa-selected-mark">AR</span>
+                <div>
+                  <strong id="qa-selected-name">No report selected</strong>
+                  <small id="qa-selected-meta">Choose a report from the left.</small>
+                </div>
+              </div>
+
+              <form id="qa-form">
+                <textarea id="qa-question" maxlength="1000" rows="5" disabled placeholder="Choose a report before asking a question"></textarea>
+                <div id="qa-prompts" class="qa-prompts"></div>
+                <div class="qa-form-actions">
+                  <span id="qa-engine-note">Text and table evidence · grounded generation</span>
+                  <button id="qa-submit" type="submit" disabled>
+                    <span>Run QA</span><b aria-hidden="true">→</b>
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <section id="qa-result" class="qa-result hidden" aria-live="polite">
+            <div class="qa-result-head">
+              <div>
+                <span>03 / ANSWER</span>
+                <h2 id="qa-result-title">Answer and evidence</h2>
+              </div>
+              <span id="qa-result-status" class="qa-status">Waiting</span>
+            </div>
+            <div id="qa-message" class="qa-message hidden"></div>
+            <article class="qa-answer">
+              <span>ANSWER</span>
+              <p id="qa-answer-text"></p>
+            </article>
+            <div class="qa-result-grid">
+              <section>
+                <div class="qa-result-subhead">
+                  <h3 id="qa-citations-title">Citations</h3>
+                  <b id="qa-citation-count">0</b>
+                </div>
+                <div id="qa-citations" class="qa-citations"></div>
+              </section>
+              <section>
+                <div class="qa-result-subhead">
+                  <h3 id="qa-trace-title">Execution route</h3>
+                  <b>TRACE</b>
+                </div>
+                <div id="qa-trace" class="qa-trace"></div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="risk-view">
+        <header class="title-block">
+          <h1>Risk exposure</h1>
+          <p>Review the most material company risks and open the annual-report evidence behind each conclusion.</p>
+        </header>
+        <div class="view-body risk-body">
+          <section class="risk-service-line">
+            <div>
+              <span class="risk-eyebrow">RISK EXPOSURE</span>
+              <strong id="risk-service-title">Evidence-preserving risk exposure</strong>
+            </div>
+            <div class="risk-service-status">
+              <span id="risk-coverage">Loading coverage…</span>
+            </div>
+          </section>
+
+          <div class="risk-workspace">
+            <aside class="risk-catalog">
+              <div class="risk-panel-title">
+                <span>01 / COMPANY</span>
+                <h2 id="risk-catalog-title">Choose a company</h2>
+                <p id="risk-catalog-description">2023 annual reports · SW3 430101</p>
+              </div>
+              <input id="risk-company-search" type="search" maxlength="100" placeholder="Search company or stock code" />
+              <div id="risk-company-count" class="risk-company-count">Loading companies…</div>
+              <div id="risk-company-list" class="risk-company-list">
+                <div class="risk-empty">Loading risk artifacts…</div>
+              </div>
+            </aside>
+
+            <section id="risk-detail" class="risk-detail empty">
+              <div id="risk-detail-placeholder" class="risk-detail-placeholder">
+                <span>RE</span>
+                <h2 id="risk-placeholder-title">Select one company</h2>
+                <p id="risk-placeholder-copy">Its category scores, risk conclusions, and source evidence will appear here.</p>
+              </div>
+
+              <div id="risk-detail-content" class="hidden">
+                <header class="risk-company-head">
+                  <div>
+                    <span>02 / EXPOSURE</span>
+                    <h2 id="risk-company-name"></h2>
+                    <p id="risk-company-meta"></p>
+                  </div>
+                  <span id="risk-quality" class="risk-quality">Evidence sufficient</span>
+                </header>
+
+                <div class="risk-stat-strip">
+                  <article><strong id="risk-stat-count">0</strong><span id="risk-stat-count-label">Risk factors</span></article>
+                  <article><strong id="risk-stat-max">0 / 3</strong><span id="risk-stat-max-label">Maximum exposure</span></article>
+                  <article><strong id="risk-stat-evidence">0</strong><span id="risk-stat-evidence-label">Evidence quotes</span></article>
+                </div>
+
+                <section class="risk-category-section">
+                  <div class="risk-section-head">
+                    <h3 id="risk-category-title">Category profile</h3>
+                    <span id="risk-score-legend">0 none · 3 high</span>
+                  </div>
+                  <div id="risk-category-grid" class="risk-category-grid"></div>
+                </section>
+
+                <section class="risk-exposure-section">
+                  <div class="risk-section-head">
+                    <h3 id="risk-list-title">Risk conclusions and evidence</h3>
+                    <span id="risk-exposure-count">0</span>
+                  </div>
+                  <div id="risk-exposure-list" class="risk-exposure-list"></div>
+                </section>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="experiments-view">
+        <header class="title-block"><h1>Experimental results.</h1><p>Fine-grained industry evaluation on SW3 430101.</p></header>
+        <div class="view-body experiment-body">
+          <section class="metric-strip" id="metric-strip"></section>
+          <section class="result-grid">
+            <article class="chart-card">
+              <div class="card-title"><div><span>MARKET-NEUTRAL COMOVEMENT</span><h2>Finer groups move closer together.</h2></div><b>+0.0505</b></div>
+              <div class="bars" id="result-bars"></div>
+            </article>
+            <article class="finding-card">
+              <span>RANDOM BASELINE</span><h2>Positive, but not yet significant.</h2>
+              <div><strong>0.1528</strong><small>p-value · 1,000 trials</small></div>
+              <p>The observed within-group comovement is above the random mean, but below the conventional significance threshold.</p>
+            </article>
+          </section>
+
+          <section class="data-card">
+            <div class="data-head">
+              <div><span>FULL EXPERIMENT DATA</span><h2>Explore the evaluation output.</h2></div>
+              <input id="data-search" type="search" placeholder="Search company or label…" />
+            </div>
+            <div class="data-tabs"><button class="active" data-data-tab="companies">Companies <b>25</b></button><button data-data-tab="clusters">Clusters <b>6</b></button><button data-data-tab="labels">Labels <b>14</b></button></div>
+            <div class="table-scroll"><table class="data-table"><thead id="data-thead"></thead><tbody id="data-tbody"></tbody></table></div>
+            <div class="table-footer"><span id="row-count"></span><span>Source: cached paper evaluation output</span></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="data.js?v=20260722-2"></script>
+  <script src="app.js?v=20260725-6"></script>
+  <script src="backend-client.js?v=20260725-6"></script>
+  <script src="multi-case-client.js?v=20260725-6"></script>
+  <script src="qa-simple.js?v=20260814-3"></script>
+  <script src="risk-integration.js?v=20260725-6"></script>
+</body>
+</html>

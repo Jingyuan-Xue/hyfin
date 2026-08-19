@@ -1,0 +1,109 @@
+{
+  "CanonicalizationHints": [
+    {
+      "Aliases": [
+        "房地产调控风险",
+        "行业调整风险"
+      ],
+      "CanonicalRisk": "政策调控与行业风险",
+      "MergeReason": "同义名称，均指向房地产行业政策调控带来的风险。"
+    },
+    {
+      "Aliases": [
+        "产品销售不达预期风险",
+        "去化压力风险"
+      ],
+      "CanonicalRisk": "产品去化压力导致的经营风险",
+      "MergeReason": "同义风险，均描述研办产品供过于求导致销售困难。"
+    }
+  ],
+  "Company": {
+    "company_id": "A000036",
+    "company_name": "华联控股",
+    "report_year": "2023",
+    "source_doc_id": "A000036_2023"
+  },
+  "QualityFlag": {
+    "NeedHumanReview": false,
+    "Notes": "风险证据主要来源于年报风险因素分析段落和分季度财务数据，证据充分。",
+    "Sufficiency": "sufficient"
+  },
+  "RiskExposures": [
+    {
+      "Category": "政策监管",
+      "Evidence": [
+        {
+          "EvidenceQuote": "1.政策调控与行业风险。房地产已进入调整或深度调整发展阶段，若没有足够的现金流或信贷资金支持，公司拟建项目存在延期开发、延期竣工的风险。",
+          "Interpretation": "公司明确将政策调控列为风险，指出在房地产调整阶段若缺乏现金流或信贷支持，拟建项目可能延期开发或竣工。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [],
+      "Mitigants": [
+        "财务部门要做好资金筹措和统筹资金使用，为在建、拟建地产项目提供资金保障和支持"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "该风险直接影响公司拟建项目的开发进度，可能导致收入延迟确认或成本增加，但风险披露为一般性定性描述，缺乏具体量化数据。",
+      "RiskName": "政策调控与行业风险",
+      "Subcategory": "房地产调控"
+    },
+    {
+      "Category": "需求周期",
+      "Evidence": [
+        {
+          "EvidenceQuote": "2.经营风险。与住宅产品相比，公司目前在售主要为研发办公产品，受区域同类产品供过于求影响，存在去化压力大，产品销售不达预期目标风险。",
+          "Interpretation": "公司明确产品供过于求导致的去化压力，可能使销售不达预期，直接冲击收入。"
+        },
+        {
+          "EvidenceQuote": "华南地区 | 261,465,962.49 | 46.26% | 2,025,718,751.26 | 86.42% | -87.09%",
+          "Interpretation": "2023年华南地区营业收入同比大幅下降87.09%，印证了区域同类产品供过于求导致的销售压力。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "华南地区营业收入比上年同期增减: -87.09%"
+      ],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "房产销售是公司核心业务，华南地区收入下降87%直接减少收入，且风险因素明确指出了去化压力。",
+      "RiskName": "产品去化压力导致的经营风险",
+      "Subcategory": "产品去化"
+    },
+    {
+      "Category": "财务流动性",
+      "Evidence": [
+        {
+          "EvidenceQuote": "经营活动产生的现金流量净额 | -324,202,909.61 | -686,218,067.33 | 64,631,773.68 | 7,669,890.93",
+          "Interpretation": "2023年第一、二季度经营活动现金净流量为较大负数，全年合计约-9.38亿元，显示公司经营性现金净流出，流动性压力显著。"
+        }
+      ],
+      "ExposureScore": 3,
+      "MetricHints": [
+        "经营活动产生的现金流量净额年度合计约-9.38亿元"
+      ],
+      "Mitigants": [
+        "财务部门要做好资金筹措和统筹资金使用，为在建、拟建地产项目提供资金保障和支持"
+      ],
+      "NeedHumanReview": false,
+      "Reason": "全年经营活动现金流为负，且金额超过9亿元，直接影响公司支付能力、偿债能力和持续经营。",
+      "RiskName": "现金流紧张风险",
+      "Subcategory": "经营活动现金流"
+    },
+    {
+      "Category": "政策监管",
+      "Evidence": [
+        {
+          "EvidenceQuote": "4.其他风险。城市更新政策变化及不可控性会直接影响公司城市更新项目的开发定位、产品属性和产品结构、申报进度及开发周期，正在申报的城市更新项目存在延期开发、申报结果存在不确定性等风险。",
+          "Interpretation": "城市更新政策不确定性可能影响项目定位、进度和结果，导致项目延期或变更。"
+        }
+      ],
+      "ExposureScore": 2,
+      "MetricHints": [],
+      "Mitigants": [],
+      "NeedHumanReview": false,
+      "Reason": "风险为定性描述，无量化数据，但政策变化可能对具体项目产生实质性影响。",
+      "RiskName": "城市更新政策变化风险",
+      "Subcategory": "城市更新"
+    }
+  ]
+}

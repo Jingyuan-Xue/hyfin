@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.qa_trace.v1",
+  "title": "QATrace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "question_analysis", "scope_plan", "composition_plan", "composition_decision", "subplan_traces", "numeric_authorization_set", "composer", "artifact_fingerprints", "trace_hash"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.qa_trace.v1"},
+    "request_id": {"type": "string"},
+    "question_analysis": {"type": ["object", "null"]},
+    "scope_plan": {"type": ["object", "null"]},
+    "composition_plan": {"type": ["object", "null"]},
+    "composition_decision": {"type": "object"},
+    "subplan_traces": {"type": "array"},
+    "numeric_authorization_set": {"type": "object"},
+    "composer": {"type": "object"},
+    "artifact_fingerprints": {"type": "object"},
+    "trace_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

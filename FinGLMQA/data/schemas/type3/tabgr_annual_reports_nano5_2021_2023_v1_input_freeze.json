@@ -1,0 +1,13 @@
+{
+  "schema_version": "finglmqa.type3.tabgr.input_freeze.v1",
+  "corpus_id": "annual_reports_nano5_2021_2023_v1",
+  "corpus_profile_sha256": "46576b011da6e5a8f7c3971deba24e44289fc26fd2a8af8b86d864e217544bd8",
+  "table_blocks_sha256": "616564052717c3ef24f2c430a7d83bb09a849b0484c5511cfa118558ff5fb6f8",
+  "financial_facts_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tabgr_runtime_sha256": "7d193807d5f74b3281c8bd52c0d6da76f1f149cd5e92c4c82b47de4b8708d316",
+  "expected_input_tables": 4185,
+  "expected_ready_tables": 4185,
+  "expected_anomalies": 0,
+  "expected_selected_facts": 0,
+  "freeze_fingerprint": "f07571f46fb1285cd7cdfa409fc3a7b157b7a8076ab087d7bbe260cba21346e8"
+}

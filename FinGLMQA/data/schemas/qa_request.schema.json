@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase8.qa_request.v1",
+  "title": "QARequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "question", "locale"],
+  "properties": {
+    "schema_version": {"const": "finglmqa.phase8.qa_request.v1"},
+    "request_id": {"type": "string", "minLength": 1},
+    "question": {"type": "string", "minLength": 1},
+    "locale": {"type": "string", "minLength": 1},
+    "company": {"type": "string", "minLength": 1},
+    "report_year": {"type": "integer", "minimum": 1900, "maximum": 2200},
+    "metric_years": {"type": "array", "uniqueItems": true, "items": {"type": "integer", "minimum": 1900, "maximum": 2200}},
+    "canonical_metrics": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "normalized_unit": {"type": "string", "minLength": 1},
+    "top_k": {"type": "integer", "minimum": 1},
+    "generation_mode": {"enum": ["disabled", "fake", "external"]},
+    "trace_delivery": {"enum": ["inline", "reference"]}
+  }
+}

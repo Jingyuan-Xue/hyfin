@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase10.qa_worker_message.v1",
+  "title": "Phase10QAWorkerMessage",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol_version", "type", "request_id"],
+  "properties": {
+    "protocol_version": {"const": "finglmqa.phase10.qa_worker.v1"},
+    "type": {"enum": ["ready", "ping", "pong", "query", "result", "shutdown", "shutdown_ack", "error"]},
+    "request_id": {"type": ["string", "null"]},
+    "request": {"type": "object"},
+    "result": {"type": "object"},
+    "ready": {"type": "object"},
+    "error_type": {"type": "string"}
+  }
+}

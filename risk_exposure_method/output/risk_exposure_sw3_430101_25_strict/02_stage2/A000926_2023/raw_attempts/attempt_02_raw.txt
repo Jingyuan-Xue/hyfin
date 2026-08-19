@@ -1,0 +1,187 @@
+{
+  "Company": {
+    "company_id": "A000926",
+    "company_name": "福星股份",
+    "report_year": "2023",
+    "source_doc_id": "A000926_2023"
+  },
+  "RiskExposures": [
+    {
+      "RiskName": "房地产市场需求下降",
+      "Category": "需求周期",
+      "Subcategory": "房地产销售",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "房地产 | 4,338,040,921.95 | 2,948,208,658.74 | 32.04% | -69.09% | -72.90% | 9.55%",
+          "Interpretation": "主营业务分行业表格显示2023年房地产营业收入同比下降69.09%，收入大幅下滑，表明市场需求严重萎缩。"
+        },
+        {
+          "EvidenceQuote": "经营活动产生的现金流量净额较上期减少62.52%，主要系本期销售商品房收到的现金减少所致",
+          "Interpretation": "销售回款大幅减少，直接反映需求下降对现金流的冲击。"
+        }
+      ],
+      "Reason": "营业收入同比降69.09%且经营活动现金流大幅减少，均指向房地产市场需求明显下滑，对公司收入及现金流产生重大不利影响。",
+      "Mitigants": [
+        "公司将紧跟政策导向，加强对宏观政策的跟踪研究，积极部署，强化开发节奏，转变销售策略",
+        "拓宽融资渠道，优化债务结构"
+      ],
+      "MetricHints": [
+        "营业收入同比-69.09%",
+        "经营活动现金流量净额同比-62.52%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "住房价格波动",
+      "Category": "市场价格",
+      "Subcategory": "房地产价格",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "同时，公司在经营过程中可能面临住房价格波动",
+          "Interpretation": "公司明确披露住房价格波动风险，可能影响项目盈利能力。"
+        },
+        {
+          "EvidenceQuote": "公允价值变动损益 | -46,040,454.31 | -15.82% | 主要系本期公司投资性房地产公允价值变动所致",
+          "Interpretation": "公允价值变动损失占利润总额-15.82%，直接由房价波动导致，对利润产生重大负面影响。"
+        },
+        {
+          "EvidenceQuote": "资产减值损失（损失以“一”号填列) | -63,222,342.38 | -21.73% | 主要系本期计提存货跌价准备所致",
+          "Interpretation": "存货跌价准备63,222,342.38元，反映房价下跌导致的资产减值风险，进一步侵蚀利润。"
+        }
+      ],
+      "Reason": "公司披露住房价格波动风险，且公允价值变动和存货减值合计超1亿元，对利润产生重大负面影响，暴露度高。",
+      "Mitigants": [
+        "公司紧跟政策导向，加强宏观政策跟踪研究，积极部署，强化开发节奏，转变销售策略"
+      ],
+      "MetricHints": [
+        "投资性房地产公允价值变动损益-46,040,454.31元",
+        "存货跌价准备-63,222,342.38元"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "施工承包价格波动",
+      "Category": "供应链",
+      "Subcategory": "施工成本",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "施工承包价格波动",
+          "Interpretation": "公司明确将施工承包价格波动列为业务经营风险之一，可能导致成本上升、项目盈利能力下降。"
+        }
+      ],
+      "Reason": "虽无量化数据，但公司明确列为经营风险，且房地产项目开发成本中施工承包占比大，波动将直接影响成本。",
+      "Mitigants": [
+        "公司积极部署，强化开发节奏，加强成本控制"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "城市规划调整",
+      "Category": "政策监管",
+      "Subcategory": "规划审批",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "城市规划调整",
+          "Interpretation": "公司披露城市规划调整风险，可能导致项目开发难度增大、周期延长、成本上升。"
+        }
+      ],
+      "Reason": "公司明确识别该风险，且房地产项目受规划政策影响大，一旦调整可能直接导致项目停滞或收益下降。",
+      "Mitigants": [
+        "公司加强宏观政策跟踪研究，积极部署"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "拆迁进度不及预期",
+      "Category": "供应链",
+      "Subcategory": "土地开发",
+      "ExposureScore": 2,
+      "Evidence": [
+        {
+          "EvidenceQuote": "拆迁进度不及预期",
+          "Interpretation": "公司披露拆迁进度不及预期风险，可能导致项目开发周期延长、成本上升。"
+        }
+      ],
+      "Reason": "公司明确列为经营风险，拆迁进度直接影响项目开工和资金回笼，对公司经营有实质性影响。",
+      "Mitigants": [
+        "公司加强政府沟通，积极部署"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "资金周转和偿债风险",
+      "Category": "财务流动性",
+      "Subcategory": "偿债能力",
+      "ExposureScore": 3,
+      "Evidence": [
+        {
+          "EvidenceQuote": "公司所处的房地产行业属于资本密集型行业，若未来市场经营环境出现波动或者融资环境发生变化，有可能使公司面临一定的资金周转压力和偿债风险",
+          "Interpretation": "公司直接披露资金周转和偿债风险，房地产行业负债率高，融资环境变化将直接影响公司流动性。"
+        },
+        {
+          "EvidenceQuote": "筹资活动产生的现金流量净额较上期减少72.86%，主要系本期偿还债务支付的现金减少所致",
+          "Interpretation": "筹资活动现金流大幅减少，表明对外融资能力下降或偿债支出减少，反映偿债压力增大。"
+        },
+        {
+          "EvidenceQuote": "现金及现金等价物净增加额 | -400,205,998.93 | -1,615,585,766.12 | -75.23%",
+          "Interpretation": "现金及现金等价物净减少额达4亿元，降幅75.23%，显示公司流动性显著恶化。"
+        }
+      ],
+      "Reason": "公司明确披露资金周转和偿债风险，且筹资现金流和现金净增加额均大幅恶化，流动性压力突出。",
+      "Mitigants": [
+        "公司继续推行稳健的财务政策，保持合理的财务杠杆，拓宽融资渠道，丰富融资品种，优化资本结构"
+      ],
+      "MetricHints": [
+        "筹资活动现金流量净额同比-72.86%",
+        "现金及现金等价物净增加额同比-75.23%"
+      ],
+      "NeedHumanReview": false
+    },
+    {
+      "RiskName": "不可抗力风险",
+      "Category": "运营安全环保",
+      "Subcategory": "自然灾害/公共卫生",
+      "ExposureScore": 1,
+      "Evidence": [
+        {
+          "EvidenceQuote": "严重自然灾害、突发性公共卫生事件将对国家的金融和经济环境造成不利影响，将对公司财产和人员造成危害，从而影响公司的正常生产经营",
+          "Interpretation": "公司披露不可抗力风险，属于一般性风险披露，对经营有潜在影响但无具体量化数据。"
+        }
+      ],
+      "Reason": "公司一般性披露不可抗力风险，无具体业务或财务数据支撑，暴露度低。",
+      "Mitigants": [
+        "公司加强风险预警和应急管理"
+      ],
+      "MetricHints": [],
+      "NeedHumanReview": false
+    }
+  ],
+  "CanonicalizationHints": [
+    {
+      "CanonicalRisk": "房地产市场需求下降",
+      "Aliases": [
+        "商品房销售下滑"
+      ],
+      "MergeReason": "同指房地产销售市场萎缩"
+    },
+    {
+      "CanonicalRisk": "住房价格波动",
+      "Aliases": [
+        "房价下跌"
+      ],
+      "MergeReason": "同指房地产市场价格下跌"
+    }
+  ],
+  "QualityFlag": {
+    "Sufficiency": "sufficient",
+    "NeedHumanReview": false,
+    "Notes": "证据充分覆盖主要风险，引用原文准确，无缺失关键信息"
+  }
+}

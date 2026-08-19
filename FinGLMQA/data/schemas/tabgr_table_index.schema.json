@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "finglmqa.phase4.tabgr_table_index.v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "document_id",
+    "table_id",
+    "table_index",
+    "stock_code",
+    "stock_symbol",
+    "stock_name",
+    "company_full",
+    "report_year",
+    "source_markdown",
+    "resolved_source_path",
+    "line_range",
+    "raw_markdown_sha1",
+    "row_count",
+    "column_count",
+    "non_empty_cell_count",
+    "header_cell_count",
+    "row_header_cell_count",
+    "data_cell_count",
+    "edge_count",
+    "tabgr_ready",
+    "parse_status",
+    "failure_reason"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "schema_version": {
+      "const": "finglmqa.phase4.tabgr_table_index.v1"
+    },
+    "document_id": {
+      "type": "string"
+    },
+    "table_id": {
+      "type": "string"
+    },
+    "table_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "stock_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stock_symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stock_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "company_full": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "report_year": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_markdown": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resolved_source_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "line_range": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      ]
+    },
+    "raw_markdown_sha1": {
+      "type": "string"
+    },
+    "row_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "column_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "non_empty_cell_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "header_cell_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "row_header_cell_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "data_cell_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "edge_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tabgr_ready": {
+      "type": "boolean"
+    },
+    "parse_status": {
+      "type": "string"
+    },
+    "failure_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
