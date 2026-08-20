@@ -143,7 +143,9 @@ are stored under `FinGLMQA/runs/`.
 ## Limitations
 
 - Text and table candidates are combined by deterministic interleaving rather
-  than a jointly calibrated cross-channel score.
+  than a jointly calibrated cross-channel score. The table channel contributes
+  at most two rows per report, so its share of the evidence set is capped rather
+  than earned by relevance.
 - Cross-document comparison occurs during answer consolidation; retrieval is
   performed independently for each selected report.
 - Industry- and risk-exposure modules serve frozen artifacts rather than running

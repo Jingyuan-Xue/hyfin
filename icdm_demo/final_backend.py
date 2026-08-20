@@ -964,6 +964,31 @@ def _chat_completion_text(messages: list[dict[str, str]], *, timeout: float = 60
     return content.strip(), str(choice.get("finish_reason") or "")
 
 
+# Consolidation is the one generation step with nothing better to fall back to:
+# a failure drops the answer to _fallback_consolidation, which only concatenates
+# the per-report answers. A transient upstream error or an empty completion is
+# common enough to be worth exactly one more attempt; a second failure still
+# degrades to the concatenation instead of surfacing an error.
+GENERATION_RETRY_ATTEMPTS = 2
+GENERATION_RETRY_PAUSE_SECONDS = 1.0
+
+
+def _generated_text(messages: list[dict[str, str]], *, timeout: float = 60.0) -> tuple[str, str]:
+    """One chat completion, retried once when generation fails.
+
+    The last attempt sits outside the loop so its error reaches the caller
+    unchanged; only the earlier ones are swallowed in favour of a retry.
+    """
+    for _ in range(GENERATION_RETRY_ATTEMPTS - 1):
+        try:
+            return _chat_completion_text(messages, timeout=timeout)
+        except Exception:
+            # A rate-limited or momentarily overloaded endpoint rejects an
+            # immediate second call, so pause before spending the retry.
+            time.sleep(GENERATION_RETRY_PAUSE_SECONDS)
+    return _chat_completion_text(messages, timeout=timeout)
+
+
 # English phrases like "the selected companies" translate into company-shaped
 # Chinese nouns.  The frozen resolver treats any such noun as a company mention
 # and then ignores the request's company hint (resolver._ordered_mentions only
@@ -1138,7 +1163,7 @@ async def finglmqa_consolidate(request: Request) -> Response:
 
     try:
         answer, finish_reason = await asyncio.to_thread(
-            _chat_completion_text, _consolidation_messages(question, results)
+            _generated_text, _consolidation_messages(question, results)
         )
         status = "ok" if any(result.get("status") == "ok" for result in results) else "partial"
         if finish_reason == "length":

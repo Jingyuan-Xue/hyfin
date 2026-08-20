@@ -91,11 +91,11 @@ authorized by the fact store or by cited evidence. Citations carry
 `hybrid_evidence_provider.py` fuses the two channels by **deterministic
 interleaving**, not by score:
 
-- `_table_quota` allots at most 2 table rows out of `top_k`, and only 1 unless
-  the question contains one of a fixed list of Chinese numeric terms — 营业收入
-  (revenue), 利润 (profit), 多少 (how much), and roughly twenty more. The list is
-  literal and untranslated: an English question only reaches the higher quota
-  after the gateway has translated it to Chinese.
+- `_table_quota` allots at most `TABLE_QUOTA` table rows out of `top_k` — two,
+  and the same two for every question. The quota used to drop to one unless the
+  question contained a term from a literal, untranslated list of Chinese numeric
+  words, which handed an English question the lower quota until the gateway had
+  translated it.
 - Table chunks are emitted with `score: 0`, then every chunk is re-scored by
   rank position.
 
@@ -103,7 +103,7 @@ This is deliberate — A2RAG cosine similarity and TabGR lexical scores are not
 calibrated to a common scale, so comparing them numerically would be
 meaningless. The consequence is that the table channel's contribution is capped
 by the quota rather than earned by relevance. See
-[Known limitations](../README.md#known-limitations).
+[Limitations](../README.md#limitations).
 
 ### Multi-report questions
 
@@ -116,6 +116,11 @@ Per-report answers are restored to their original Chinese before consolidation,
 so the model reasons over retrieved text rather than a translation. When several
 reports are selected, ask the question without naming a company — the selection
 defines the scope.
+
+The consolidation call is retried once, after a one-second pause, when the model
+returns an error or an empty completion. A second failure falls back to
+concatenating the per-report answers, which is what the route did on the first
+failure before. Retrieval is not repeated: the retry re-runs generation only.
 
 ---
 

@@ -16,11 +16,10 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_TABGR_INDEX = ROOT / "data/indexes/type3/annual_reports_170_v1/tabgr"
 HYBRID_PROVIDER_VERSION = "a2rag-tabgr-hybrid-provider-v1"
 
-_TABLE_QUESTION_TERMS = (
-    "多少", "金额", "营业收入", "营收", "利润", "成本", "费用", "资产", "负债",
-    "现金流", "增长率", "同比", "占比", "比例", "数量", "销量", "产量", "库存",
-    "研发投入", "员工", "分红", "每股", "毛利率", "净利率",
-)
+# Table rows the fused evidence set may hold, whatever the question asks. The
+# quota used to depend on a literal list of Chinese numeric terms, which gave an
+# untranslated English question the lower quota for no defensible reason.
+TABLE_QUOTA = 2
 
 
 class A2RAGTabGRHybridEvidenceProvider:
@@ -62,11 +61,10 @@ class A2RAGTabGRHybridEvidenceProvider:
         self.tabgr_document_count = len(self.tabgr.document_ids)
 
     @staticmethod
-    def _table_quota(question: str, top_k: int) -> int:
+    def _table_quota(top_k: int) -> int:
         if top_k <= 1:
             return 0
-        requested = 2 if any(term in question for term in _TABLE_QUESTION_TERMS) else 1
-        return min(requested, top_k - 1)
+        return min(TABLE_QUOTA, top_k - 1)
 
     @staticmethod
     def _table_chunk(candidate: Any, identity: Mapping[str, Any], rank: int) -> dict[str, Any]:
@@ -106,7 +104,7 @@ class A2RAGTabGRHybridEvidenceProvider:
         if not question or not document_id or isinstance(top_k, bool) or not isinstance(top_k, int):
             raise ValueError("hybrid evidence request is invalid")
 
-        table_quota = self._table_quota(question, top_k)
+        table_quota = self._table_quota(top_k)
         text_quota = top_k - table_quota
         text_result = self.text_provider.retrieve({
             "document_id": document_id,
@@ -142,4 +140,5 @@ __all__ = [
     "A2RAGTabGRHybridEvidenceProvider",
     "DEFAULT_TABGR_INDEX",
     "HYBRID_PROVIDER_VERSION",
+    "TABLE_QUOTA",
 ]
