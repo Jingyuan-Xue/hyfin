@@ -165,7 +165,8 @@ If you use HyFin in your research, please cite our paper:
   author    = {Tian, Runze and Xue, Jingyuan and Yang, Zihan and Tang, Yifu
                and Chen, Liuyi and Huang, Yiming and Yu, Jianke and Han, Bocheng
                and Fang, Yvonne and Jin, Jiahui and Yang, Zhengyi},
-  booktitle = {Proceedings of the IEEE International Conference on Data Mining (ICDM)},
+  booktitle = {Proceedings of the IEEE International Conference on Data Mining (ICDM),
+               Demo Track},
   year      = {2026}
 }
 ```
