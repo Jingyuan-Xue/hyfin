@@ -1,4 +1,6 @@
-# HyFin: Hybrid Cross-Document Analysis of Financial Reports
+# HyFin: An LLM-Driven Platform for Hybrid Text-and-Table Financial Report Analysis
+
+This repository accompanies our ICDM 2026 demo paper.
 
 HyFin is the reference implementation for evidence-grounded analysis of Chinese
 company annual reports. It combines dense text retrieval with structured table
@@ -154,14 +156,16 @@ are stored under `FinGLMQA/runs/`.
 
 ## Citation
 
-If you use this repository in your research, cite the project as:
+If you use HyFin in your research, please cite our paper:
 
 ```bibtex
-@misc{hyfin2026,
-  title        = {HyFin: Hybrid Cross-Document Analysis of Financial Reports
-                  with Traceable Evidence},
-  author       = {HyFin Contributors},
-  year         = {2026},
-  howpublished = {\url{https://github.com/Jingyuan-Xue/hyfin}}
+@inproceedings{tian2026hyfin,
+  title     = {{HyFin}: An {LLM}-Driven Platform for Hybrid Text-and-Table
+               Financial Report Analysis},
+  author    = {Tian, Runze and Xue, Jingyuan and Yang, Zihan and Tang, Yifu
+               and Chen, Liuyi and Huang, Yiming and Yu, Jianke and Han, Bocheng
+               and Fang, Yvonne and Jin, Jiahui and Yang, Zhengyi},
+  booktitle = {Proceedings of the IEEE International Conference on Data Mining (ICDM)},
+  year      = {2026}
 }
 ```
