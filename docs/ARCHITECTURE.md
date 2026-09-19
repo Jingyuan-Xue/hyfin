@@ -54,7 +54,7 @@ Serves validated 2023 risk-exposure artifacts for the SW3 cohort from
 ### QA
 
 The only live path. Retrieval and generation run per request against the
-170-report corpus.
+annual reports of the 50 demo companies.
 
 ---
 
@@ -74,11 +74,11 @@ POST /api/finglmqa/qa
       ├─ metric/metadata questions ──▶ frozen DuckDB fact store, no LLM
       │
       └─ narrative questions ────────▶ A2RAGTabGRHybridEvidenceProvider
-                                          ├─ A2RAG dense text chunks (BGE-M3)
+                                          ├─ A2RAG text evidence graph (BGE-M3)
                                           └─ TabGR structured table rows
                                                     │
                                                     ▼
-                                          online model composes the answer
+                                          Qwen3.6-27B composes the answer
                                           from retrieved evidence only
 ```
 
@@ -102,8 +102,7 @@ interleaving**, not by score:
 This is deliberate — A2RAG cosine similarity and TabGR lexical scores are not
 calibrated to a common scale, so comparing them numerically would be
 meaningless. The consequence is that the table channel's contribution is capped
-by the quota rather than earned by relevance. See
-[Limitations](../README.md#limitations).
+by the quota rather than earned by relevance.
 
 ### Multi-report questions
 
